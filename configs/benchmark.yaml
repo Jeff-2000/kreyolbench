@@ -1,0 +1,12 @@
+name: kreyolbench
+version: v0.1
+language:
+  iso_639_3: hat
+  bcp47: ht
+  name: Haitian Creole
+splits: [train, validation, test_public, test_hidden]
+v0_tasks: [classification, ner, qa, retrieval, normalization, codeswitch, translation]
+domains: [health, education, civic_admin, disaster_response, religion, news, culture, other]
+default_license_policy: review_required
+hidden_test_policy: metadata_only_until_eval_server
+

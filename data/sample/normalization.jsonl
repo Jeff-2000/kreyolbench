@@ -1,0 +1,2 @@
+{"id":"kb_sample_norm_0001","task":"normalization","language":"hat","split":"test_public","domain":"other","source":{"source_id":"sample","url":null,"license":"CC0-1.0","retrieved_at":"2026-06-04"},"input":{"raw_text":"m pa konn si lap vini"},"target":{"normalized_text":"mwen pa konnen si l ap vini","edits":[{"type":"standardize_spelling","raw":"konn","normalized":"konnen"},{"type":"split_merge","raw":"lap","normalized":"l ap"}]},"metadata":{"synthetic":true,"pii_status":"checked"}}
+

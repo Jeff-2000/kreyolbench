@@ -1,0 +1,7 @@
+task: classification
+primary_metric: macro_f1
+input_fields: [text]
+target_fields: [label]
+labels_config: configs/labels/topic.yaml
+v0: true
+

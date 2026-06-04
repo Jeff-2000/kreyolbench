@@ -1,0 +1,8 @@
+task: qa
+primary_metric: f1
+input_fields: [context, question]
+target_fields: [answers]
+answer_format: extractive
+allow_unanswerable: true
+v0: true
+

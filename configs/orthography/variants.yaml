@@ -1,0 +1,22 @@
+normalization_target: official_haitian_creole
+preserve_raw_text: true
+variants:
+  - raw: "m pa"
+    normalized: "mwen pa"
+    type: pronoun_expansion
+  - raw: "pa p"
+    normalized: "p ap"
+    type: aspect_marker_spacing
+  - raw: "p'ap"
+    normalized: "p ap"
+    type: apostrophe
+  - raw: "pap"
+    normalized: "p ap"
+    type: ambiguous_aspect_marker
+  - raw: "école"
+    normalized: "lekòl"
+    type: french_influenced
+  - raw: "lap"
+    normalized: "l ap"
+    type: clitic_spacing
+

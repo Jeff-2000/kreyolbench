@@ -1,0 +1,8 @@
+task: ner
+primary_metric: span_f1
+input_fields: [tokens]
+target_fields: [tags]
+labels_config: configs/labels/ner.yaml
+tag_scheme: BIO
+v0: true
+

@@ -1,0 +1,2 @@
+{"id":"kb_sample_ner_0001","task":"ner","language":"hat","split":"test_public","domain":"public_health","source":{"source_id":"sample","url":null,"license":"CC0-1.0","retrieved_at":"2026-06-04"},"input":{"tokens":["MSPP","anonse","yon","kanpay","vaksinasyon","nan","Pòtoprens","lendi","."]},"target":{"tags":["B-ORG","O","O","O","O","O","B-GPE","B-DATE","O"]},"metadata":{"synthetic":true,"pii_status":"checked"}}
+

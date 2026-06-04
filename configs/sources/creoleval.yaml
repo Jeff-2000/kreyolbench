@@ -1,0 +1,16 @@
+source_id: creoleval
+name: CreoleVal
+url: https://github.com/hclent/CreoleVal
+access_method: upstream_loader_or_metadata_only
+license: mixed_upstream
+license_url: https://huggingface.co/papers/2310.19567
+redistribution_allowed: null
+citation: "Lent et al. CreoleVal: Multilingual Multitask Benchmarks for Creoles."
+language_claim: hat_and_other_creoles
+domain: benchmark
+collection_date: null
+hash: null
+notes: "Do not repackage restricted subsets; preserve upstream licenses."
+pii_risk: low
+review_status: pending_subset_review
+

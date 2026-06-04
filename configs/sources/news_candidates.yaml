@@ -1,0 +1,16 @@
+source_id: haitian_news_candidates
+name: Haitian News Candidate Sources
+url: null
+access_method: allowlist_rss_sitemap_manual
+license: review_required
+license_url: null
+redistribution_allowed: false
+citation: "Per-article URL and publication metadata required."
+language_claim: hat_fra_mixed
+domain: news
+collection_date: null
+hash: null
+notes: "Default to metadata/scripts only unless permission is obtained."
+pii_risk: high
+review_status: not_approved_for_redistribution
+

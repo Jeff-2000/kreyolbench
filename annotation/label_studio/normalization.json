@@ -1,0 +1,2 @@
+{"label_config":"<View><Text name=\"raw\" value=\"$raw_text\"/><TextArea name=\"normalized\" toName=\"raw\"/><Choices name=\"edit_type\" toName=\"raw\" choice=\"multiple\"><Choice value=\"standardize_spelling\"/><Choice value=\"split_merge\"/><Choice value=\"apostrophe\"/><Choice value=\"accent\"/><Choice value=\"punctuation\"/><Choice value=\"no_change\"/></Choices></View>"}
+

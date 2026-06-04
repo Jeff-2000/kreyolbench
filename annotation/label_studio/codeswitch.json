@@ -1,0 +1,2 @@
+{"label_config":"<View><Text name=\"text\" value=\"$text\"/><Choices name=\"sentence_lang\" toName=\"text\"><Choice value=\"hat\"/><Choice value=\"hat-fra\"/><Choice value=\"hat-eng\"/><Choice value=\"hat-spa\"/><Choice value=\"mixed-other\"/><Choice value=\"unknown\"/></Choices></View>"}
+

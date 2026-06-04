@@ -1,0 +1,7 @@
+task: translation
+primary_metric: chrf
+input_fields: [source_text, source_lang, target_lang]
+target_fields: [references]
+metrics: [bleu, chrf, comet]
+v0: true
+

@@ -1,0 +1,14 @@
+datasets
+evaluate
+transformers
+scikit-learn
+seqeval
+typer
+pydantic
+pyyaml
+pandas
+numpy
+trafilatura
+pymupdf
+rapidfuzz
+

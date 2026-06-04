@@ -1,0 +1,16 @@
+source_id: un_haiti_ht
+name: United Nations in Haiti Kreyol Site
+url: https://haiti.un.org/ht
+access_method: targeted_html_collection
+license: review_required
+license_url: https://haiti.un.org/ht
+redistribution_allowed: null
+citation: "United Nations in Haiti article URLs and retrieval dates."
+language_claim: hat
+domain: civic_disaster_development
+collection_date: null
+hash: null
+notes: "Good source for Kreyol civic/public information; review reuse terms."
+pii_risk: low
+review_status: pending_legal_review
+

@@ -1,0 +1,2 @@
+{"classification":["health","education","civic_admin","disaster_response","economy","security","culture","religion","other"],"sequence_labeling":["PER","ORG","LOC","GPE","DATE","TIME","FACILITY","HEALTH_CONDITION","LAW_POLICY","EVENT"]}
+

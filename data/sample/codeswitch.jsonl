@@ -1,0 +1,2 @@
+{"id":"kb_sample_cs_0001","task":"codeswitch","language":"hat","split":"test_public","domain":"civic_admin","source":{"source_id":"sample","url":null,"license":"CC0-1.0","retrieved_at":"2026-06-04"},"input":{"tokens":["Nou","bezwen","appointment","pou","sèvis","la","."]},"target":{"sentence_lang":"hat-eng","token_langs":["B-HAT","I-HAT","B-ENG","B-HAT","I-HAT","I-HAT","PUNCT"]},"metadata":{"synthetic":true,"pii_status":"checked"}}
+

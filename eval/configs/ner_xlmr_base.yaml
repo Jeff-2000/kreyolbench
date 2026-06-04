@@ -1,0 +1,12 @@
+task: ner
+dataset_path: data/processed/ner.jsonl
+split: test_public
+model:
+  name_or_path: xlm-roberta-base
+  type: token_classification
+evaluation:
+  batch_size: 16
+  seed: 42
+  metrics: [span_f1, per_label_f1]
+output_dir: eval/results
+

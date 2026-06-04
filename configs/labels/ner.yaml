@@ -1,0 +1,16 @@
+entity_types:
+  - PER
+  - ORG
+  - LOC
+  - GPE
+  - DATE
+  - TIME
+  - MONEY
+  - PERCENT
+  - FACILITY
+  - HEALTH_CONDITION
+  - PRODUCT
+  - LAW_POLICY
+  - EVENT
+tag_scheme: BIO
+

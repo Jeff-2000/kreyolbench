@@ -1,0 +1,16 @@
+source_id: opus
+name: OPUS Parallel Corpora
+url: https://opus.nlpl.eu/
+access_method: opus_api
+license: mixed_corpus_specific
+license_url: https://opus.nlpl.eu/opusapi/
+redistribution_allowed: null
+citation: "Tiedemann 2012 OPUS plus corpus-specific citations."
+language_claim: multilingual
+domain: parallel_text
+collection_date: null
+hash: null
+notes: "Query OPUS API for hat/en, hat/fr, hat/es candidates; inspect corpus licenses."
+pii_risk: low
+review_status: pending_subset_review
+

@@ -1,0 +1,16 @@
+source_id: cmu_haitian
+name: CMU Haitian Creole Resources
+url: https://www.speech.cs.cmu.edu/haitian/
+access_method: manual_or_scripted_download
+license: minimal_restrictions_review_required
+license_url: https://www.speech.cs.cmu.edu/haitian/
+redistribution_allowed: null
+citation: "CMU LTI Haitian Creole public release; cite source page and any bundled notices."
+language_claim: hat
+domain: mixed
+collection_date: null
+hash: null
+notes: "Use metadata/download scripts; verify per-file terms before redistribution."
+pii_risk: medium
+review_status: pending_legal_review
+

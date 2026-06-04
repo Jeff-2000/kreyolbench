@@ -1,0 +1,7 @@
+task: normalization
+primary_metric: exact_match
+input_fields: [raw_text]
+target_fields: [normalized_text, edits]
+preserve_raw_text: true
+v0: true
+

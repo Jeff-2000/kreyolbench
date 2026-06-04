@@ -1,0 +1,2 @@
+{"label_config":"<View><Text name=\"context\" value=\"$context\"/><Text name=\"question\" value=\"$question\"/><Labels name=\"answer\" toName=\"context\"><Label value=\"ANSWER\"/></Labels><Choices name=\"unanswerable\" toName=\"context\"><Choice value=\"unanswerable\"/></Choices></View>"}
+

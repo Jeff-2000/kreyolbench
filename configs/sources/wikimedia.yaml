@@ -1,0 +1,16 @@
+source_id: wikimedia_htwiki
+name: Haitian Creole Wikipedia Dumps
+url: https://dumps.wikimedia.org/htwiki/latest/
+access_method: dump_download
+license: CC-BY-SA
+license_url: https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
+redistribution_allowed: true
+citation: "Wikimedia contributors, Haitian Creole Wikipedia dump snapshot."
+language_claim: hat
+domain: encyclopedia
+collection_date: null
+hash: null
+notes: "Preserve attribution and snapshot date; remove stubs and boilerplate."
+pii_risk: low
+review_status: reviewed_standard_wikimedia_terms
+

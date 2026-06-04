@@ -1,0 +1,7 @@
+task: summarization
+primary_metric: rougeL
+input_fields: [document]
+target_fields: [summary]
+metrics: [rouge1, rouge2, rougeL, chrf]
+v0: false
+

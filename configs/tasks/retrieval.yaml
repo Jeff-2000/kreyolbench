@@ -1,0 +1,11 @@
+task: retrieval
+primary_metric: ndcg_at_10
+input_fields: [query]
+target_fields: [relevant_docs]
+relevance_scale:
+  0: not_relevant
+  1: related
+  2: relevant
+  3: highly_relevant
+v0: true
+

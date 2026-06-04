@@ -1,0 +1,2 @@
+{"id":"kb_sample_cls_0001","task":"classification","language":"hat","split":"test_public","domain":"health","source":{"source_id":"sample","url":null,"license":"CC0-1.0","retrieved_at":"2026-06-04"},"input":{"text":"Lave men nou ak savon pou evite kolera."},"target":{"label":"health"},"metadata":{"synthetic":true,"pii_status":"checked"}}
+

@@ -1,0 +1,2 @@
+{"id":"kb_sample_mt_0001","task":"translation","language":"hat","split":"test_public","domain":"health","source":{"source_id":"sample","url":null,"license":"CC0-1.0","retrieved_at":"2026-06-04"},"input":{"source_text":"Lave men nou ak savon.","source_lang":"hat","target_lang":"eng"},"target":{"references":["Wash your hands with soap."]},"metadata":{"synthetic":true,"pii_status":"checked"}}
+

@@ -1,0 +1,52 @@
+# KreyolBench
+
+KreyolBench is a Kreyol-first benchmark scaffold for Haitian Creole NLP. It is designed for reproducible research, Hugging Face compatibility, and public release with explicit source, license, and provenance tracking.
+
+The benchmark prioritizes real-world Haitian Creole use cases: education, public health, civic information, disaster response, administration, translation, search, text normalization, and digital inclusion.
+
+## Quick Start
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+
+kreyolbench validate-dataset --task ner --path data/sample/ner.jsonl
+kreyolbench evaluate --task classification --predictions data/sample/classification_topic.jsonl --references data/sample/classification_topic.jsonl
+pytest
+```
+
+## Tasks
+
+Version `v0.1` targets topic/domain classification, NER, extractive QA, retrieval, text normalization, code-switch sentence/token labels, and translation metadata evaluation. Later releases add sentiment, summarization, orthographic robustness, hidden tests, and larger domain transfer settings.
+
+## Data Policy
+
+This repository does not assume external datasets are redistributable. Source adapters and registry files record public HTTPS locations, access methods, licenses, and review status. Raw external data should be stored under `data/raw/` locally and should not be committed unless redistribution is explicitly allowed.
+
+## Verified Source Families
+
+- CMU Haitian Creole resources: https://www.speech.cs.cmu.edu/haitian/
+- CreoleVal: https://huggingface.co/papers/2310.19567
+- CreoleVal GitHub: https://github.com/hclent/CreoleVal
+- SEACrowd Creole RC: https://huggingface.co/datasets/SEACrowd/creole_rc
+- OPUS API: https://opus.nlpl.eu/opusapi/
+- OPUS corpora: https://opus.nlpl.eu/
+- eBible Haitian Creole Bib La: https://ebible.org/bible/details.php?id=hat
+- MSPP publications: https://mspp.gouv.ht/publications
+- UN Haiti Kreyol site: https://haiti.un.org/ht
+- Wikimedia htwiki dumps: https://dumps.wikimedia.org/htwiki/latest/
+- Leipzig Haitian Wikipedia corpus: https://corpora.uni-leipzig.de/en?corpusId=hat_wikipedia_2011
+
+## Repository Layout
+
+- `configs/`: benchmark, task, label, source, and orthography configuration.
+- `data/`: local raw/interim/processed data plus committed tiny sample fixtures.
+- `datasets/`: Hugging Face dataset loader and dataset card.
+- `src/kreyolbench/`: installable Python package and CLI.
+- `annotation/`: annotation guidelines, Label Studio configs, and examples.
+- `eval/`: evaluation configs and generated results.
+- `leaderboard/`: submission schema and public table template.
+- `docs/`: governance, ethics, release, and paper planning documents.
+- `tests/`: schema, preprocessing, metric, and CLI tests.
+

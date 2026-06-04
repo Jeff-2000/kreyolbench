@@ -1,0 +1,16 @@
+source_id: ebible_hat_1985
+name: eBible Haitian Creole Bib La 1985
+url: https://ebible.org/bible/details.php?id=hat
+access_method: download_public_domain_files
+license: public_domain
+license_url: https://ebible.org/bible/details.php?id=hat
+redistribution_allowed: true
+citation: "Bib La Haitian Creole Bible 1985, eBible.org."
+language_claim: hat
+domain: religion
+collection_date: null
+hash: null
+notes: "Mark as religious/domain-specific; do not treat as representative general Kreyol."
+pii_risk: low
+review_status: reviewed_public_domain_notice
+

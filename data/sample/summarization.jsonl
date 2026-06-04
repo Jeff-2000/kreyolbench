@@ -1,0 +1,2 @@
+{"id":"kb_sample_sum_0001","task":"summarization","language":"hat","split":"test_public","domain":"health","source":{"source_id":"sample","url":null,"license":"CC0-1.0","retrieved_at":"2026-06-04"},"input":{"document":"Sant sante a ap bay vaksen gratis lendi. Moun dwe pote kat idantite yo."},"target":{"summary":"Sant sante a bay vaksen gratis lendi."},"metadata":{"synthetic":true,"pii_status":"checked"}}
+

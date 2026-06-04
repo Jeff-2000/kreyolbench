@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hugging Face cache
+.cache/
+hf_cache/
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/README.md
+
+# Logs
+logs/
+*.log
+
+# Secrets
+.env
+.env.*
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Generated benchmark results
+/outputs/
+/results/
+eval/results/*
+!eval/results/.gitkeep
+leaderboard/submissions/
+
+# Annotation exports
+annotation/exports/
+annotation/audit_logs/
+
+# Temporary files
+tmp/
