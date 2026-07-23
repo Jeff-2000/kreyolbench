@@ -24,6 +24,21 @@ Version `v0.1` targets topic/domain classification, NER, extractive QA, retrieva
 
 This repository does not assume external datasets are redistributable. Source adapters and registry files record public HTTPS locations, access methods, licenses, and review status. Raw external data should be stored under `data/raw/` locally and should not be committed unless redistribution is explicitly allowed.
 
+## Collaboration and Security
+
+KreyolBench uses staged collaboration and least-privilege access. New collaborators should start with a small non-sensitive task before receiving broader access.
+
+- Project mission and ethical boundaries: `PROJECT_CHARTER.md`
+- Governance and roles: `GOVERNANCE.md`
+- Contribution workflow: `CONTRIBUTING.md`
+- Conduct expectations: `CODE_OF_CONDUCT.md`
+- Security and incident reporting: `SECURITY.md`
+- Authorship and credit: `AUTHORSHIP.md`
+- Restricted data rules: `DATA_ACCESS_POLICY.md`
+- Full operating guide: `docs/collaboration_security_guide.md`
+- Intake form: `docs/collaborator_intake_form.md`
+- Onboarding checklist: `docs/onboarding_checklist.md`
+
 ## Verified Source Families
 
 - CMU Haitian Creole resources: https://www.speech.cs.cmu.edu/haitian/
@@ -49,4 +64,3 @@ This repository does not assume external datasets are redistributable. Source ad
 - `leaderboard/`: submission schema and public table template.
 - `docs/`: governance, ethics, release, and paper planning documents.
 - `tests/`: schema, preprocessing, metric, and CLI tests.
-

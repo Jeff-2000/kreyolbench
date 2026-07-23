@@ -66,6 +66,61 @@ leaderboard/submissions/
 # Annotation exports
 annotation/exports/
 annotation/audit_logs/
+annotation/private/
+annotation/payment_records/
+
+# Private collaboration records
+docs/private/
+docs/internal/
+docs/meeting_notes/private/
+collaborators/
+partner_lists/
+intake_forms/
+signed_agreements/
+mou_signed/
+conflict_disclosures/
+
+# Private research and funding drafts
+paper_drafts/
+grant_drafts/
+reviewer_notes/
+roadmaps/private/
+
+# Human-subject and consent materials
+consent_records/
+consent_forms/completed/
+participant_records/
+annotator_identity/
+
+# Sensitive data access logs
+data/access_logs/
+data/restricted/
+data/consent/
+data/private/
+
+# Local credentials and secrets
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+secrets/
+credentials/
+tokens/
+
+# Local LaTeX/build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
 
 # Temporary files
 tmp/
