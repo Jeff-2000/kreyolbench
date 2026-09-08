@@ -1,7 +1,10 @@
 task: codeswitch
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001]
+requires_expert_validation: true
+release_candidate: false
 primary_metric: macro_f1
 input_fields: [tokens]
 target_fields: [sentence_lang, token_langs]
 labels_config: configs/labels/codeswitch.yaml
 v0: true
-

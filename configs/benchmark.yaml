@@ -1,5 +1,16 @@
 name: kreyolbench
 version: v0.1
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+  - KB-DEC-001
+  - KB-DATA-001
+  - KB-DATA-002
+  - KB-ANN-001
+  - KB-EVAL-001
+  - KB-SPLIT-001
+  - KB-PUB-001
+requires_expert_validation: true
+release_candidate: false
 language:
   iso_639_3: hat
   bcp47: ht
@@ -9,4 +20,3 @@ v0_tasks: [classification, ner, qa, retrieval, normalization, codeswitch, transl
 domains: [health, education, civic_admin, disaster_response, religion, news, culture, other]
 default_license_policy: review_required
 hidden_test_policy: metadata_only_until_eval_server
-

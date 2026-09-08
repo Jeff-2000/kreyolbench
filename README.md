@@ -12,9 +12,12 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 
 kreyolbench validate-dataset --task ner --path data/sample/ner.jsonl
+kreyolbench audit-governance --root . --format text
 kreyolbench evaluate --task classification --predictions data/sample/classification_topic.jsonl --references data/sample/classification_topic.jsonl
 pytest
 ```
+
+The governance audit distinguishes structural validity from scientific approval. A `PASS` result can still report `release_eligible: false` while expert decisions remain unresolved.
 
 ## Tasks
 
@@ -39,7 +42,9 @@ KreyolBench uses staged collaboration and least-privilege access. New collaborat
 - Intake form: `docs/collaborator_intake_form.md`
 - Onboarding checklist: `docs/onboarding_checklist.md`
 
-## Verified Source Families
+## Candidate Source Families
+
+These links are provenance candidates, not blanket approval for collection, redistribution, benchmark inclusion, or scientific representativeness. See `configs/sources/` for source-specific review status.
 
 - CMU Haitian Creole resources: https://www.speech.cs.cmu.edu/haitian/
 - CreoleVal: https://huggingface.co/papers/2310.19567

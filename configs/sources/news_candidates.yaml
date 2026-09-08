@@ -1,16 +1,24 @@
 source_id: haitian_news_candidates
 name: Haitian News Candidate Sources
 url: null
+provider: TO_VERIFY_PER_SOURCE
+data_type: news_articles
 access_method: allowlist_rss_sitemap_manual
 license: review_required
 license_url: null
 redistribution_allowed: false
+commercial_use_allowed: null
 citation: "Per-article URL and publication metadata required."
 language_claim: hat_fra_mixed
 domain: news
+expected_tasks: []
 collection_date: null
 hash: null
 notes: "Default to metadata/scripts only unless permission is obtained."
+quality_notes: "Publisher, license, language, duplication, and privacy risk require per-source review."
 pii_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001]
+requires_expert_validation: true
+release_candidate: false
 review_status: not_approved_for_redistribution
-

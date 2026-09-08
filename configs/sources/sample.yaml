@@ -1,0 +1,33 @@
+source_id: sample
+name: KreyolBench Synthetic Sample Fixtures
+url: null
+provider: KreyolBench contributors
+language_claim: hat_and_documented_code_switching
+domain: synthetic_test_fixtures
+data_type: synthetic_jsonl_examples
+license: CC0-1.0
+license_url: https://creativecommons.org/publicdomain/zero/1.0/
+redistribution_allowed: true
+commercial_use_allowed: true
+access_method: repository_fixture
+expected_tasks:
+  - classification
+  - sentiment
+  - ner
+  - qa
+  - retrieval
+  - normalization
+  - codeswitch
+  - translation
+  - summarization
+collection_date: null
+hash: null
+citation: "KreyolBench synthetic sample fixtures."
+notes: "Synthetic examples for tests and interface demonstration; not benchmark evidence."
+quality_notes: "Fixtures validate software behavior only and must not support scientific claims."
+pii_risk: low
+status: TO_REVIEW_LATER
+decision_ids: [KB-DATA-001]
+requires_expert_validation: false
+release_candidate: false
+review_status: approved_public_release

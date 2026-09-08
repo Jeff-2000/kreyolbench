@@ -1,2 +1,5 @@
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001]
+requires_expert_validation: true
+release_candidate: false
 labels: [positive, neutral, negative, mixed, not_applicable]
-

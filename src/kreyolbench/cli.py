@@ -9,6 +9,7 @@ import typer
 
 from kreyolbench.evaluation.reporting import results_to_csv
 from kreyolbench.evaluation.runner import evaluate_jsonl
+from kreyolbench.governance import audit_repository
 from kreyolbench.io import read_jsonl
 from kreyolbench.registry import load_yaml
 from kreyolbench.schemas import validate_row
@@ -27,6 +28,37 @@ SAMPLE_FILES = {
     "translation": Path("data/sample/translation.jsonl"),
     "summarization": Path("data/sample/summarization.jsonl"),
 }
+
+
+@app.command("audit-governance")
+def audit_governance(
+    root: Path = typer.Option(Path("."), help="KreyolBench repository root."),
+    output_format: str = typer.Option(
+        "text", "--format", help="Output format for maintainers or CI."
+    ),
+) -> None:
+    """Validate governance configuration and scientific invariants."""
+
+    if output_format not in {"text", "json"}:
+        raise typer.BadParameter("--format must be 'text' or 'json'")
+    audit = audit_repository(root)
+    if output_format == "json":
+        typer.echo(audit.as_json())
+    else:
+        typer.echo(f"status: {audit.status}")
+        typer.echo(f"release_eligible: {str(audit.release_eligible).lower()}")
+        for field_name in (
+            "errors",
+            "warnings",
+            "blocked_components",
+            "unresolved_decisions",
+        ):
+            values = getattr(audit, field_name)
+            typer.echo(f"{field_name}: {len(values)}")
+            for value in values:
+                typer.echo(f"  - {value}")
+    if audit.errors:
+        raise typer.Exit(code=1)
 
 
 @app.command("validate-dataset")

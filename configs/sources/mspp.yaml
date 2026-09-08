@@ -1,16 +1,24 @@
 source_id: mspp_publications
 name: Ministere de la Sante Publique et de la Population Publications
 url: https://mspp.gouv.ht/publications
+provider: Ministere de la Sante Publique et de la Population
+data_type: html_and_pdf_documents
 access_method: targeted_html_pdf_collection
 license: review_required
 license_url: https://mspp.gouv.ht/
 redistribution_allowed: null
+commercial_use_allowed: null
 citation: "MSPP publication pages and document URLs."
 language_claim: fra_hat_mixed
 domain: public_health
+expected_tasks: []
 collection_date: null
 hash: null
 notes: "Government/public-health source; verify document terms before redistributing text."
+quality_notes: "Language mix, OCR quality, and document-level terms require review."
 pii_risk: medium
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001]
+requires_expert_validation: true
+release_candidate: false
 review_status: pending_legal_review
-

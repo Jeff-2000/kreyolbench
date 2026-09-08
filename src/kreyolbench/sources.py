@@ -42,6 +42,7 @@ def build_source_plan(config: dict[str, Any]) -> SourcePlan:
 
 def known_source_families() -> list[str]:
     return [
+        "sample",
         "cmu_haitian",
         "creoleval",
         "opus",
@@ -51,4 +52,3 @@ def known_source_families() -> list[str]:
         "un_haiti_ht",
         "haitian_news_candidates",
     ]
-

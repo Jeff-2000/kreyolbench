@@ -1,3 +1,7 @@
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001]
+requires_expert_validation: true
+release_candidate: false
 entity_types:
   - PER
   - ORG
@@ -13,4 +17,3 @@ entity_types:
   - LAW_POLICY
   - EVENT
 tag_scheme: BIO
-

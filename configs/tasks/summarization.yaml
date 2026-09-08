@@ -1,7 +1,11 @@
 task: summarization
+status: BLOCKED
+decision_ids: [KB-EVAL-001, KB-SPLIT-001]
+requires_expert_validation: true
+release_candidate: false
+blocked_reason: Publication-grade automatic and human evaluation protocols are not implemented.
 primary_metric: rougeL
 input_fields: [document]
 target_fields: [summary]
 metrics: [rouge1, rouge2, rougeL, chrf]
 v0: false
-

@@ -1,4 +1,8 @@
 task: retrieval
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001]
+requires_expert_validation: true
+release_candidate: false
 primary_metric: ndcg_at_10
 input_fields: [query]
 target_fields: [relevant_docs]
@@ -8,4 +12,3 @@ relevance_scale:
   2: relevant
   3: highly_relevant
 v0: true
-

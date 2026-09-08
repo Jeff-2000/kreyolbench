@@ -1,3 +1,6 @@
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001]
+requires_expert_validation: true
+release_candidate: false
 sentence_labels: [hat, hat-fra, hat-eng, hat-spa, mixed-other, unknown]
 token_labels: [B-HAT, I-HAT, B-FRA, I-FRA, B-ENG, I-ENG, B-SPA, I-SPA, PUNCT, NUM, OTHER]
-

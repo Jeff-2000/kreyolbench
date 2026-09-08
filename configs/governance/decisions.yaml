@@ -1,0 +1,38 @@
+schema_version: 1
+decisions:
+  - id: KB-DEC-001
+    title: Project-wide review-status policy
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+  - id: KB-DATA-001
+    title: Source registry and redistribution gate
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+  - id: KB-DATA-002
+    title: Raw and normalized text preservation policy
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+  - id: KB-ANN-001
+    title: Annotation quality-control policy
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+  - id: KB-EVAL-001
+    title: Metric and statistical-testing policy
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+  - id: KB-SPLIT-001
+    title: Split, leakage, and contamination policy
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+  - id: KB-PUB-001
+    title: Publication artifact traceability policy
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+  - id: KB-ENG-001
+    title: Machine-readable governance registry
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+  - id: KB-ENG-002
+    title: Structural validity and release eligibility separation
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
