@@ -1,38 +1,287 @@
-schema_version: 1
+schema_version: 4
 decisions:
   - id: KB-DEC-001
     title: Project-wide review-status policy
-    status: SUBMITTED_TO_REVIEW
+    status: EXPERT_VALIDATED
     requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-08
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
   - id: KB-DATA-001
-    title: Source registry and redistribution gate
-    status: SUBMITTED_TO_REVIEW
+    title: Multi-axis source registry and release authorization gate
+    status: EXPERT_VALIDATED
     requires_expert_approval: true
+    review_history:
+      - outcome: REVISED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-08
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+        notes: Revision requested to separate source-governance axes and broaden open-world discovery.
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-09
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+        notes: Revised project-level policy approved; source-specific authorization remains mandatory.
+
   - id: KB-DATA-002
     title: Raw and normalized text preservation policy
-    status: SUBMITTED_TO_REVIEW
+    status: EXPERT_VALIDATED
     requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-08
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
+  - id: KB-DATA-003
+    title: Open-world source discovery and corpus expansion policy
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-09
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
   - id: KB-ANN-001
     title: Annotation quality-control policy
-    status: SUBMITTED_TO_REVIEW
+    status: EXPERT_VALIDATED
     requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-08
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
   - id: KB-EVAL-001
     title: Metric and statistical-testing policy
-    status: SUBMITTED_TO_REVIEW
+    status: EXPERT_VALIDATED
     requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-08
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
   - id: KB-SPLIT-001
     title: Split, leakage, and contamination policy
-    status: SUBMITTED_TO_REVIEW
+    status: EXPERT_VALIDATED
     requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-09
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
   - id: KB-PUB-001
     title: Publication artifact traceability policy
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-08
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
+  - id: KB-SCOPE-001
+    title: KreyolBench v0.1 scientific pilot task scope
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-08
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/EXPERT_REVIEW_PACKET_V0_1.md
+
+  - id: KB-SCOPE-002
+    title: Open-world task and benchmark expansion policy
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-09
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/TASK_SPEC_REVIEW_PACKET_V0_1.md
+        notes: Project-scope policy approval only; no task, source, dataset, metric, or release authorization.
+
+  - id: KB-GOV-002
+    title: Independent external task-specification review gate
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-09
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/TASK_SPEC_REVIEW_PACKET_V0_1.md
+        notes: Independent external review is required before any v0.1 task specification is frozen.
+
+  - id: KB-GOV-003
+    title: Qualified external human review evidence policy
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-10
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md
+        notes: Policy approval only. External task validation requires identifiable human reviewers, affiliations, relevant expertise, conflict disclosure, dated evidence, and task-specific qualification coverage.
+
+  - id: KB-TASK-CLS-001
+    title: Multi-label topic-classification task specification
     status: SUBMITTED_TO_REVIEW
     requires_expert_approval: true
+    review_requirements:
+      required_independence: EXTERNAL_INDEPENDENT
+      minimum_external_approvals: 1
+      required_expertise_tags: [HAITIAN_CREOLE_DOMAIN_KNOWLEDGE, MULTI_LABEL_CLASSIFICATION]
+      require_affiliation: true
+      require_conflict_disclosure: true
+    review_history:
+      - outcome: REVISED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-10
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md
+        notes: AI-assisted internal audit adopted by the project lead; ontology, agreement, and threshold corrections incorporated before resubmission. This is not external validation.
+
+  - id: KB-TASK-NER-001
+    title: Character-span named-entity-recognition task specification
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+    review_requirements:
+      required_independence: EXTERNAL_INDEPENDENT
+      minimum_external_approvals: 1
+      required_expertise_tags: [HAITIAN_CREOLE_LINGUISTICS, NAMED_ENTITY_RECOGNITION]
+      require_affiliation: true
+      require_conflict_disclosure: true
+    review_history:
+      - outcome: REVISED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-10
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md
+        notes: AI-assisted internal audit adopted by the project lead; canonical offsets, ontology, nesting, and contiguous-span corrections incorporated before resubmission. This is not external validation.
+
+  - id: KB-TASK-RET-001
+    title: Hybrid-query information-retrieval task specification
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+    review_requirements:
+      required_independence: EXTERNAL_INDEPENDENT
+      minimum_external_approvals: 1
+      required_expertise_tags: [HAITIAN_PUBLIC_INFORMATION, INFORMATION_RETRIEVAL]
+      require_affiliation: true
+      require_conflict_disclosure: true
+    review_history:
+      - outcome: REVISED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-10
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md
+        notes: AI-assisted internal audit adopted by the project lead; query provenance, qrels, pooling, unjudged treatment, and temporal controls incorporated before resubmission. This is not external validation.
+
+  - id: KB-TASK-NORM-001
+    title: Orthography-only text-normalization task specification
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+    review_requirements:
+      required_independence: EXTERNAL_INDEPENDENT
+      minimum_external_approvals: 1
+      required_expertise_tags: [HAITIAN_CREOLE_ORTHOGRAPHY]
+      require_affiliation: true
+      require_conflict_disclosure: true
+    review_history:
+      - outcome: REVISED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-10
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md
+        notes: AI-assisted internal audit adopted by the project lead; core and auxiliary strata, normative evidence, and decision classes incorporated before resubmission. This is not external validation.
+
+  - id: KB-TASK-CS-001
+    title: Token-level code-switching task specification
+    status: SUBMITTED_TO_REVIEW
+    requires_expert_approval: true
+    review_requirements:
+      required_independence: EXTERNAL_INDEPENDENT
+      minimum_external_approvals: 1
+      required_expertise_tags: [HAITIAN_CREOLE_SOCIOLINGUISTICS, CODE_SWITCHING_LANGUAGE_CONTACT]
+      require_affiliation: true
+      require_conflict_disclosure: true
+    review_history:
+      - outcome: REVISED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-10
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md
+        notes: AI-assisted internal audit adopted by the project lead; factorized contact status, tokenization, borrowing, ambiguity, and switch-boundary corrections incorporated before resubmission. This is not external validation.
+
   - id: KB-ENG-001
     title: Machine-readable governance registry
     status: TO_REVIEW_LATER
     requires_expert_approval: false
+    review_history: []
+
   - id: KB-ENG-002
     title: Structural validity and release eligibility separation
     status: TO_REVIEW_LATER
     requires_expert_approval: false
+    review_history: []
+
+  - id: KB-ENG-003
+    title: Multi-axis source-registry schema version 2
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []
+
+  - id: KB-ENG-004
+    title: Example-level provenance and content-origin contract
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []
+
+  - id: KB-ENG-005
+    title: Extensible task taxonomy and release-membership registry
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []
+
+  - id: KB-ENG-006
+    title: Machine-enforced reviewer qualification and evidence checks
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []

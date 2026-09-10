@@ -1,11 +1,14 @@
 task: qa
-status: SUBMITTED_TO_REVIEW
-decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001]
+task_instance_id: kb_qa_extractive_v0_1_feasibility
+task_family_id: question_answering
+task_type_id: extractive_qa
+task_variant: answerable_and_unanswerable
+scope_status: FEASIBILITY_ONLY
+scientific_status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001, KB-SCOPE-001, KB-SCOPE-002]
 requires_expert_validation: true
-release_candidate: false
 primary_metric: f1
 input_fields: [context, question]
 target_fields: [answers]
 answer_format: extractive
 allow_unanswerable: true
-v0: true

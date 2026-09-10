@@ -14,7 +14,9 @@ Requires expert validation: Yes
 
 ## Vision
 
-KreyolBench should become a leading benchmark suite and research infrastructure for Haitian Creole NLP. It should support reproducible experiments, trustworthy evaluation, high-quality annotation, community participation, rigorous publication, and long-term language technology development.
+KreyolBench aspires to become reference-grade research and evaluation infrastructure for Haitian Creole NLP and AI. It should support reproducible experiments, trustworthy evaluation, high-quality annotation, community participation, rigorous publication, controlled expansion across tasks and modalities, and long-term language technology development.
+
+This is an aspiration, not a current superiority claim. The repository is not yet a validated benchmark release and must not describe itself as first, largest, leading, best, most comprehensive, or state of the art without systematic comparative evidence.
 
 ## Scientific Objectives
 
@@ -23,6 +25,8 @@ KreyolBench should become a leading benchmark suite and research infrastructure 
 - Make Haitian Creole more visible in multilingual and low-resource AI evaluation.
 - Provide reusable datasets, configs, schemas, metrics, and baseline protocols.
 - Promote ethical, non-extractive collaboration with Haitian Creole speakers and experts.
+- Preserve an open-world scientific architecture while keeping each release bounded.
+- Support Haitian Creole-specific linguistic and reliability questions rather than only translating standard multilingual tasks.
 
 ## Public-Interest Objectives
 
@@ -32,7 +36,7 @@ Out-of-scope uses include surveillance, harmful profiling, automated denial of s
 
 ## Current State
 
-The repository is a scaffold with schemas, sample data, configs, annotation templates, basic metrics, baseline placeholders, governance docs, and release checklists. It is not yet a validated benchmark release.
+The repository has governance, source, task, provenance, synthetic-contract, and evaluation scaffolds. Five task instances are proposed for a controlled v0.1 pilot. None is included in a validated benchmark release.
 
 ## Acceptance Criteria
 
@@ -43,11 +47,12 @@ The repository is a scaffold with schemas, sample data, configs, annotation temp
 
 ## Next Recommended Action
 
-Expert review of this vision and v0.1 task priorities.
+Recruit independent reviewers for the v0.1 task instances while conducting metadata-only legal, ethical, linguistic, and scientific feasibility reviews of specific source collections.
 
 ## Revision History
 
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial project vision. | SUBMITTED_TO_REVIEW |
-
+| 2026-09-09 | Separated the long-term aspiration from current evidence and bounded releases. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Recorded approval of the open-world project-scope policy without expanding the current release. | EXPERT_VALIDATED |

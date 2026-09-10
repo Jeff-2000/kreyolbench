@@ -1,24 +1,45 @@
+source_schema_version: 2
 source_id: un_haiti_ht
+record_type: SOURCE_COLLECTION
+parent_source_id: null
 name: United Nations in Haiti Kreyol Site
 url: https://haiti.un.org/ht
 provider: United Nations in Haiti
+publisher_owner: United Nations and credited content owners
 data_type: html_documents
-access_method: targeted_html_collection
-license: review_required
+access_method: targeted_document_review_before_collection
+license: TO_VERIFY_PER_PAGE
 license_url: https://haiti.un.org/ht
-redistribution_allowed: null
-commercial_use_allowed: null
-citation: "United Nations in Haiti article URLs and retrieval dates."
+license_evidence: "Public access does not establish a uniform right to redistribute page text."
+citation: "Cite each United Nations in Haiti page, credited author, URL, date, and retrieval date."
 language_claim: hat
+registers: [civic, development, public_information]
 domain: civic_disaster_development
-expected_tasks: []
+temporal_coverage: TO_VERIFY
+geographic_relevance: Haiti
+expected_tasks: [classification, ner, retrieval, normalization]
+accessed_on: null
 collection_date: null
 hash: null
-notes: "Good source for Kreyol civic/public information; review reuse terms."
-quality_notes: "Reuse terms, page language, boilerplate, and temporal coverage require review."
+notes: "Review page terms, credited third-party material, and retrieval dates before use."
+quality_notes: "Language, boilerplate, temporal coverage, duplicated releases, and rights require page-level review."
+machine_generated_content_risk: unknown
 pii_risk: low
+duplication_risk: medium
 status: SUBMITTED_TO_REVIEW
-decision_ids: [KB-DATA-001]
+decision_ids: [KB-DATA-001, KB-DATA-003]
 requires_expert_validation: true
 release_candidate: false
-review_status: pending_legal_review
+source_governance:
+  discovery_status: DISCOVERED
+  access_status: UNKNOWN
+  legal_review_status: PENDING
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://haiti.un.org/ht]

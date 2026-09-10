@@ -38,6 +38,8 @@ Secondary targets:
 - Workshop paper
 - Shared-task or leaderboard report
 
+The first benchmark paper may report only task instances and artifacts that have passed their review and release gates. It does not define the permanent scope of KreyolBench. Later task-expansion, resource, linguistic-analysis, robustness, speech, multimodal, and domain-specific papers are possible pathways, not promised outputs.
+
 ## Contribution Claims
 
 Potential claims must be evidence-backed:
@@ -56,6 +58,15 @@ Do not claim:
 - production-ready model performance
 - unrestricted dataset openness
 - superiority over other benchmarks without direct comparison
+- first, largest, leading, best, most comprehensive, or state-of-the-art status without a systematic comparison protocol
+
+## Vision, Evidence, and Claims
+
+- Vision records what KreyolBench intends to become.
+- Evidence records what reviewed artifacts demonstrate.
+- Claims in papers, websites, releases, and grant materials must not exceed that evidence.
+
+Task-family or roadmap registration is not publication evidence. Every claim must identify the release, task instances, dataset versions, evaluation conditions, uncertainty, limitations, and relevant comparisons.
 
 ## Artifact Traceability
 
@@ -70,4 +81,4 @@ Expert review of target venue and v0.1 publication claim scope.
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial publication strategy. | SUBMITTED_TO_REVIEW |
-
+| 2026-09-09 | Distinguished the first paper from the long-term research program and strengthened claims governance. | SUBMITTED_TO_REVIEW |

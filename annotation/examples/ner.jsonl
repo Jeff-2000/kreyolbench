@@ -1,2 +1,1 @@
-{"tokens":["MSPP","anonse","yon","kanpay","nan","Pòtoprens"],"tags":["B-ORG","O","O","O","O","B-GPE"]}
-
+{"text":"MSPP anonse yon kanpay nan Pòtoprens","entities":[{"entity_id":"e1","start_char":0,"end_char":4,"text":"MSPP","label":"ORG"},{"entity_id":"e2","start_char":27,"end_char":36,"text":"Pòtoprens","label":"GPE"}]}

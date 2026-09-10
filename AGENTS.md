@@ -4,7 +4,7 @@
 
 This is the primary operating manual for Codex and any future AI coding agent working on KreyolBench.
 
-KreyolBench is both a software project and a long-term scientific research program. Agents must optimize for scientific quality, reproducibility, extensibility, traceability, maintainability, reviewability, and future publication value.
+KreyolBench is both a software project and a long-term, open-world scientific research program. Agents must optimize for scientific quality, reproducibility, extensibility, traceability, maintainability, reviewability, and future publication value while keeping every release bounded.
 
 ## Status
 
@@ -22,7 +22,7 @@ Blocking downstream work:
 
 ## Mission
 
-KreyolBench is a Kreyol-first benchmark suite for Haitian Creole NLP. It supports peer-reviewed research, open-source datasets, baseline and frontier-model evaluation, annotation campaigns, reproducible experiments, leaderboards, scientific governance, international collaboration, and public-interest Haitian Creole AI.
+KreyolBench is a Kreyol-first research program and extensible benchmark ecosystem for Haitian Creole NLP and AI evaluation. It supports peer-reviewed research, open-source datasets, baseline and frontier-model evaluation, annotation campaigns, reproducible experiments, leaderboards, scientific governance, international collaboration, and public-interest Haitian Creole AI.
 
 ## Required Reading Before Editing
 
@@ -30,15 +30,15 @@ Before editing a subsystem, read the relevant Markdown specification:
 
 | Subsystem | Required docs |
 | --- | --- |
-| Project vision/scope | `PROJECT_VISION.md`, `RESEARCH_SCOPE.md`, `ROADMAP.md` |
+| Project vision/scope | `PROJECT_VISION.md`, `RESEARCH_SCOPE.md`, `ROADMAP.md`, `datasets/TASK_TAXONOMY.md` |
 | Scientific governance | `SCIENTIFIC_GOVERNANCE.md`, `DECISIONS.md`, `ASSUMPTIONS.md`, `RISKS.md` |
-| Data and datasets | `data/README.md`, `datasets/DATASET_SPECIFICATION.md`, `datasets/SOURCE_REGISTRY.md`, `datasets/SPLIT_POLICY.md`, `datasets/LEAKAGE_PREVENTION.md`, `datasets/VERSIONING_POLICY.md` |
+| Data and datasets | `data/README.md`, `datasets/DATASET_SPECIFICATION.md`, `datasets/EXAMPLE_PROVENANCE.md`, `datasets/SOURCE_REGISTRY.md`, `datasets/SPLIT_POLICY.md`, `datasets/LEAKAGE_PREVENTION.md`, `datasets/VERSIONING_POLICY.md`, and the relevant `datasets/tasks/*.md` specification |
 | Annotation | `annotation/README.md`, `annotation/guidelines.md`, `annotation/QUALITY_CONTROL.md`, `annotation/ADJUDICATION_PROTOCOL.md` |
 | Evaluation | `eval/EVALUATION_PROTOCOL.md`, `eval/METRICS.md`, `eval/STATISTICAL_TESTING.md`, `eval/ERROR_ANALYSIS.md` |
 | Baselines | `baselines/BASELINE_MATRIX.md`, `baselines/TRAINING_PROTOCOL.md`, `baselines/COMPUTE_POLICY.md` |
 | Leaderboard | `leaderboard/LEADERBOARD_POLICY.md`, `leaderboard/SUBMISSION_POLICY.md`, `leaderboard/REPRODUCIBILITY_REQUIREMENTS.md` |
 | Code | `src/README.md`, `tests/TEST_STRATEGY.md`, `ARCHITECTURE.md`, `REPRODUCIBILITY.md` |
-| Publication | `PUBLICATION_STRATEGY.md`, `reports/PAPER_OUTLINE.md`, `CHANGELOG_RESEARCH.md` |
+| Publication and review | `PUBLICATION_STRATEGY.md`, `reports/PAPER_OUTLINE.md`, `reports/INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md`, `reports/TASK_SPEC_REVIEW_PACKET_V0_1.md`, `reports/reviews/README.md`, `reports/V0_1_TASK_FEASIBILITY_MATRIX.md`, `CHANGELOG_RESEARCH.md` |
 
 ## Engineering Expectations
 
@@ -51,6 +51,8 @@ Before editing a subsystem, read the relevant Markdown specification:
 - Keep generated outputs, large data, secrets, and restricted material out of Git.
 - Prefer configuration files over hard-coded scientific choices.
 - Do not create fake benchmark results or pretend scaffold behavior is publication-grade.
+- Do not interpret runtime task aliases, implemented validators, or any release list as the permanent KreyolBench task universe.
+- Register future task families at roadmap level; do not create placeholder implementations to imply breadth.
 
 ## Scientific Expectations
 
@@ -60,6 +62,8 @@ Before editing a subsystem, read the relevant Markdown specification:
 - Treat Haitian Creole as a language with its own orthography, variation, syntax, register, and sociolinguistic context.
 - Preserve raw and normalized forms when scientifically justified.
 - Do not normalize linguistic diversity away merely to simplify modeling.
+- Keep task family, task instance, scope status, scientific status, and release membership conceptually and mechanically separate.
+- Treat first/largest/leading/best/most-comprehensive claims as unsupported until systematic comparative evidence exists.
 
 ## Human Expert Checkpoints
 
@@ -76,6 +80,9 @@ Scientific decisions require documentation and may require `SUBMITTED_TO_REVIEW`
 - statistical testing methodology
 - leaderboard ranking policy
 - publication claims
+- task-family expansion and release membership
+
+An internal or AI-assisted audit may produce a `REVISED` event but cannot satisfy an `EXTERNAL_INDEPENDENT` requirement. Task validation requires identifiable external human reviewers, affiliations, relevant expertise, conflict disclosure, dated evidence, and the qualification coverage declared in the machine-readable decision.
 
 ## Data and License Rules
 
@@ -128,3 +135,6 @@ After each meaningful implementation step, report:
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial project agent operating manual. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Added task-specification, feasibility, and example-provenance required reading. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Added open-world scope and bounded-release operating rules. | SUBMITTED_TO_REVIEW |
+| 2026-09-10 | Added qualified external-review evidence rules and the internal/AI-assistance boundary. | SUBMITTED_TO_REVIEW |

@@ -1,0 +1,17 @@
+schema_version: 1
+release_id: v0.1
+version: v0.1
+scientific_status: SUBMITTED_TO_REVIEW
+scope_status: PILOT_CANDIDATE
+decision_ids: [KB-SCOPE-001, KB-SCOPE-002, KB-GOV-002]
+requires_expert_validation: true
+task_memberships:
+  - {task_instance_id: kb_cls_topic_multilabel_v0_1, scope_status: PILOT_CANDIDATE}
+  - {task_instance_id: kb_ie_ner_charspan_v0_1, scope_status: PILOT_CANDIDATE}
+  - {task_instance_id: kb_ret_hybrid_query_v0_1, scope_status: PILOT_CANDIDATE}
+  - {task_instance_id: kb_norm_orthography_v0_1, scope_status: PILOT_CANDIDATE}
+  - {task_instance_id: kb_lc_token_language_id_v0_1, scope_status: PILOT_CANDIDATE}
+  - {task_instance_id: kb_qa_extractive_v0_1_feasibility, scope_status: FEASIBILITY_ONLY}
+  - {task_instance_id: kb_mt_text_v0_1_deferred, scope_status: DEFERRED}
+splits: [train, validation, test_public, test_hidden]
+hidden_test_policy: metadata_only_until_eval_server

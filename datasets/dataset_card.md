@@ -2,7 +2,7 @@
 
 ## Dataset Summary
 
-KreyolBench is a Kreyol-first benchmark suite for Haitian Creole NLP across public-health, education, civic administration, disaster response, search, translation, normalization, and code-switching scenarios.
+KreyolBench is a Kreyol-first research program and extensible benchmark ecosystem for Haitian Creole NLP and AI evaluation. The current repository is a governed scaffold, not a released dataset.
 
 ## Languages
 
@@ -10,7 +10,7 @@ Primary language: Haitian Creole (`hat`, `ht`). Some subsets explicitly include 
 
 ## Tasks
 
-Classification, NER, extractive QA, retrieval, normalization, translation evaluation, code-switch detection, sentiment, summarization, and orthographic robustness.
+The provisional v0.1 pilot contains multi-label topic classification, character-span NER, hybrid-query retrieval, orthographic normalization, and token-level code-switch identification. QA is feasibility-only, translation is deferred, and sentiment and summarization remain roadmap instances. Future task families are registered separately and are not implemented or released by this card.
 
 ## Licensing
 
@@ -30,5 +30,4 @@ Do not use KreyolBench for surveillance, sensitive identity inference, automated
 
 ## Limitations
 
-Early releases are small, domain-skewed, and may underrepresent informal speech, regional variation, and diaspora language practices.
-
+No validated release currently exists. Future releases may be small, domain-skewed, and may underrepresent informal speech, regional variation, and diaspora language practices; limitations must be measured for each release rather than assumed away.

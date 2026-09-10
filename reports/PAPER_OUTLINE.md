@@ -16,6 +16,12 @@ Requires expert validation: Yes
 
 KreyolBench: A Kreyol-First Benchmark Suite for Haitian Creole NLP
 
+## Publication Scope Boundary
+
+This outline is for the first controlled benchmark paper. It may describe only task instances, sources, datasets, metrics, and results that pass their applicable review and release gates. It does not define the permanent KreyolBench research program or task universe.
+
+Later task-expansion, dataset/resource, linguistic-analysis, robustness, speech, multimodal, and domain-specific papers remain possible research pathways. They require independent evidence and are not commitments of this paper.
+
 ## 1. Introduction
 
 ### 1.1 Motivation
@@ -168,18 +174,16 @@ Status: BLOCKED until annotation pilot.
 
 Purpose: describe input/output format, labels, use cases, sources, and evaluation for each task.
 
-Tasks:
+Provisional v0.1 task instances:
 
-- classification
-- sentiment
-- NER
-- QA
-- retrieval
-- normalization
-- code-switching
-- translation
-- summarization
-- orthographic robustness
+- `kb_cls_topic_multilabel_v0_1`
+- `kb_ie_ner_charspan_v0_1`
+- `kb_ret_hybrid_query_v0_1`
+- `kb_norm_orthography_v0_1`
+- `kb_lc_token_language_id_v0_1`
+
+QA remains feasibility-only. Translation is deferred from v0.1. Sentiment,
+summarization, and orthographic robustness remain roadmap work.
 
 Status: SUBMITTED_TO_REVIEW
 
@@ -274,6 +278,8 @@ Status: DRAFT
 | KB-PUB-TAB-001 | Source inventory table | 3.1 | reviewed source registry | SUBMITTED_TO_REVIEW |
 | KB-PUB-TAB-002 | License matrix | 3.1 | legal/source review | BLOCKED |
 | KB-PUB-TAB-003 | Task statistics table | 5 | frozen dataset | BLOCKED |
+| KB-PUB-TAB-006 | Task feasibility matrix | 1.4, 5 | task specs and metadata-only source assessment | SUBMITTED_TO_REVIEW |
+| KB-PUB-APP-001 | Five task specifications | 4.1, 5, appendices | independent external review | SUBMITTED_TO_REVIEW |
 | KB-PUB-TAB-004 | Annotation agreement table | 4.3 | double annotation and adjudication | BLOCKED |
 | KB-PUB-TAB-005 | Baseline results table | 9 | validated baseline runs | BLOCKED |
 | KB-PUB-FIG-001 | Preprocessing pipeline | 3.3 | finalized preprocessing spec | TO_REVIEW_LATER |
@@ -284,4 +290,5 @@ Status: DRAFT
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial detailed paper blueprint. | SUBMITTED_TO_REVIEW |
-
+| 2026-09-09 | Linked the five-task specification and feasibility artifacts. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Bounded the first paper to validated release instances without narrowing the research program. | SUBMITTED_TO_REVIEW |

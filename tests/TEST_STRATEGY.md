@@ -62,6 +62,9 @@ Should include:
 - Raw text linkage must be preserved when normalized text exists.
 - Test IDs must never occur in train.
 - Source metadata must be present.
+- Example provenance must identify a specific collection/subset unit and content origin.
+- NER character spans may represent nesting but must not cross; nested annotation is not mandatory until reviewed.
+- Retrieval qrels must resolve to existing queries and documents.
 - Data with unapproved redistribution status must not appear in public release paths.
 
 ## Governance Audit Coverage
@@ -76,7 +79,15 @@ Implemented checks now cover:
 - train/test exact-text contamination
 - raw/normalized text linkage
 - resolvable sample source IDs
-- configured classification, sentiment, NER, and code-switch labels
+- configured multi-label classification, span NER, sentiment, and code-switch labels
+- decision review histories and evidence paths
+- task feasibility dimensions and v0.1 coverage
+- canonical retrieval corpus/query/qrel fixtures
+- open-world task-family and domain registration
+- stable task-instance identity and family/type resolution
+- separation of scientific review status from scope status
+- explicit versioned release membership
+- exclusion of roadmap, discovery, feasibility-only, and deferred tasks from automatic release inclusion
 - deterministic text and JSON CLI output
 
 Near-duplicate detection, document-group leakage, and release-manifest validation remain future work because their thresholds and storage contracts require scientific review.
@@ -93,3 +104,5 @@ Near-duplicate detection, document-group leakage, and release-manifest validatio
 | --- | --- | --- |
 | 2026-09-01 | Initial test strategy. | SUBMITTED_TO_REVIEW |
 | 2026-09-08 | Added executable governance and scientific-invariant coverage. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Added task-contract, provenance, review-history, and retrieval-artifact coverage. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Added open-world taxonomy, domain, task-instance, and release-membership coverage. | SUBMITTED_TO_REVIEW |

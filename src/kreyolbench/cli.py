@@ -17,12 +17,12 @@ from kreyolbench.sources import build_source_plan
 
 app = typer.Typer(help="KreyolBench dataset and evaluation tools.")
 
+# Local fixtures for currently implemented adapters, not the project task universe.
 SAMPLE_FILES = {
     "classification": Path("data/sample/classification_topic.jsonl"),
     "sentiment": Path("data/sample/sentiment.jsonl"),
     "ner": Path("data/sample/ner.jsonl"),
     "qa": Path("data/sample/qa.jsonl"),
-    "retrieval": Path("data/sample/retrieval.jsonl"),
     "normalization": Path("data/sample/normalization.jsonl"),
     "codeswitch": Path("data/sample/codeswitch.jsonl"),
     "translation": Path("data/sample/translation.jsonl"),

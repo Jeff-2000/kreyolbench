@@ -26,8 +26,11 @@ Requires expert validation: Yes
 - ambiguous text
 - label boundary disagreement
 - entity type disagreement
-- code-switch language boundary
+- NER discontinuity or unsupported nesting
+- code-switch language identity, borrowing, contact status, or tokenization
 - orthographic normalization disagreement
+- normalization authority or acceptable-variant disagreement
+- retrieval relevance, authority, freshness, or unjudged-treatment disagreement
 - source/context missing
 - guideline gap
 - annotator error
@@ -59,4 +62,3 @@ Public or release-safe:
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial adjudication protocol. | SUBMITTED_TO_REVIEW |
-

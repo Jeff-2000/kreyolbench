@@ -1,0 +1,2 @@
+{"query_id":"q1","doc_id":"doc1","judgment_status":"JUDGED","relevance":3,"assessor_id":"synthetic_fixture","adjudicated":true}
+{"query_id":"q1","doc_id":"doc2","judgment_status":"JUDGED","relevance":0,"assessor_id":"synthetic_fixture","adjudicated":true}

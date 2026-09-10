@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: haiti_civil_protection_resources
+record_type: SOURCE_COLLECTION
+parent_source_id: haiti_government_publications
+name: Haiti Civil Protection and Disaster-Response Resources
+url: https://www.servicespublics.gouv.ht/site/rsmo/DPC
+provider: Direction de la Protection Civile and related public institutions
+publisher_owner: TO_VERIFY_PER_DOCUMENT
+data_type: disaster_response_web_and_document_resources
+access_method: endpoint_language_and_rights_review_before_collection
+license: TO_VERIFY_PER_DOCUMENT
+license_url: null
+license_evidence: "The official service listing identifies the institution; content reuse terms remain unverified."
+citation: "Cite each civil-protection item, issuing institution, date, URL, and retrieval date."
+language_claim: fra_hat_mixed_TO_VERIFY
+registers: [disaster_response, civic, public_information]
+domain: disaster_response
+temporal_coverage: TO_VERIFY
+geographic_relevance: Haiti
+expected_tasks: [classification, ner, retrieval, summarization]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Verify the active content endpoint and Kreyol coverage before any collection."
+quality_notes: "Temporal urgency, mirrored alerts, stale guidance, language mix, and sensitive incident data require review."
+machine_generated_content_risk: unknown
+pii_risk: medium
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://www.servicespublics.gouv.ht/site/rsmo/DPC]

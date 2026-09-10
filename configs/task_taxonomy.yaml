@@ -1,0 +1,67 @@
+schema_version: 1
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-SCOPE-001, KB-SCOPE-002]
+requires_expert_validation: true
+release_candidate: false
+open_world: true
+task_families:
+  - family_id: classification
+    name: Classification and understanding
+    scope_status: DISCOVERY
+    modalities: [text]
+    task_type_ids: [topic_classification, sentiment_analysis, intent_classification, stance_detection, natural_language_inference, semantic_similarity, acceptability_judgment]
+  - family_id: information_extraction
+    name: Information extraction
+    scope_status: DISCOVERY
+    modalities: [text, document]
+    task_type_ids: [named_entity_recognition, entity_linking, relation_extraction, event_extraction, terminology_extraction]
+  - family_id: retrieval
+    name: Retrieval and information access
+    scope_status: DISCOVERY
+    modalities: [text, document, multimodal]
+    task_type_ids: [information_retrieval, passage_retrieval, cross_lingual_retrieval, conversational_retrieval, evidence_retrieval, rag_retrieval]
+  - family_id: question_answering
+    name: Question answering
+    scope_status: DISCOVERY
+    modalities: [text, document, multimodal]
+    task_type_ids: [extractive_qa, generative_qa, open_domain_qa, domain_qa, grounded_qa]
+  - family_id: generation
+    name: Generation
+    scope_status: ROADMAP
+    modalities: [text]
+    task_type_ids: [summarization, controlled_generation, paraphrasing, simplification, dialogue]
+  - family_id: translation
+    name: Translation
+    scope_status: ROADMAP
+    modalities: [text, speech]
+    task_type_ids: [machine_translation, speech_translation, multilingual_translation_evaluation]
+  - family_id: normalization
+    name: Language normalization and correction
+    scope_status: DISCOVERY
+    modalities: [text, document, speech]
+    task_type_ids: [orthographic_normalization, spelling_correction, ocr_correction, asr_transcript_normalization, historical_normalization, noisy_text_normalization]
+  - family_id: language_contact
+    name: Language contact
+    scope_status: DISCOVERY
+    modalities: [text, speech]
+    task_type_ids: [code_switch_identification, language_identification, borrowing_analysis, mixed_language_robustness]
+  - family_id: linguistic_robustness
+    name: Linguistic robustness and challenge evaluation
+    scope_status: ROADMAP
+    modalities: [text, speech, document]
+    task_type_ids: [orthographic_robustness, lexical_robustness, domain_shift, source_shift, temporal_drift, register_variation, contamination_analysis]
+  - family_id: llm_evaluation
+    name: LLM and generative-system evaluation
+    scope_status: ROADMAP
+    modalities: [text, document, multimodal]
+    task_type_ids: [instruction_following, factuality, hallucination, reasoning, retrieval_grounding, safety, bias, cultural_grounding, long_context]
+  - family_id: speech_audio
+    name: Speech and audio
+    scope_status: ROADMAP
+    modalities: [speech, audio]
+    task_type_ids: [automatic_speech_recognition, speech_understanding, text_to_speech_evaluation, spoken_code_switching, audio_text_evaluation]
+  - family_id: document_multimodal
+    name: Document and multimodal understanding
+    scope_status: ROADMAP
+    modalities: [document, image, text, audio]
+    task_type_ids: [ocr, document_understanding, image_text_evaluation, multimodal_language_understanding]

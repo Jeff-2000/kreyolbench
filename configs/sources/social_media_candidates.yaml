@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: social_media_candidates
+record_type: SOURCE_FAMILY
+parent_source_id: null
+name: Haitian Creole Social Media Candidates
+url: null
+provider: TO_VERIFY_PER_PLATFORM_AND_COMMUNITY
+publisher_owner: AUTHORS_PLATFORMS_AND_RIGHTS_HOLDERS_TO_VERIFY
+data_type: social_media_source_family
+access_method: ethics_and_terms_review_only
+license: PLATFORM_TERMS_AND_USER_RIGHTS_TO_VERIFY
+license_url: null
+license_evidence: "Public visibility does not authorize collection, research use, quotation, redistribution, or deanonymization."
+citation: "TO_DEFINE_PER_PLATFORM_RESEARCH_PROTOCOL"
+language_claim: hat_and_multilingual_TO_VERIFY
+registers: [informal, codeswitch, social_media]
+domain: online_communication
+temporal_coverage: TO_VERIFY
+geographic_relevance: Haiti_and_diaspora_without_individual_profiling
+expected_tasks: [normalization, codeswitch, robustness]
+accessed_on: null
+collection_date: null
+hash: null
+notes: "No collection may begin without a platform-specific terms review and dedicated ethics protocol."
+quality_notes: "Consent, contextual integrity, deletion, minors, vulnerable groups, toxicity, bots, synthetic content, and sampling bias are material risks."
+machine_generated_content_risk: high
+pii_risk: high
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: DISCOVERED
+  access_status: UNKNOWN
+  legal_review_status: NOT_STARTED
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: []

@@ -16,7 +16,7 @@ Requires expert validation: Yes
 
 - Pilot at least one small batch before full annotation.
 - Include gold examples for annotator calibration.
-- Double annotate a defined subset, initially 20--30 percent for v0 pilots.
+- Use pilot evidence to define a task-specific double-annotation proportion; no universal percentage is approved.
 - Review disagreement patterns before scaling.
 - Report agreement metrics appropriate to task type.
 - Preserve uncertainty labels or flags.
@@ -25,11 +25,12 @@ Requires expert validation: Yes
 
 Candidate measures:
 
-- classification: accuracy, Cohen's kappa, Krippendorff's alpha where suitable
-- NER/code-switching: span-level agreement and token-level agreement
-- retrieval: graded agreement and adjudicated qrels
+- classification: per-label binary agreement, set precision/recall/F1, and bootstrapped chance-adjusted multi-label agreement; ordinary Cohen's kappa alone is insufficient
+- NER: exact span/type agreement, boundary-only agreement, and per-type agreement
+- code-switching: separate agreement for language identity, token type, contact status, uncertainty, and derived boundaries
+- retrieval: graded agreement, assessor overlap, adjudicated qrels, judgment coverage, and pooling sensitivity
 - QA: exact span agreement and adjudicated acceptability
-- normalization: exact agreement and edit-type agreement
+- normalization: reference acceptability, decision-class agreement, edit-type agreement, and over-normalization review
 
 Status: SUBMITTED_TO_REVIEW
 
@@ -44,4 +45,3 @@ Status: SUBMITTED_TO_REVIEW
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial annotation QC policy. | SUBMITTED_TO_REVIEW |
-

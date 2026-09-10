@@ -2,67 +2,125 @@
 
 ## Purpose
 
-Define required source metadata and review gates.
+Define the open-world source inventory and the independent gates that control
+how a discovered resource may be handled.
 
 ## Status
 
 Current status: SUBMITTED_TO_REVIEW
 
-Owner: Codex
+Owner: Data Governance working group
 
 Requires expert validation: Yes
 
-## Required Fields
+Governing decisions: `KB-DATA-001`, `KB-DATA-003`, `KB-ENG-003`
 
-Each source registry record must track:
+## Core Principle
 
-- `source_id`
-- `name`
-- `url`
-- `provider`
-- `language_claim`
-- `domain`
-- `data_type`
-- `license`
-- `redistribution_allowed`
-- `commercial_use_allowed`
-- `access_method`
-- `expected_tasks`
-- `quality_notes`
-- `privacy_risk`
-- `status`
-- `review_status`
+The registry is not a fixed whitelist, corpus manifest, partnership list, or
+statement of authorization. New resources may be registered continuously.
+Registration permits metadata discovery only. Collection, annotation,
+transformation, redistribution, commercial use, and scientific inclusion each
+require their own documented review.
 
-The configuration field corresponding to privacy risk is currently `pii_risk`. A future schema migration may rename it only through a documented compatibility decision.
+Dataset examples and retrieval documents must also satisfy
+`datasets/EXAMPLE_PROVENANCE.md`. A registry record governs a source, but it
+does not by itself provide sufficiently granular example provenance.
 
-## Review Status Values
+## Record Hierarchy
 
-- `pending_legal_review`
-- `pending_subset_review`
-- `reviewed_public_domain_notice`
-- `reviewed_standard_wikimedia_terms`
-- `not_approved_for_redistribution`
-- `approved_link_only`
-- `approved_derived_only`
-- `approved_public_release`
+| Record type | Purpose | May back dataset rows? |
+| --- | --- | --- |
+| `SOURCE_FAMILY` | Discovery container for a provider, platform, or heterogeneous resource family | No |
+| `SOURCE_COLLECTION` | Identifiable collection with coherent provenance | Yes, after applicable gates |
+| `SOURCE_SUBSET` | Versioned or bounded subset of a parent family/collection | Yes, after applicable gates |
 
-Project lifecycle `status` uses the uppercase review-status system. Source-specific `review_status` uses the values above and describes legal/data handling, not scientific suitability.
+A subset requires `parent_source_id`. Families do not have parents. A family
+must never receive blanket collection, redistribution, or scientific approval;
+a concrete child record is required.
 
-## Rules
+## Required Metadata
 
-- External datasets should usually be referenced through source URLs and reproducible acquisition logic.
-- Do not download or redistribute a dataset unless legal and technical handling is documented.
-- Do not treat public web availability as redistribution permission.
+Every schema-v2 source record contains:
+
+- stable ID, record type, and optional parent ID;
+- name, URL, provider, and publisher/owner claim;
+- data type and proposed access method;
+- license label, evidence URL, evidence note, and citation instructions;
+- language claim, registers, domain, temporal coverage, and geographic relevance;
+- expected benchmark tasks;
+- access and collection dates plus hashes when artifacts exist;
+- quality, privacy, duplication, and machine-generated-content risks;
+- project review status, decision references, and release-candidate flag;
+- the complete `source_governance` block.
+
+Unknown values remain `TO_VERIFY`, `UNKNOWN`, or `null`. Do not infer rights,
+language coverage, ownership, partnerships, or scientific quality.
+
+## Independent Governance Axes
+
+| Axis | Allowed states |
+| --- | --- |
+| Discovery | `DISCOVERED`, `ENDPOINT_VERIFIED`, `INACCESSIBLE`, `RETIRED` |
+| Access | `UNKNOWN`, `ACCESSIBLE_FOR_REVIEW`, `RESTRICTED`, `UNAVAILABLE` |
+| Legal review | `NOT_STARTED`, `PENDING`, `APPROVED`, `CONDITIONAL`, `REJECTED`, `NOT_APPLICABLE` |
+| Collection | `NOT_REQUESTED`, `PERMISSION_UNKNOWN`, `APPROVED`, `PROHIBITED`, `NOT_APPLICABLE` |
+| Derived use | `UNKNOWN`, `APPROVED`, `CONDITIONAL`, `PROHIBITED`, `NOT_APPLICABLE` |
+| Redistribution | `UNKNOWN`, `APPROVED`, `LINK_ONLY`, `DERIVED_ONLY`, `CONDITIONAL`, `PROHIBITED` |
+| Commercial use | `UNKNOWN`, `APPROVED`, `CONDITIONAL`, `PROHIBITED`, `NOT_APPLICABLE` |
+| Ethics | `NOT_STARTED`, `PENDING`, `APPROVED`, `RESTRICTED`, `REJECTED`, `NOT_APPLICABLE` |
+| Scientific inclusion | `PENDING_EXPERT_REVIEW`, `PILOT_ONLY`, `APPROVED`, `EXCLUDED`, `NOT_APPLICABLE` |
+
+No axis inherits approval from another. In particular, accessibility does not
+authorize collection; collection does not authorize derived use or
+redistribution; legal permission does not establish representativeness; and
+scientific approval cannot override legal or ethical restrictions.
+
+## Release Gate
+
+Public source-data release requires all of the following:
+
+- a collection or subset record, never a family;
+- project status `EXPERT_VALIDATED`;
+- legal review `APPROVED` or `NOT_APPLICABLE`;
+- redistribution `APPROVED` with recorded evidence;
+- ethics `APPROVED` or `NOT_APPLICABLE`;
+- scientific inclusion `APPROVED`;
+- release-candidate dependencies resolved;
+- source-specific attribution, conditions, hashes, and versions recorded.
+
+`LINK_ONLY`, `DERIVED_ONLY`, and `CONDITIONAL` are not blanket public-data
+release approvals. The synthetic sample fixture is an explicit software-testing
+exception: it may be committed and redistributed, but its scientific status is
+`EXCLUDED` and it cannot support benchmark claims.
+
+## Candidate Review Workflow
+
+1. Register metadata and uncertainties.
+2. Verify endpoint and provider identity.
+3. Create child records for heterogeneous families.
+4. Review license, ownership, platform terms, and collection permission.
+5. Complete ethics and community-harm screening.
+6. Assess language, quality, representativeness, duplication, and contamination.
+7. Submit scientific inclusion for expert review.
+8. Record collection date, version, hash, and provenance before acquisition.
+9. Re-audit before annotation, derived release, or public redistribution.
 
 ## Acceptance Criteria
 
-- Every row source ID resolves to a registry record.
-- Every public release has reviewed source status.
-- Risky sources are excluded or released link-only/derived-only.
+- Every committed record validates against schema version 2.
+- Every dataset-row source ID resolves to a collection or subset.
+- Every example retains a specific provenance unit, content origin, and derivation history.
+- Parent references resolve and contain no cycles.
+- Approved redistribution has evidence and compatible legal and ethical states.
+- Discovery-only records cannot become release candidates.
+- Markdown and machine-readable decisions remain synchronized.
 
 ## Revision History
 
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial source registry specification. | SUBMITTED_TO_REVIEW |
-| 2026-09-08 | Aligned documented field names with executable source configurations. | SUBMITTED_TO_REVIEW |
+| 2026-09-08 | Aligned documented fields with executable source configurations. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Adopted open-world discovery and multi-axis schema v2; expanded candidate families without authorizing collection. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Linked source governance to the example-level provenance contract. | SUBMITTED_TO_REVIEW |

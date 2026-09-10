@@ -1,11 +1,14 @@
 task: summarization
-status: BLOCKED
-decision_ids: [KB-EVAL-001, KB-SPLIT-001]
+task_instance_id: kb_gen_summarization_roadmap
+task_family_id: generation
+task_type_id: summarization
+task_variant: document_abstractive_candidate
+scope_status: ROADMAP
+scientific_status: BLOCKED
+decision_ids: [KB-EVAL-001, KB-SPLIT-001, KB-SCOPE-001, KB-SCOPE-002]
 requires_expert_validation: true
-release_candidate: false
 blocked_reason: Publication-grade automatic and human evaluation protocols are not implemented.
 primary_metric: rougeL
 input_fields: [document]
 target_fields: [summary]
 metrics: [rouge1, rouge2, rougeL, chrf]
-v0: false

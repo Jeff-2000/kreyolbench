@@ -9,8 +9,11 @@ import yaml
 
 
 def load_yaml(path: str | Path) -> dict[str, Any]:
-    with Path(path).open(encoding="utf-8") as handle:
-        data = yaml.safe_load(handle) or {}
+    try:
+        with Path(path).open(encoding="utf-8") as handle:
+            data = yaml.safe_load(handle) or {}
+    except yaml.YAMLError as exc:
+        raise ValueError(f"{path} contains invalid YAML: {exc}") from exc
     if not isinstance(data, dict):
         raise ValueError(f"{path} must contain a YAML mapping")
     return data
@@ -23,4 +26,3 @@ def load_registry(directory: str | Path) -> dict[str, dict[str, Any]]:
         key = item.get("source_id") or item.get("task") or path.stem
         registry[str(key)] = item
     return registry
-

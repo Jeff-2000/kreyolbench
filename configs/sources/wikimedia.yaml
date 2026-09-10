@@ -1,24 +1,47 @@
+source_schema_version: 2
 source_id: wikimedia_htwiki
+record_type: SOURCE_COLLECTION
+parent_source_id: null
 name: Haitian Creole Wikipedia Dumps
 url: https://dumps.wikimedia.org/htwiki/latest/
 provider: Wikimedia Foundation and Haitian Creole Wikipedia contributors
+publisher_owner: Wikimedia contributors_and_possible_imported_content_owners
 data_type: encyclopedia_dump
-access_method: dump_download
-license: CC-BY-SA
+access_method: dump_metadata_review_before_download
+license: CC_BY_SA_AND_GFDL_WITH_CONTENT_LEVEL_EXCEPTIONS
 license_url: https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
-redistribution_allowed: true
-commercial_use_allowed: true
-citation: "Wikimedia contributors, Haitian Creole Wikipedia dump snapshot."
+license_evidence: "Wikimedia text is generally subject to attribution and share-alike requirements, with possible exceptions for imported or separately marked content."
+citation: "Haitian Creole Wikipedia contributors; cite dump snapshot and page revision identifiers."
 language_claim: hat
+registers: [encyclopedic, formal, community_edited]
 domain: encyclopedia
-expected_tasks: []
+temporal_coverage: snapshot_specific
+geographic_relevance: Haiti_and_global
+expected_tasks: [classification, ner, retrieval, normalization]
+accessed_on: 2026-09-09
 collection_date: null
 hash: null
-notes: "Preserve attribution and snapshot date; remove stubs and boilerplate."
-quality_notes: "Coverage, article quality, duplication, and snapshot effects require measurement."
+notes: "Preserve attribution, page revision identifiers, snapshot date, and content-level exceptions."
+quality_notes: "Coverage, stubs, quality variation, revision effects, copied content, and duplication require measurement."
+machine_generated_content_risk: medium
 pii_risk: low
+duplication_risk: high
 status: SUBMITTED_TO_REVIEW
-decision_ids: [KB-DATA-001]
+decision_ids: [KB-DATA-001, KB-DATA-003]
 requires_expert_validation: true
 release_candidate: false
-review_status: reviewed_standard_wikimedia_terms
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: CONDITIONAL
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: CONDITIONAL
+  redistribution_status: CONDITIONAL
+  commercial_use_status: CONDITIONAL
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
+    - https://dumps.wikimedia.org/htwiki/latest/

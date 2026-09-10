@@ -1,6 +1,6 @@
 # KreyolBench
 
-KreyolBench is a Kreyol-first benchmark scaffold for Haitian Creole NLP. It is designed for reproducible research, Hugging Face compatibility, and public release with explicit source, license, and provenance tracking.
+KreyolBench is a Kreyol-first research program and extensible benchmark ecosystem for Haitian Creole NLP and AI evaluation. It is designed for reproducible research, controlled releases, Hugging Face compatibility, and explicit source, license, and provenance tracking.
 
 The benchmark prioritizes real-world Haitian Creole use cases: education, public health, civic information, disaster response, administration, translation, search, text normalization, and digital inclusion.
 
@@ -21,11 +21,19 @@ The governance audit distinguishes structural validity from scientific approval.
 
 ## Tasks
 
-Version `v0.1` targets topic/domain classification, NER, extractive QA, retrieval, text normalization, code-switch sentence/token labels, and translation metadata evaluation. Later releases add sentiment, summarization, orthographic robustness, hidden tests, and larger domain transfer settings.
+Version `v0.1` proposes five pilot tasks: multi-label topic classification, character-span NER, corpus/query/qrels retrieval, orthography-only normalization, and token-level code-switching. Question answering remains feasibility-only; translation is deferred from the core release; sentiment and summarization remain roadmap items.
+
+These task definitions are `SUBMITTED_TO_REVIEW`. They must receive independent external review before their schemas, labels, metrics, annotation protocols, or split rules are frozen. See `datasets/tasks/` and `reports/TASK_SPEC_REVIEW_PACKET_V0_1.md`.
+
+The five tasks are concrete v0.1 instances, not the permanent KreyolBench task universe. The hierarchy is research program -> benchmark ecosystem -> task family -> task type -> task variant -> task instance -> release membership. See `datasets/TASK_TAXONOMY.md`.
+
+KreyolBench aspires to become reference-grade Haitian Creole evaluation infrastructure. The repository does not claim to be first, largest, leading, best, or most comprehensive without systematic evidence.
 
 ## Data Policy
 
-This repository does not assume external datasets are redistributable. Source adapters and registry files record public HTTPS locations, access methods, licenses, and review status. Raw external data should be stored under `data/raw/` locally and should not be committed unless redistribution is explicitly allowed.
+This repository does not assume external datasets are redistributable. Source registration is open-world and authorizes metadata discovery only. Legal, ethical, collection, derived-use, redistribution, and scientific-suitability decisions remain independent. Raw external data should be stored under `data/raw/` locally and should not be committed unless redistribution is explicitly approved.
+
+Every benchmark example must retain item-level provenance. Source-family records are discovery containers and cannot be used as final example provenance. See `datasets/EXAMPLE_PROVENANCE.md` and `datasets/SOURCE_REGISTRY.md`.
 
 ## Collaboration and Security
 
@@ -60,12 +68,14 @@ These links are provenance candidates, not blanket approval for collection, redi
 
 ## Repository Layout
 
-- `configs/`: benchmark, task, label, source, and orthography configuration.
+- `configs/`: ecosystem, task taxonomy, domain, release, task, label, source, and orthography configuration.
 - `data/`: local raw/interim/processed data plus committed tiny sample fixtures.
-- `datasets/`: Hugging Face dataset loader and dataset card.
+- `datasets/`: Hugging Face dataset loader, dataset card, provenance, and task taxonomy.
+- `datasets/tasks/`: provisional scientific specifications for the five v0.1 pilot tasks.
 - `src/kreyolbench/`: installable Python package and CLI.
 - `annotation/`: annotation guidelines, Label Studio configs, and examples.
 - `eval/`: evaluation configs and generated results.
 - `leaderboard/`: submission schema and public table template.
-- `docs/`: governance, ethics, release, and paper planning documents.
+- `docs/`: governance, ethics, release, and collaboration documents.
+- `reports/`: expert-review packets, feasibility evidence, and publication planning.
 - `tests/`: schema, preprocessing, metric, and CLI tests.

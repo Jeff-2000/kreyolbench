@@ -12,7 +12,13 @@ Owner: Codex
 
 Requires expert validation: Yes for milestone scope.
 
-## v0.1: Scaffold and Governance
+## Research Program and Ecosystem
+
+Status: SUBMITTED_TO_REVIEW
+
+KreyolBench remains open to evidence-driven expansion across task families, domains, modalities, challenge sets, and evaluation paradigms under `KB-SCOPE-002`. Roadmap registration is not implementation or release inclusion.
+
+## v0.1: Scaffold, Governance, and Controlled Pilot
 
 Status: IN_PROGRESS
 
@@ -28,14 +34,28 @@ Goals:
 - machine-readable governance statuses and decision references
 - deterministic governance audit in text and JSON formats
 - automated checks for core sample-data scientific invariants
+- open-world source discovery with schema-v2 authorization gates
+- expert-validated five-task v0.1 pilot selection, with instance specifications still provisional
+- completed project-policy review, including revised `KB-DATA-001`
+- provisional contracts for five retained task instances
+- evidence-based task and source-to-task feasibility matrix
+- open-world task and domain registries
+- stable task-instance identifiers and explicit release membership
 
 Exit criteria:
 
-- expert review of v0.1 candidate tasks
-- source registry policy complete
+- task-level review for the five-task v0.1 pilot
+- independent external review before task specification freeze
+- example-level provenance contract and synthetic contract tests
 - test strategy documented
 - no fake results or unsupported claims
 - governance audit passes structurally while release eligibility remains explicit
+
+Immediate next action:
+
+- recruit identifiable external reviewers using `reports/TASK_SPEC_REVIEW_PACKET_V0_1.md` and `reports/reviews/REVIEW_TEMPLATE.md`;
+- perform metadata-only legal, ethical, linguistic, and scientific feasibility reviews for specific source collections;
+- revise rejected specifications and authorize no annotation pilot until every applicable task and source gate passes.
 
 ## v0.2: Dataset Pilot and Annotation Protocol
 
@@ -46,7 +66,7 @@ Goals:
 - validated source subset
 - annotation pilot
 - adjudication workflow
-- task-level specs
+- independently validated task-level specs
 - baseline matrix
 - preliminary metric confidence intervals
 
@@ -67,7 +87,7 @@ Goals:
 
 Status: DRAFT
 
-Possible expansions:
+Possible evidence-driven expansions:
 
 - document QA
 - OCR-heavy sources
@@ -75,6 +95,12 @@ Possible expansions:
 - orthographic robustness
 - disaster temporal benchmark
 - speech/ASR companion benchmark
+- LLM factuality, safety, cultural grounding, and RAG evaluation
+- TTS and speech-understanding evaluation
+- document, image-text, and audio-text evaluation
+- additional public-interest and diaspora domains
+
+These are non-exhaustive research pathways. They are not validated components or release promises.
 
 ## Revision History
 
@@ -82,3 +108,7 @@ Possible expansions:
 | --- | --- | --- |
 | 2026-09-01 | Initial staged roadmap. | SUBMITTED_TO_REVIEW |
 | 2026-09-08 | Recorded governance-audit and invariant-test infrastructure. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Recorded the validated pilot scope and multi-axis open-world source registry. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Closed project-policy review and added five provisional task specifications and feasibility gates. | SUBMITTED_TO_REVIEW |
+| 2026-09-09 | Separated the open-world ecosystem from versioned release membership. | SUBMITTED_TO_REVIEW |
+| 2026-09-10 | Added the pre-external revision phase and made reviewer recruitment plus metadata-only source review the immediate next action. | SUBMITTED_TO_REVIEW |

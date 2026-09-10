@@ -1,10 +1,17 @@
 task: codeswitch
-status: SUBMITTED_TO_REVIEW
-decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001]
+task_instance_id: kb_lc_token_language_id_v0_1
+task_family_id: language_contact
+task_type_id: code_switch_identification
+task_variant: factorized_token_language_contact
+scope_status: PILOT_CANDIDATE
+scientific_status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001, KB-SCOPE-001, KB-SCOPE-002, KB-GOV-002, KB-GOV-003, KB-TASK-CS-001]
 requires_expert_validation: true
-release_candidate: false
-primary_metric: macro_f1
-input_fields: [tokens]
-target_fields: [sentence_lang, token_langs]
+primary_metric: token_language_macro_f1_candidate
+input_fields: [raw_text, tokens, tokenization_version]
+target_fields: [annotations]
 labels_config: configs/labels/codeswitch.yaml
-v0: true
+canonical_representation: factorized_token_annotations
+sentence_composition: derived
+switch_boundaries: derived
+switch_boundary_exclusions: [ESTABLISHED_BORROWING, SHARED_AMBIGUOUS, UNCERTAIN, zxx, und]

@@ -1,0 +1,47 @@
+source_schema_version: 2
+source_id: universal_dependencies_haitian
+record_type: SOURCE_FAMILY
+parent_source_id: null
+name: Universal Dependencies Haitian Creole Treebanks
+url: https://universaldependencies.org/treebanks/ht_adolphe/index.html
+provider: Universal Dependencies contributors and treebank-specific maintainers
+publisher_owner: TO_VERIFY_PER_TREEBANK_AND_UPSTREAM_TEXT
+data_type: syntactically_annotated_treebank_family
+access_method: release_and_treebank_specific_review
+license: TO_VERIFY_PER_TREEBANK_AND_UPSTREAM_TEXT
+license_url: https://universaldependencies.org/
+license_evidence: "UD treebanks publish treebank-specific license information, but upstream text rights and release versions must also be checked."
+citation: "Universal Dependencies release and treebank-specific README, maintainers, version, and upstream text citation."
+language_claim: hat
+registers: [written, linguistic_annotation, TO_VERIFY_PER_TREEBANK]
+domain: linguistics
+temporal_coverage: TO_VERIFY_PER_TREEBANK
+geographic_relevance: Haiti_TO_VERIFY
+expected_tasks: [pos_tagging, dependency_parsing, linguistic_evaluation]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Create child records for each treebank and exact release version before use."
+quality_notes: "Review source genre, conversion history, manual correction, annotation consistency, upstream rights, and overlap."
+machine_generated_content_risk: medium
+pii_risk: low
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://universaldependencies.org/
+    - https://universaldependencies.org/treebanks/ht_adolphe/index.html

@@ -1,10 +1,13 @@
 task: sentiment
-status: SUBMITTED_TO_REVIEW
-decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001]
+task_instance_id: kb_cls_sentiment_roadmap
+task_family_id: classification
+task_type_id: sentiment_analysis
+task_variant: polarity_candidate
+scope_status: ROADMAP
+scientific_status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001, KB-SCOPE-001, KB-SCOPE-002]
 requires_expert_validation: true
-release_candidate: false
 primary_metric: macro_f1
 input_fields: [text]
 target_fields: [label]
 labels_config: configs/labels/sentiment.yaml
-v0: false

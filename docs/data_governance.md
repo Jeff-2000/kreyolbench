@@ -1,21 +1,24 @@
 # Data Governance
 
-Every source must have a YAML registry entry with URL, access method, license, redistribution status, citation, language claim, domain, collection date, hash, PII risk, and review status.
+Every source must have a schema-v2 YAML registry entry with provenance, access
+method, license evidence, language/register claims, domain, dates, hashes, and
+risk metadata. The normative schema and release gate are defined in
+`datasets/SOURCE_REGISTRY.md`.
 
 ## Rules
 
-- Do not commit raw external text unless redistribution is allowed.
+- Discovery and registration do not authorize content collection.
+- Do not commit raw external text unless redistribution is explicitly approved.
 - Keep raw, clean, and normalized text separate.
 - Store source URL and retrieval date on every row.
 - Run PII detection before public release.
 - Keep annotator audit logs private if they contain personal information.
-- Preserve attribution requirements for Wikimedia, OPUS subsets, and other upstream data.
+- Preserve source-specific attribution requirements and conditions.
+- Register concrete OPUS, CreoleVal, government, media, and institutional subsets separately.
 
-## Review Status Values
+## Review Dimensions
 
-- `reviewed_public_domain_notice`
-- `reviewed_standard_wikimedia_terms`
-- `pending_legal_review`
-- `pending_subset_review`
-- `not_approved_for_redistribution`
-
+Do not use the deprecated single `review_status`. Source discovery, access,
+legal review, collection, derived use, redistribution, commercial use, ethics,
+and scientific inclusion are independent dimensions. Approval on one dimension
+never implies approval on another.

@@ -1,2 +1,1 @@
-{"tokens":["Nou","bezwen","appointment"],"sentence_lang":"hat-eng","token_langs":["B-HAT","I-HAT","B-ENG"]}
-
+{"raw_text":"Nou bezwen appointment","tokenization_version":"kb-token-v0.1-candidate.1","tokens":[{"token_id":"t1","text":"Nou","start_char":0,"end_char":3},{"token_id":"t2","text":"bezwen","start_char":4,"end_char":10},{"token_id":"t3","text":"appointment","start_char":11,"end_char":22}],"annotations":[{"token_id":"t1","language_id":"hat","token_type":"WORD","contact_status":"NONE","uncertainty":"NONE"},{"token_id":"t2","language_id":"hat","token_type":"WORD","contact_status":"NONE","uncertainty":"NONE"},{"token_id":"t3","language_id":"eng","token_type":"WORD","contact_status":"ACTIVE_SWITCH","uncertainty":"NONE"}]}

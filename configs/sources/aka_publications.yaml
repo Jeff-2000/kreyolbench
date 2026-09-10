@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: aka_publications
+record_type: SOURCE_COLLECTION
+parent_source_id: aka_official
+name: AKA Publications, Bulletins, and Official Documents
+url: https://www.akademikreyol.net/
+provider: Akademi Kreyol Ayisyen
+publisher_owner: Akademi Kreyol Ayisyen_and_credited_authors
+data_type: publications_bulletins_and_reference_documents
+access_method: metadata_inventory_and_permission_request
+license: COPYRIGHT_OR_PERMISSION_REQUIRED_PER_DOCUMENT
+license_url: https://www.akademikreyol.net/
+license_evidence: "Download links do not supersede the site's no-copy notice or document-specific rights."
+citation: "Cite each AKA publication, bulletin, resolution, or document using its own bibliographic metadata."
+language_claim: hat
+registers: [normative, formal, linguistic, terminology]
+domain: language_governance
+temporal_coverage: TO_VERIFY_PER_DOCUMENT
+geographic_relevance: Haiti_and_diaspora
+expected_tasks: [normalization, terminology, retrieval, linguistic_evaluation]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Inventory titles and metadata only until written permission or document-specific terms are recorded."
+quality_notes: "Separate orthographic resolutions, reference works, bulletins, and general institutional communication."
+machine_generated_content_risk: low
+pii_risk: low
+duplication_risk: medium
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://www.akademikreyol.net/]
