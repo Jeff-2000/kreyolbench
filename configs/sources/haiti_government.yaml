@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: haiti_government_publications
+record_type: SOURCE_FAMILY
+parent_source_id: null
+name: Haitian Government and Ministry Publications
+url: https://communication.gouv.ht/
+provider: Government of Haiti and individual public institutions
+publisher_owner: TO_VERIFY_PER_INSTITUTION_AND_DOCUMENT
+data_type: public_sector_resource_family
+access_method: discovery_metadata_only
+license: TO_VERIFY_PER_INSTITUTION_AND_DOCUMENT
+license_url: null
+license_evidence: "Official publication and public access do not establish uniform reuse rights."
+citation: "TO_VERIFY_PER_INSTITUTION_AND_DOCUMENT"
+language_claim: fra_hat_mixed_TO_VERIFY
+registers: [civic, administrative, public_information]
+domain: civic_administration
+temporal_coverage: TO_VERIFY_PER_COLLECTION
+geographic_relevance: Haiti
+expected_tasks: [classification, ner, retrieval, normalization]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Open-world parent record; each portal, ministry, and document family requires a child record."
+quality_notes: "Verify Kreyol presence, publisher, dates, mirrored content, rights, and document integrity."
+machine_generated_content_risk: unknown
+pii_risk: medium
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: NOT_STARTED
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://communication.gouv.ht/]

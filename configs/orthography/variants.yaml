@@ -1,22 +1,23 @@
-normalization_target: official_haitian_creole
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-002, KB-TASK-NORM-001]
+requires_expert_validation: true
+release_candidate: false
+normalization_target: orthography_only_candidate
 preserve_raw_text: true
 variants:
-  - raw: "m pa"
-    normalized: "mwen pa"
-    type: pronoun_expansion
-  - raw: "pa p"
-    normalized: "p ap"
-    type: aspect_marker_spacing
   - raw: "p'ap"
     normalized: "p ap"
     type: apostrophe
-  - raw: "pap"
-    normalized: "p ap"
-    type: ambiguous_aspect_marker
-  - raw: "école"
-    normalized: "lekòl"
-    type: french_influenced
+    rule_id: KB-ORTH-CAND-001
+    authority_status: TO_VERIFY
   - raw: "lap"
     normalized: "l ap"
-    type: clitic_spacing
-
+    type: spacing
+    rule_id: KB-ORTH-CAND-002
+    authority_status: TO_VERIFY
+prohibited_change_types:
+  - unicode_cleanup_as_gold
+  - lexical_substitution
+  - translation
+  - grammatical_rewrite
+  - register_conversion

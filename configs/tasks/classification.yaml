@@ -1,7 +1,19 @@
 task: classification
-primary_metric: macro_f1
+task_instance_id: kb_cls_topic_multilabel_v0_1
+task_family_id: classification
+task_type_id: topic_classification
+task_variant: multi_label
+scope_status: PILOT_CANDIDATE
+scientific_status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001, KB-SCOPE-001, KB-SCOPE-002, KB-GOV-002, KB-GOV-003, KB-TASK-CLS-001]
+requires_expert_validation: true
+primary_metric: multilabel_macro_f1_candidate
 input_fields: [text]
-target_fields: [label]
+target_fields: [labels]
 labels_config: configs/labels/topic.yaml
-v0: true
-
+ontology_version: topic-v0.1-candidate.2
+label_mode: multi_label
+provenance_fields: [domain, genre, register]
+scoring_structure: flat
+agreement_candidates: [per_label_binary, set_precision_recall_f1, bootstrapped_chance_adjusted]
+threshold_protocol: report_fixed_0_5_and_validation_tuned_per_label

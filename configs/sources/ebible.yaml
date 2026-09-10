@@ -1,16 +1,45 @@
+source_schema_version: 2
 source_id: ebible_hat_1985
+record_type: SOURCE_COLLECTION
+parent_source_id: null
 name: eBible Haitian Creole Bib La 1985
 url: https://ebible.org/bible/details.php?id=hat
-access_method: download_public_domain_files
-license: public_domain
+provider: eBible.org
+publisher_owner: TO_VERIFY
+data_type: religious_text
+access_method: metadata_review_before_download
+license: PUBLIC_DOMAIN_NOTICE_TO_VERIFY
 license_url: https://ebible.org/bible/details.php?id=hat
-redistribution_allowed: true
-citation: "Bib La Haitian Creole Bible 1985, eBible.org."
+license_evidence: "The existing registry claimed a public-domain notice; that claim must be reverified before use."
+citation: "Bib La Haitian Creole Bible 1985, eBible.org; edition and upstream citation TO_VERIFY."
 language_claim: hat
+registers: [religious, formal]
 domain: religion
+temporal_coverage: 1985_edition_TO_VERIFY
+geographic_relevance: Haiti
+expected_tasks: [language_modeling, normalization]
+accessed_on: null
 collection_date: null
 hash: null
-notes: "Mark as religious/domain-specific; do not treat as representative general Kreyol."
+notes: "Do not treat a religious translation as representative general Kreyol."
+quality_notes: "Highly domain-specific text; edition, upstream rights, translation provenance, and duplication require review."
+machine_generated_content_risk: low
 pii_risk: low
-review_status: reviewed_public_domain_notice
-
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: DISCOVERED
+  access_status: UNKNOWN
+  legal_review_status: PENDING
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: ["https://ebible.org/bible/details.php?id=hat"]

@@ -1,3 +1,7 @@
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-TASK-NER-001]
+requires_expert_validation: true
+release_candidate: false
 entity_types:
   - PER
   - ORG
@@ -12,5 +16,25 @@ entity_types:
   - PRODUCT
   - LAW_POLICY
   - EVENT
-tag_scheme: BIO
-
+canonical_representation: character_spans
+allow_nested: true
+annotate_nested: false
+allow_crossing: false
+allow_discontinuous: false
+offset_unit: unicode_code_point
+derived_tag_schemes: [BIO, BILOU]
+ontology_version: ner-v0.1-candidate.2
+ontology:
+  PER: named person or explicitly named human identity
+  ORG: named organization or institution acting as an organization
+  LOC: named non-political geographic feature
+  GPE: named political or administrative geographic unit
+  DATE: calendrical date or named temporal period
+  TIME: clock time or bounded time of day
+  MONEY: monetary amount including its currency expression
+  PERCENT: percentage or explicitly expressed rate
+  FACILITY: named physical facility when the physical site is intended
+  HEALTH_CONDITION: named disease, syndrome, or reviewed clinical condition
+  PRODUCT: named product, medicine, or branded material object
+  LAW_POLICY: official title or stable short name of a law, regulation, or policy
+  EVENT: named event with a stable referential identity

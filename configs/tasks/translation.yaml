@@ -1,7 +1,14 @@
 task: translation
+task_instance_id: kb_mt_text_v0_1_deferred
+task_family_id: translation
+task_type_id: machine_translation
+task_variant: multilingual_text_candidate
+scope_status: DEFERRED
+scientific_status: BLOCKED
+decision_ids: [KB-EVAL-001, KB-SPLIT-001, KB-SCOPE-001, KB-SCOPE-002]
+requires_expert_validation: true
+blocked_reason: Current translation scoring is scaffold-level and cannot support publication claims.
 primary_metric: chrf
 input_fields: [source_text, source_lang, target_lang]
 target_fields: [references]
 metrics: [bleu, chrf, comet]
-v0: true
-

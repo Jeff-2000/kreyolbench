@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: menfp_educational_resources
+record_type: SOURCE_COLLECTION
+parent_source_id: haiti_government_publications
+name: MENFP Educational Resources
+url: https://menfp.gouv.ht/
+provider: Ministere de l'Education Nationale et de la Formation Professionnelle
+publisher_owner: MENFP_and_credited_content_owners
+data_type: educational_web_and_document_resources
+access_method: asset_inventory_and_review_before_collection
+license: TO_VERIFY_PER_ASSET
+license_url: null
+license_evidence: "KreyolBench has not recorded a uniform license covering all portal resources."
+citation: "Cite each MENFP resource, credited author, edition, URL, and retrieval date."
+language_claim: fra_hat_mixed_TO_VERIFY
+registers: [education, instructional, administrative]
+domain: education
+temporal_coverage: TO_VERIFY
+geographic_relevance: Haiti
+expected_tasks: [classification, ner, retrieval, normalization]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Inventory educational resources and verify language and rights per asset."
+quality_notes: "Grade level, curriculum alignment, authorship, scans/OCR, editions, and language mix require review."
+machine_generated_content_risk: unknown
+pii_risk: medium
+duplication_risk: medium
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://menfp.gouv.ht/]

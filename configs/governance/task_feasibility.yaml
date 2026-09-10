@@ -1,0 +1,103 @@
+schema_version: 1
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+  - KB-GOV-002
+  - KB-GOV-003
+  - KB-SCOPE-002
+  - KB-TASK-CLS-001
+  - KB-TASK-NER-001
+  - KB-TASK-RET-001
+  - KB-TASK-NORM-001
+  - KB-TASK-CS-001
+requires_expert_validation: true
+release_candidate: false
+tasks:
+  - task_instance_id: kb_cls_topic_multilabel_v0_1
+    dimensions:
+      source_authorization_availability: MISSING
+      linguistic_representativeness: MISSING
+      annotation_complexity: PARTIAL
+      native_speaker_requirements: EVIDENCE_AVAILABLE
+      schema_readiness: PARTIAL
+      metric_validity: PARTIAL
+      split_contamination_risk: PARTIAL
+      baseline_readiness: PARTIAL
+      compute_requirements: EVIDENCE_AVAILABLE
+      publication_novelty: PARTIAL
+      twelve_month_feasibility: PARTIAL
+    overall: CONDITIONAL
+    source_candidates: [mspp_publications, menfp_educational_resources, haiti_government_publications, haitian_news_candidates, wikimedia_htwiki]
+    blockers: [source-specific authorization, qualified external review, topic-ontology pilot, multi-label agreement evidence]
+    rationale: The revised flat ontology and contract are testable, but no real corpus, external approval, or empirical ontology evidence exists.
+
+  - task_instance_id: kb_ie_ner_charspan_v0_1
+    dimensions:
+      source_authorization_availability: MISSING
+      linguistic_representativeness: MISSING
+      annotation_complexity: PARTIAL
+      native_speaker_requirements: EVIDENCE_AVAILABLE
+      schema_readiness: PARTIAL
+      metric_validity: PARTIAL
+      split_contamination_risk: PARTIAL
+      baseline_readiness: PARTIAL
+      compute_requirements: EVIDENCE_AVAILABLE
+      publication_novelty: PARTIAL
+      twelve_month_feasibility: PARTIAL
+    overall: CONDITIONAL
+    source_candidates: [mspp_publications, menfp_educational_resources, haiti_government_communication_portal, haitian_news_candidates, radio_haiti_inter_lrec2026]
+    blockers: [source-specific authorization, qualified linguistic and NER review, entity-ontology pilot, contiguous-span agreement evidence]
+    rationale: Canonical offsets and contiguous-span rules are implemented, but ontology, source, and external-review evidence remain provisional.
+
+  - task_instance_id: kb_ret_hybrid_query_v0_1
+    dimensions:
+      source_authorization_availability: MISSING
+      linguistic_representativeness: MISSING
+      annotation_complexity: PARTIAL
+      native_speaker_requirements: EVIDENCE_AVAILABLE
+      schema_readiness: PARTIAL
+      metric_validity: PARTIAL
+      split_contamination_risk: PARTIAL
+      baseline_readiness: PARTIAL
+      compute_requirements: EVIDENCE_AVAILABLE
+      publication_novelty: PARTIAL
+      twelve_month_feasibility: PARTIAL
+    overall: CONDITIONAL
+    source_candidates: [mspp_publications, menfp_educational_resources, haiti_civil_protection_resources, mit_ayiti_resources, wikimedia_htwiki, un_haiti_ht]
+    blockers: [document redistribution rights, qualified domain and IR review, ethical query acquisition, pooling and qrel evidence]
+    rationale: Query provenance and unjudged-document contracts are implemented, but corpus rights, realistic query evidence, and pooling adequacy are unresolved.
+
+  - task_instance_id: kb_norm_orthography_v0_1
+    dimensions:
+      source_authorization_availability: MISSING
+      linguistic_representativeness: MISSING
+      annotation_complexity: PARTIAL
+      native_speaker_requirements: EVIDENCE_AVAILABLE
+      schema_readiness: PARTIAL
+      metric_validity: PARTIAL
+      split_contamination_risk: PARTIAL
+      baseline_readiness: PARTIAL
+      compute_requirements: EVIDENCE_AVAILABLE
+      publication_novelty: PARTIAL
+      twelve_month_feasibility: PARTIAL
+    overall: CONDITIONAL
+    source_candidates: [aka_publications, radio_haiti_inter_lrec2026, haitian_news_candidates, diaspora_publications, social_media_candidates]
+    blockers: [source-specific authorization, qualified orthography review, normative-rule evidence, multiple-reference pilot evaluation]
+    rationale: The revised core and auxiliary strata are coherent, but each rule needs authority evidence and independent linguistic validation.
+
+  - task_instance_id: kb_lc_token_language_id_v0_1
+    dimensions:
+      source_authorization_availability: MISSING
+      linguistic_representativeness: MISSING
+      annotation_complexity: PARTIAL
+      native_speaker_requirements: EVIDENCE_AVAILABLE
+      schema_readiness: PARTIAL
+      metric_validity: PARTIAL
+      split_contamination_risk: PARTIAL
+      baseline_readiness: PARTIAL
+      compute_requirements: EVIDENCE_AVAILABLE
+      publication_novelty: PARTIAL
+      twelve_month_feasibility: PARTIAL
+    overall: CONDITIONAL
+    source_candidates: [radio_haiti_duke_archive, radio_haiti_inter_lrec2026, haitian_news_candidates, diaspora_publications, social_media_candidates]
+    blockers: [source-specific authorization, qualified sociolinguistic review, contact-ontology pilot, factorized agreement evidence]
+    rationale: The factorized contract addresses language-ID conflation, but borrowing, ambiguity, tokenization, and source ethics require empirical and external review.

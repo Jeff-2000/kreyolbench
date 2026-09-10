@@ -1,8 +1,22 @@
 task: ner
-primary_metric: span_f1
-input_fields: [tokens]
-target_fields: [tags]
+task_instance_id: kb_ie_ner_charspan_v0_1
+task_family_id: information_extraction
+task_type_id: named_entity_recognition
+task_variant: character_span_nested_optional
+scope_status: PILOT_CANDIDATE
+scientific_status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-EVAL-001, KB-SPLIT-001, KB-SCOPE-001, KB-SCOPE-002, KB-GOV-002, KB-GOV-003, KB-TASK-NER-001]
+requires_expert_validation: true
+primary_metric: exact_character_span_micro_f1_candidate
+input_fields: [text]
+target_fields: [entities]
 labels_config: configs/labels/ner.yaml
-tag_scheme: BIO
-v0: true
-
+canonical_representation: character_spans
+supports_nested: true
+nested_annotation_required: false
+nested_annotation_enabled: false
+allow_crossing: false
+scored_span_structure: contiguous
+discontinuous_policy: flag_and_exclude_from_v0_1_scoring
+offset_unit: unicode_code_point
+derived_exports: [BIO, BILOU]

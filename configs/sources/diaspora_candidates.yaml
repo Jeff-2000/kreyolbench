@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: diaspora_publications
+record_type: SOURCE_FAMILY
+parent_source_id: null
+name: Haitian Creole Diaspora Publications
+url: null
+provider: TO_VERIFY_PER_PUBLICATION
+publisher_owner: TO_VERIFY_PER_PUBLICATION
+data_type: diaspora_publication_family
+access_method: discovery_metadata_only
+license: TO_VERIFY_PER_PUBLICATION_AND_ITEM
+license_url: null
+license_evidence: "No collection or reuse permission is implied by discovery."
+citation: "TO_VERIFY_PER_PUBLICATION_AND_ITEM"
+language_claim: hat_and_multilingual_TO_VERIFY
+registers: [diaspora, formal, informal, codeswitch]
+domain: diaspora_communication
+temporal_coverage: TO_VERIFY
+geographic_relevance: diaspora_regions_TO_VERIFY
+expected_tasks: [classification, ner, retrieval, normalization, codeswitch]
+accessed_on: null
+collection_date: null
+hash: null
+notes: "Discovery container only; avoid geographic profiling of individuals."
+quality_notes: "Rights, register, dialect, code-switching, representativeness, privacy, and duplication require review."
+machine_generated_content_risk: medium
+pii_risk: high
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: DISCOVERED
+  access_status: UNKNOWN
+  legal_review_status: NOT_STARTED
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: []

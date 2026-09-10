@@ -16,9 +16,16 @@ def test_sentence_split_keeps_abbreviation():
 
 
 def test_orthography_preserves_raw():
-    result = normalize_orthography("m pa konn si lap vini")
-    assert result.raw_text == "m pa konn si lap vini"
+    result = normalize_orthography("M pa konnen si lap vini")
+    assert result.raw_text == "M pa konnen si lap vini"
     assert "l ap" in result.normalized_text
+    assert result.normalized_text.startswith("M pa konnen")
+
+
+def test_default_normalizer_does_not_expand_lexical_variants():
+    result = normalize_orthography("m pa konn")
+
+    assert result.normalized_text == "m pa konn"
 
 
 def test_langid_and_pii():
@@ -30,4 +37,3 @@ def test_langid_and_pii():
 def test_dedupe_helpers():
     assert normalized_hash("Bonjou!") == normalized_hash("bonjou")
     assert token_jaccard("lave men", "lave men ak savon") > 0.4
-

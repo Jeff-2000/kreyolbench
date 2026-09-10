@@ -1,0 +1,31 @@
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-002, KB-ANN-001, KB-TASK-NORM-001]
+requires_expert_validation: true
+release_candidate: false
+registry_version: orthography-evidence-v0.1-candidate.1
+rules:
+  - rule_id: KB-ORTH-CAND-001
+    transformation_type: apostrophe
+    description: Candidate handling of apostrophe-separated preverbal forms.
+    authority_status: TO_VERIFY
+    authority: UNKNOWN
+    publication: UNKNOWN
+    publication_version: UNKNOWN
+    evidence_url: null
+    scientific_use: Synthetic contract testing only; not an approved normative rule.
+  - rule_id: KB-ORTH-CAND-002
+    transformation_type: spacing
+    description: Candidate handling of spacing in elided pronoun-plus-marker sequences.
+    authority_status: TO_VERIFY
+    authority: UNKNOWN
+    publication: UNKNOWN
+    publication_version: UNKNOWN
+    evidence_url: null
+    scientific_use: Synthetic contract testing only; not an approved normative rule.
+context_sources:
+  - citation: Albert Valdman, L'Akademi Kreyol Ayisyen et la standardisation du creole haitien.
+    evidence_url: https://scholarworks.iu.edu/dspace/items/f9ef342f-c1cc-40bc-b29f-747985df5eed
+    role: Scholarly context on standardization and morphophonological variation; not automatic rule authority.
+  - citation: Bambi B. Schieffelin and Rachelle Charlier Doucet, The Real Haitian Creole.
+    evidence_url: https://anthrosource.onlinelibrary.wiley.com/doi/10.1525/ae.1994.21.1.02a00090
+    role: Sociolinguistic context on orthographic choice; not automatic rule authority.

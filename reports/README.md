@@ -1,0 +1,42 @@
+# Reports
+
+## Purpose
+
+`reports/` contains research outputs, datasheets, baseline summaries, and publication-facing artifacts.
+
+## Status
+
+Current status: TO_REVIEW_LATER
+
+Owner: Codex
+
+Requires expert validation: Yes for publication claims.
+
+## Current State
+
+Current reports are scaffold-level and must not be treated as final benchmark evidence.
+
+`EXPERT_REVIEW_PACKET_V0_1.md` records completed project-policy review.
+`TASK_SPEC_REVIEW_PACKET_V0_1.md` is the controlled interface for independent
+review of the five provisional v0.1 task specifications.
+`INTERNAL_TASK_SCIENTIFIC_AUDIT_V0_1.md` records the AI-assisted internal
+pre-review and cannot satisfy the external task-review gate.
+`reviews/` contains reusable external-review evidence requirements and forms.
+`V0_1_TASK_FEASIBILITY_MATRIX.md` records evidence gaps and source-to-task fit.
+The master paper outline covers the first controlled release only; it does not define the global KreyolBench task universe. Long-term scope is governed by `datasets/TASK_TAXONOMY.md` and `KB-SCOPE-002`.
+
+## Rules
+
+- Separate scaffold reports from publication-ready reports.
+- Link publication artifacts to `reports/PAPER_OUTLINE.md`.
+- Do not publish benchmark claims without validated data, metrics, and reproducible runs.
+- Include limitations and source-review status.
+
+## Revision History
+
+| Date | Change | Status |
+| --- | --- | --- |
+| 2026-09-01 | Initial reports subsystem specification. | TO_REVIEW_LATER |
+| 2026-09-08 | Added the v0.1 expert-review packet. | TO_REVIEW_LATER |
+| 2026-09-09 | Added the task review packet and evidence-based feasibility matrix. | TO_REVIEW_LATER |
+| 2026-09-10 | Added the internal audit record and qualified external-review evidence templates. | TO_REVIEW_LATER |

@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: aka_official
+record_type: SOURCE_FAMILY
+parent_source_id: null
+name: Akademi Kreyol Ayisyen Official Resources
+url: https://www.akademikreyol.net/
+provider: Akademi Kreyol Ayisyen
+publisher_owner: Akademi Kreyol Ayisyen_and_credited_owners
+data_type: institutional_linguistic_resource_family
+access_method: review_and_permission_request_only
+license: COPYRIGHT_OR_PERMISSION_REQUIRED
+license_url: https://www.akademikreyol.net/
+license_evidence: "The official site identifies downloadable publications but displays a no-copy copyright notice."
+citation: "Akademi Kreyol Ayisyen official site and resource-specific bibliographic citation."
+language_claim: hat
+registers: [normative, formal, linguistic, terminology]
+domain: language_governance
+temporal_coverage: TO_VERIFY_PER_RESOURCE
+geographic_relevance: Haiti_and_diaspora
+expected_tasks: [normalization, terminology, linguistic_evaluation]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Critical candidate for scientific consultation; contact AKA before any collection beyond metadata review."
+quality_notes: "Distinguish normative guidance from observed language variation and preserve publication-level provenance."
+machine_generated_content_risk: low
+pii_risk: low
+duplication_risk: medium
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://www.akademikreyol.net/]

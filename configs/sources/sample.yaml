@@ -1,0 +1,54 @@
+source_schema_version: 2
+source_id: sample
+record_type: SOURCE_COLLECTION
+parent_source_id: null
+name: KreyolBench Synthetic Sample Fixtures
+url: null
+provider: KreyolBench contributors
+publisher_owner: KreyolBench contributors
+data_type: synthetic_jsonl_examples
+access_method: repository_fixture
+license: CC0-1.0
+license_url: https://creativecommons.org/publicdomain/zero/1.0/
+license_evidence: "The fixtures are original project test data released under the repository's declared fixture license."
+citation: "KreyolBench synthetic sample fixtures."
+language_claim: hat_and_documented_code_switching
+registers: [synthetic, software_test]
+domain: synthetic_test_fixtures
+temporal_coverage: not_applicable
+geographic_relevance: not_applicable
+expected_tasks:
+  - classification
+  - sentiment
+  - ner
+  - qa
+  - retrieval
+  - normalization
+  - codeswitch
+  - translation
+  - summarization
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Synthetic examples test interfaces only and must never support benchmark findings."
+quality_notes: "Fixtures validate software behavior; they are explicitly excluded from scientific evidence."
+machine_generated_content_risk: low
+pii_risk: low
+duplication_risk: low
+status: TO_REVIEW_LATER
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: false
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: NOT_APPLICABLE
+  collection_status: NOT_APPLICABLE
+  derived_use_status: APPROVED
+  redistribution_status: APPROVED
+  commercial_use_status: APPROVED
+  ethics_status: NOT_APPLICABLE
+  scientific_status: EXCLUDED
+  reviewed_by: KreyolBench maintainers
+  reviewed_on: 2026-09-09
+  evidence_urls: [https://creativecommons.org/publicdomain/zero/1.0/]

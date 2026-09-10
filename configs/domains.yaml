@@ -1,0 +1,29 @@
+schema_version: 1
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-SCOPE-001, KB-SCOPE-002]
+requires_expert_validation: true
+release_candidate: false
+open_world: true
+domains:
+  - {domain_id: health, scope_status: DISCOVERY}
+  - {domain_id: education, scope_status: DISCOVERY}
+  - {domain_id: civic_admin, scope_status: DISCOVERY}
+  - {domain_id: disaster_response, scope_status: DISCOVERY}
+  - {domain_id: religion, scope_status: DISCOVERY}
+  - {domain_id: news, scope_status: DISCOVERY}
+  - {domain_id: culture, scope_status: DISCOVERY}
+  - {domain_id: other, scope_status: DISCOVERY}
+  - {domain_id: agriculture, scope_status: ROADMAP}
+  - {domain_id: environment, scope_status: ROADMAP}
+  - {domain_id: justice_law, scope_status: ROADMAP}
+  - {domain_id: economics, scope_status: ROADMAP}
+  - {domain_id: finance, scope_status: ROADMAP}
+  - {domain_id: migration, scope_status: ROADMAP}
+  - {domain_id: diaspora, scope_status: ROADMAP}
+  - {domain_id: science_stem, scope_status: ROADMAP}
+  - {domain_id: history, scope_status: ROADMAP}
+  - {domain_id: literature, scope_status: ROADMAP}
+  - {domain_id: social_media, scope_status: ROADMAP}
+  - {domain_id: everyday_conversation, scope_status: ROADMAP}
+  - {domain_id: labor_employment, scope_status: ROADMAP}
+  - {domain_id: humanitarian_response, scope_status: ROADMAP}

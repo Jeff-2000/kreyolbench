@@ -1,16 +1,47 @@
+source_schema_version: 2
 source_id: creoleval
+record_type: SOURCE_FAMILY
+parent_source_id: null
 name: CreoleVal
 url: https://github.com/hclent/CreoleVal
-access_method: upstream_loader_or_metadata_only
-license: mixed_upstream
-license_url: https://huggingface.co/papers/2310.19567
-redistribution_allowed: null
-citation: "Lent et al. CreoleVal: Multilingual Multitask Benchmarks for Creoles."
+provider: CreoleVal authors and upstream dataset providers
+publisher_owner: MIXED_UPSTREAM
+data_type: multilingual_benchmark_collection
+access_method: upstream_loader_or_metadata_only_after_subset_review
+license: MIXED_UPSTREAM
+license_url: https://github.com/hclent/CreoleVal
+license_evidence: "CreoleVal aggregates tasks and upstream resources with subset-specific provenance and terms."
+citation: "Lent et al. CreoleVal: Multilingual Multitask Benchmarks for Creoles, plus each upstream subset citation."
 language_claim: hat_and_other_creoles
+registers: [mixed, benchmark]
 domain: benchmark
+temporal_coverage: TO_VERIFY_PER_SUBSET
+geographic_relevance: MULTI_REGION
+expected_tasks: [classification, machine_translation, language_model_evaluation]
+accessed_on: 2026-09-09
 collection_date: null
 hash: null
-notes: "Do not repackage restricted subsets; preserve upstream licenses."
+notes: "Do not treat the repository as one uniformly licensed dataset; register Haitian Creole subsets separately."
+quality_notes: "Task construction, translations, overlap, and upstream provenance require subset-level review."
+machine_generated_content_risk: unknown
 pii_risk: low
-review_status: pending_subset_review
-
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://github.com/hclent/CreoleVal
+    - https://aclanthology.org/2024.tacl-1.53/

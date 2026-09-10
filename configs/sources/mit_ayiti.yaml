@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: mit_ayiti_resources
+record_type: SOURCE_FAMILY
+parent_source_id: null
+name: MIT-Ayiti Educational Resources
+url: https://haiti.mit.edu/resources/
+provider: MIT-Haiti Initiative and credited upstream projects
+publisher_owner: MIT_and_credited_upstream_owners
+data_type: educational_resource_family
+access_method: metadata_and_asset_license_review
+license: PAGE_CC_BY_4_WITH_ASSET_LEVEL_REVIEW_REQUIRED
+license_url: https://haiti.mit.edu/resources/
+license_evidence: "The resources page displays CC BY 4.0, while linked tools and materials may have separate owners and terms."
+citation: "MIT-Haiti Initiative plus resource-specific authors, owners, and citations."
+language_claim: hat_and_parallel_materials
+registers: [education, stem, instructional, terminology]
+domain: education
+temporal_coverage: TO_VERIFY_PER_RESOURCE
+geographic_relevance: Haiti
+expected_tasks: [retrieval, normalization, terminology, education_evaluation]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Create child records for each resource or corpus; do not apply the page license automatically to linked assets."
+quality_notes: "Educational level, translation provenance, modality, linked-resource ownership, and overlap require review."
+machine_generated_content_risk: low
+pii_risk: low
+duplication_risk: medium
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://haiti.mit.edu/resources/]

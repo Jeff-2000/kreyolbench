@@ -1,12 +1,25 @@
 name: kreyolbench
-version: v0.1
+program_id: kreyolbench-research-program
+ecosystem_id: kreyolbench-benchmark-ecosystem
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+  - KB-DEC-001
+  - KB-DATA-001
+  - KB-DATA-002
+  - KB-ANN-001
+  - KB-EVAL-001
+  - KB-SPLIT-001
+  - KB-PUB-001
+  - KB-SCOPE-001
+  - KB-SCOPE-002
+requires_expert_validation: true
+release_candidate: false
 language:
   iso_639_3: hat
   bcp47: ht
   name: Haitian Creole
-splits: [train, validation, test_public, test_hidden]
-v0_tasks: [classification, ner, qa, retrieval, normalization, codeswitch, translation]
-domains: [health, education, civic_admin, disaster_response, religion, news, culture, other]
+task_taxonomy: configs/task_taxonomy.yaml
+domain_registry: configs/domains.yaml
+release_registry: configs/releases
+current_pilot_release: v0.1
 default_license_policy: review_required
-hidden_test_policy: metadata_only_until_eval_server
-

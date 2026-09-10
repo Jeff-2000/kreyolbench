@@ -1,3 +1,10 @@
-sentence_labels: [hat, hat-fra, hat-eng, hat-spa, mixed-other, unknown]
-token_labels: [B-HAT, I-HAT, B-FRA, I-FRA, B-ENG, I-ENG, B-SPA, I-SPA, PUNCT, NUM, OTHER]
-
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-TASK-CS-001]
+requires_expert_validation: true
+release_candidate: false
+language_ids: [hat, fra, eng, spa, mul, und, zxx]
+allow_registered_iso639_3: true
+token_types: [WORD, NAMED_ENTITY, NUMBER, PUNCTUATION, SYMBOL, URL, EMOJI]
+contact_statuses: [NONE, ACTIVE_SWITCH, ESTABLISHED_BORROWING, MIXED_INTRATOKEN, SHARED_AMBIGUOUS, UNCERTAIN]
+uncertainty_values: [NONE, AMBIGUOUS_FORM, INSUFFICIENT_CONTEXT, TOKENIZATION_UNCERTAIN]
+sentence_composition: derived

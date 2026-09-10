@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import math
 import re
-from collections import Counter, defaultdict
+from collections import Counter
 from typing import Any
 
 
@@ -36,6 +36,41 @@ def classification_scores(predictions: list[str], references: list[str]) -> dict
     }
 
 
+def multilabel_classification_scores(
+    predictions: list[list[str]], references: list[list[str]]
+) -> dict[str, float]:
+    """Compute set-based multi-label scores without choosing model thresholds."""
+
+    _check_lengths(predictions, references)
+    labels = sorted({label for row in predictions + references for label in row})
+    per_label_f1 = []
+    total_tp = total_fp = total_fn = 0
+    sample_f1s = []
+    exact = []
+    for predicted, reference in zip(predictions, references):
+        predicted_set = set(predicted)
+        reference_set = set(reference)
+        tp = len(predicted_set & reference_set)
+        fp = len(predicted_set - reference_set)
+        fn = len(reference_set - predicted_set)
+        total_tp += tp
+        total_fp += fp
+        total_fn += fn
+        sample_f1s.append(_f1(tp, fp, fn))
+        exact.append(float(predicted_set == reference_set))
+    for label in labels:
+        tp = sum(label in p and label in r for p, r in zip(predictions, references))
+        fp = sum(label in p and label not in r for p, r in zip(predictions, references))
+        fn = sum(label not in p and label in r for p, r in zip(predictions, references))
+        per_label_f1.append(_f1(tp, fp, fn))
+    return {
+        "subset_accuracy": sum(exact) / len(exact) if exact else 0.0,
+        "micro_f1": _f1(total_tp, total_fp, total_fn),
+        "macro_f1": sum(per_label_f1) / len(per_label_f1) if per_label_f1 else 0.0,
+        "sample_f1": sum(sample_f1s) / len(sample_f1s) if sample_f1s else 0.0,
+    }
+
+
 def token_accuracy(predictions: list[list[str]], references: list[list[str]]) -> float:
     _check_lengths(predictions, references)
     total = 0
@@ -59,6 +94,54 @@ def span_f1(predictions: list[list[str]], references: list[list[str]]) -> dict[s
     fp = sum((pred_spans - ref_spans).values())
     fn = sum((ref_spans - pred_spans).values())
     return {"span_f1": _f1(tp, fp, fn), "precision": _precision(tp, fp), "recall": _recall(tp, fn)}
+
+
+def character_span_scores(
+    predictions: list[list[dict[str, Any]]], references: list[list[dict[str, Any]]]
+) -> dict[str, float]:
+    """Score exact typed character spans, including nested spans."""
+
+    _check_lengths(predictions, references)
+    predicted_spans: Counter[tuple[int, int, int, str]] = Counter()
+    reference_spans: Counter[tuple[int, int, int, str]] = Counter()
+    for row_index, (predicted, reference) in enumerate(zip(predictions, references)):
+        predicted_spans.update(
+            (row_index, item["start_char"], item["end_char"], item["label"])
+            for item in predicted
+        )
+        reference_spans.update(
+            (row_index, item["start_char"], item["end_char"], item["label"])
+            for item in reference
+        )
+    tp = sum((predicted_spans & reference_spans).values())
+    fp = sum((predicted_spans - reference_spans).values())
+    fn = sum((reference_spans - predicted_spans).values())
+    return {
+        "span_f1": _f1(tp, fp, fn),
+        "precision": _precision(tp, fp),
+        "recall": _recall(tp, fn),
+    }
+
+
+def token_classification_scores(
+    predictions: list[list[str]], references: list[list[str]]
+) -> dict[str, float]:
+    """Compute direct token-label scores without BIO span interpretation."""
+
+    _check_lengths(predictions, references)
+    flat_predictions: list[str] = []
+    flat_references: list[str] = []
+    for predicted, reference in zip(predictions, references):
+        _check_lengths(predicted, reference)
+        flat_predictions.extend(predicted)
+        flat_references.extend(reference)
+    scores = classification_scores(flat_predictions, flat_references)
+    return {
+        "token_accuracy": scores["accuracy"],
+        "micro_f1": scores["accuracy"],
+        "macro_f1": scores["macro_f1"],
+        "weighted_f1": scores["weighted_f1"],
+    }
 
 
 def bio_spans(tags: list[str]) -> list[tuple[int, int, str]]:
@@ -100,6 +183,8 @@ def retrieval_scores(
     mrrs = []
     ndcgs = []
     recalls = []
+    judged_rates = []
+    bprefs = []
     for ranked_docs, relevant in zip(rankings, qrels):
         ranked_at_k = ranked_docs[:k]
         relevant_docs = {doc_id for doc_id, rel in relevant.items() if rel > 0}
@@ -111,10 +196,32 @@ def retrieval_scores(
         idcg = sum((2**gain - 1) / math.log2(index + 2) for index, gain in enumerate(ideal))
         ndcgs.append(dcg / idcg if idcg else 0.0)
         recalls.append(len(set(ranked_at_k) & relevant_docs) / len(relevant_docs) if relevant_docs else 0.0)
+        judged_rates.append(
+            sum(doc_id in relevant for doc_id in ranked_at_k) / len(ranked_at_k)
+            if ranked_at_k
+            else 0.0
+        )
+        judged_nonrelevant = {doc_id for doc_id, rel in relevant.items() if rel == 0}
+        denominator = min(len(relevant_docs), len(judged_nonrelevant))
+        if not relevant_docs or denominator == 0:
+            bprefs.append(0.0)
+        else:
+            ranked_positions = {doc_id: index for index, doc_id in enumerate(ranked_docs)}
+            preferences = []
+            for relevant_doc in relevant_docs:
+                relevant_rank = ranked_positions.get(relevant_doc, len(ranked_docs))
+                nonrelevant_above = sum(
+                    ranked_positions.get(doc_id, len(ranked_docs)) < relevant_rank
+                    for doc_id in judged_nonrelevant
+                )
+                preferences.append(1.0 - min(nonrelevant_above, denominator) / denominator)
+            bprefs.append(sum(preferences) / len(preferences))
     return {
         f"mrr_at_{k}": sum(mrrs) / len(mrrs) if mrrs else 0.0,
         f"ndcg_at_{k}": sum(ndcgs) / len(ndcgs) if ndcgs else 0.0,
         f"recall_at_{k}": sum(recalls) / len(recalls) if recalls else 0.0,
+        f"judged_at_{k}": sum(judged_rates) / len(judged_rates) if judged_rates else 0.0,
+        "bpref": sum(bprefs) / len(bprefs) if bprefs else 0.0,
     }
 
 
@@ -125,18 +232,51 @@ def normalization_scores(predictions: list[str], references: list[str]) -> dict[
     }
 
 
+def normalization_reference_scores(
+    predictions: list[str], references: list[list[str]]
+) -> dict[str, float]:
+    """Score normalization against one or more accepted references."""
+
+    _check_lengths(predictions, references)
+    exact = []
+    closest_token_f1 = []
+    for prediction, accepted in zip(predictions, references):
+        if not accepted:
+            raise ValueError("normalization references must not be empty")
+        exact.append(float(prediction in accepted))
+        closest_token_f1.append(
+            max(_token_f1(prediction.casefold(), reference.casefold()) for reference in accepted)
+        )
+    return {
+        "exact_match_any_reference": sum(exact) / len(exact) if exact else 0.0,
+        "closest_reference_token_f1": (
+            sum(closest_token_f1) / len(closest_token_f1) if closest_token_f1 else 0.0
+        ),
+    }
+
+
 def evaluate_task(task: str, predictions: Any, references: Any) -> dict[str, float]:
-    if task in {"classification", "sentiment", "codeswitch"}:
+    """Dispatch metrics for implemented runtime aliases, not all roadmap tasks."""
+    if task == "classification":
         if predictions and isinstance(predictions[0], list):
-            return {"token_accuracy": token_accuracy(predictions, references), **span_f1(predictions, references)}
+            return multilabel_classification_scores(predictions, references)
         return classification_scores(predictions, references)
+    if task == "sentiment":
+        return classification_scores(predictions, references)
+    if task == "codeswitch":
+        return token_classification_scores(predictions, references)
     if task == "ner":
+        first_sequence = predictions[0] if predictions else (references[0] if references else [])
+        if first_sequence and isinstance(first_sequence[0], dict):
+            return character_span_scores(predictions, references)
         return span_f1(predictions, references)
     if task == "qa":
         return qa_scores(predictions, references)
     if task == "retrieval":
         return retrieval_scores(predictions, references)
     if task == "normalization":
+        if references and isinstance(references[0], list):
+            return normalization_reference_scores(predictions, references)
         return normalization_scores(predictions, references)
     if task in {"translation", "summarization"}:
         return normalization_scores(predictions, references)
@@ -179,4 +319,3 @@ def _token_f1(prediction: str, reference: str) -> float:
     precision = common / sum(pred_counts.values())
     recall = common / sum(ref_counts.values())
     return 2 * precision * recall / (precision + recall)
-

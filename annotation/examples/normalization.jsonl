@@ -1,2 +1,1 @@
-{"raw_text":"m pa konn si lap vini","normalized_text":"mwen pa konnen si l ap vini"}
-
+{"raw_text":"M pa konnen si lap vini","decision":"ERROR_CORRECTION","references":["M pa konnen si l ap vini"],"edits":[{"type":"spacing","evaluation_stratum":"CORE","rule_id":"KB-ORTH-CAND-002","raw_start":15,"raw_end":18,"raw":"lap","replacement":"l ap"}]}

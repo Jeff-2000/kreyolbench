@@ -1,16 +1,45 @@
+source_schema_version: 2
 source_id: opus
+record_type: SOURCE_FAMILY
+parent_source_id: null
 name: OPUS Parallel Corpora
 url: https://opus.nlpl.eu/
-access_method: opus_api
-license: mixed_corpus_specific
-license_url: https://opus.nlpl.eu/opusapi/
-redistribution_allowed: null
-citation: "Tiedemann 2012 OPUS plus corpus-specific citations."
+provider: OPUS and corpus-specific upstream providers
+publisher_owner: MIXED_UPSTREAM
+data_type: parallel_corpus_family
+access_method: opus_api_metadata_only_until_subset_review
+license: MIXED_CORPUS_SPECIFIC
+license_url: https://opus.nlpl.eu/corpora
+license_evidence: "OPUS is an aggregation service; rights and conditions differ by upstream corpus."
+citation: "Tiedemann 2012 OPUS plus corpus-specific upstream citations."
 language_claim: multilingual
+registers: [mixed, parallel_text]
 domain: parallel_text
+temporal_coverage: TO_VERIFY_PER_SUBSET
+geographic_relevance: MULTI_REGION
+expected_tasks: [translation]
+accessed_on: 2026-09-09
 collection_date: null
 hash: null
-notes: "Query OPUS API for hat/en, hat/fr, hat/es candidates; inspect corpus licenses."
-pii_risk: low
-review_status: pending_subset_review
-
+notes: "Create a SOURCE_SUBSET record before using any Haitian Creole pair or OPUS corpus."
+quality_notes: "Alignment quality, duplication, machine translation, and licensing vary by corpus."
+machine_generated_content_risk: high
+pii_risk: unknown
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://opus.nlpl.eu/corpora]

@@ -1,16 +1,45 @@
+source_schema_version: 2
 source_id: mspp_publications
-name: Ministere de la Sante Publique et de la Population Publications
+record_type: SOURCE_COLLECTION
+parent_source_id: haiti_government_publications
+name: MSPP Publications
 url: https://mspp.gouv.ht/publications
-access_method: targeted_html_pdf_collection
-license: review_required
+provider: Ministere de la Sante Publique et de la Population
+publisher_owner: MSPP
+data_type: html_and_pdf_documents
+access_method: targeted_document_review_before_collection
+license: TO_VERIFY_PER_DOCUMENT
 license_url: https://mspp.gouv.ht/
-redistribution_allowed: null
-citation: "MSPP publication pages and document URLs."
-language_claim: fra_hat_mixed
+license_evidence: "Official publication does not by itself establish permission to collect or redistribute document text."
+citation: "Cite each MSPP document, publisher, URL, date, and retrieval date."
+language_claim: fra_hat_mixed_TO_VERIFY
+registers: [health, administrative, public_information]
 domain: public_health
+temporal_coverage: TO_VERIFY
+geographic_relevance: Haiti
+expected_tasks: [classification, ner, retrieval, normalization]
+accessed_on: null
 collection_date: null
 hash: null
-notes: "Government/public-health source; verify document terms before redistributing text."
+notes: "Review document language, rights, sensitive health content, and PDF/OCR handling individually."
+quality_notes: "Language mix, OCR quality, document dates, boilerplate, and privacy risk require review."
+machine_generated_content_risk: unknown
 pii_risk: medium
-review_status: pending_legal_review
-
+duplication_risk: medium
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: DISCOVERED
+  access_status: UNKNOWN
+  legal_review_status: PENDING
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://mspp.gouv.ht/]

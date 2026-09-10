@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: radio_haiti_duke_archive
+record_type: SOURCE_COLLECTION
+parent_source_id: null
+name: Radio Haiti Archive at Duke University
+url: https://repository.duke.edu/dc/radiohaiti
+provider: Duke University Libraries and Radio Haiti collection stakeholders
+publisher_owner: MIXED_ITEM_LEVEL_RIGHTS
+data_type: archival_audio_and_metadata
+access_method: item_metadata_and_rights_review
+license: LIMITED_REUSE_AND_ITEM_LEVEL_EXCEPTIONS
+license_url: https://repository.duke.edu/dc/radiohaiti
+license_evidence: "Repository items may carry reuse statements while third-party material and item-level restrictions still apply."
+citation: "Radio Haiti Archive, David M. Rubenstein Rare Book and Manuscript Library, Duke University; include item ID."
+language_claim: hat_fra_mixed
+registers: [spoken, broadcast, interview, code_switching, diachronic]
+domain: media_and_oral_history
+temporal_coverage: archival_TO_VERIFY_PER_ITEM
+geographic_relevance: Haiti_and_diaspora
+expected_tasks: [asr, codeswitch, ner, retrieval, diachronic_analysis]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "High-priority research resource; preserve item identifiers and conduct item-level rights and sensitivity review."
+quality_notes: "Audio quality, speakers, transcription availability, code-switching, temporal variation, and rights vary by item."
+machine_generated_content_risk: low
+pii_risk: high
+duplication_risk: medium
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: CONDITIONAL
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: CONDITIONAL
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: [https://repository.duke.edu/dc/radiohaiti]

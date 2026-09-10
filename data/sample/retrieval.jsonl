@@ -1,2 +1,0 @@
-{"id":"kb_sample_ir_0001","task":"retrieval","language":"hat","split":"test_public","domain":"health","source":{"source_id":"sample","url":null,"license":"CC0-1.0","retrieved_at":"2026-06-04"},"input":{"query":"kijan pou evite kolera","documents":[{"doc_id":"doc1","text":"Lave men ak savon epi trete dlo pou evite kolera."},{"doc_id":"doc2","text":"Biwo leta yo ouvri lendi."}]},"target":{"relevant_docs":[{"doc_id":"doc1","relevance":3},{"doc_id":"doc2","relevance":0}]},"metadata":{"synthetic":true,"pii_status":"checked"}}
-

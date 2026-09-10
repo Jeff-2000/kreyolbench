@@ -7,11 +7,8 @@ from dataclasses import dataclass
 
 
 DEFAULT_VARIANTS = {
-    r"\bm pa\b": "mwen pa",
-    r"\bpa p\b": "p ap",
     r"\bp'ap\b": "p ap",
     r"\blap\b": "l ap",
-    r"\bécole\b": "lekòl",
 }
 
 
@@ -34,4 +31,3 @@ def normalize_orthography(text: str, variants: dict[str, str] | None = None) -> 
             normalized = updated
     confidence = 1.0 if not edits else 0.75
     return NormalizationResult(text, normalized, edits, confidence)
-

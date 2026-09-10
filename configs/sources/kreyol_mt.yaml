@@ -1,0 +1,47 @@
+source_schema_version: 2
+source_id: jhu_kreyol_mt
+record_type: SOURCE_COLLECTION
+parent_source_id: null
+name: JHU Kreyol-MT
+url: https://huggingface.co/datasets/jhu-clsp/kreyol-mt
+provider: Johns Hopkins University Center for Language and Speech Processing and upstream providers
+publisher_owner: MIXED_UPSTREAM_TO_VERIFY
+data_type: multilingual_machine_translation_collection
+access_method: metadata_and_subset_review_before_download
+license: OTHER_AND_SUBSET_SPECIFIC_TO_VERIFY
+license_url: https://huggingface.co/datasets/jhu-clsp/kreyol-mt
+license_evidence: "The dataset card uses a nonstandard or 'other' license designation; upstream subsets require independent review."
+citation: "Robinson et al. Kreyol-MT, NAACL 2024, plus upstream subset citations."
+language_claim: multiple_creoles_including_hat
+registers: [parallel_text, mixed]
+domain: machine_translation
+temporal_coverage: TO_VERIFY_PER_SUBSET
+geographic_relevance: MULTI_REGION
+expected_tasks: [translation, translation_evaluation]
+accessed_on: 2026-09-09
+collection_date: null
+hash: null
+notes: "Do not infer uniform rights or Haitian Creole coverage from the collection-level record."
+quality_notes: "Audit language pairs, domains, source provenance, translations, duplicates, contamination, and licenses."
+machine_generated_content_risk: high
+pii_risk: unknown
+duplication_risk: high
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: NOT_STARTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://huggingface.co/datasets/jhu-clsp/kreyol-mt
+    - https://aclanthology.org/2024.naacl-long.170/

@@ -1,3 +1,7 @@
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-ANN-001, KB-TASK-CLS-001]
+requires_expert_validation: true
+release_candidate: false
 labels:
   - health
   - education
@@ -8,4 +12,46 @@ labels:
   - culture
   - religion
   - other
-
+label_mode: multi_label
+other_is_exclusive: true
+scoring_structure: flat
+ontology_version: topic-v0.1-candidate.2
+provenance_dimensions_not_labels: [domain, genre, register, source, audience]
+uncertainty_values: [CONFIDENT, UNCERTAIN, MISSING_CONTEXT]
+ontology:
+  health:
+    definition: health, disease, care, prevention, treatment, or health-system information
+    include: [disease prevention, access to care]
+    exclude: [a hospital named only as a location]
+  education:
+    definition: learning, schools, teaching, literacy, curricula, or education policy
+    include: [school enrollment, literacy instruction]
+    exclude: [a school named only as an event venue]
+  civic_admin:
+    definition: public services, government administration, elections, rights, or civic procedures
+    include: [obtaining a public document, voting procedures]
+    exclude: [a ministry mentioned only as publisher]
+  disaster_response:
+    definition: preparedness, emergency response, recovery, or humanitarian coordination
+    include: [hurricane preparedness, emergency shelter]
+    exclude: [weather without preparedness or response content]
+  economy:
+    definition: livelihoods, prices, trade, employment, production, or economic policy
+    include: [market prices, employment]
+    exclude: [a price incidental to a non-economic instruction]
+  security:
+    definition: public safety, violence, crime, policing, or conflict-related information
+    include: [safety alerts, violence prevention]
+    exclude: [health safety instructions]
+  culture:
+    definition: arts, heritage, language, media, history, or cultural practice
+    include: [literature, music, cultural heritage]
+    exclude: [a cultural reference incidental to another topic]
+  religion:
+    definition: religious institutions, practices, beliefs, observances, or communities
+    include: [religious observance, faith institutions]
+    exclude: [a church used only as a geographic landmark]
+  other:
+    definition: no substantive candidate topic applies; requires a taxonomy-gap justification
+    include: [documented taxonomy gap]
+    exclude: [use alongside any substantive label]
