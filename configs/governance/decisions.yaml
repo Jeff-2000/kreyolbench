@@ -291,3 +291,9 @@ decisions:
     status: TO_REVIEW_LATER
     requires_expert_approval: false
     review_history: []
+
+  - id: KB-ENG-008
+    title: Open-world discovery intake and claim-level metadata evidence
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []

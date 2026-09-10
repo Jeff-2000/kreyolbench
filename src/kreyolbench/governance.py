@@ -14,7 +14,7 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_validator
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl, ValidationError, model_validator
 
 from kreyolbench.io import read_jsonl
 from kreyolbench.registry import load_yaml
@@ -548,6 +548,24 @@ SOURCE_FEASIBILITY_DIMENSIONS = {
 }
 
 
+class MetadataClaim(BaseModel):
+    """A limited metadata assertion, not a license opinion or content audit."""
+
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+
+    claim: str = Field(min_length=1)
+    url: HttpUrl
+    publisher: str = Field(min_length=1)
+    accessed_on: date
+    basis: Literal["DIRECT_FACT", "INFERENCE"]
+
+    @model_validator(mode="after")
+    def check_date(self) -> "MetadataClaim":
+        if self.accessed_on > date.today():
+            raise ValueError("metadata evidence date cannot be in the future")
+        return self
+
+
 class SourceFeasibilityRecord(BaseModel):
     """Metadata-only evidence about one registered source candidate."""
 
@@ -561,6 +579,7 @@ class SourceFeasibilityRecord(BaseModel):
     evidence_path: str = Field(min_length=1)
     authoritative_evidence_urls: list[str] = Field(default_factory=list)
     dimensions: dict[str, EvidenceState]
+    dimension_evidence: dict[str, list[MetadataClaim]] = Field(default_factory=dict)
     overall: FeasibilityConclusion
     recommended_actions: list[SourceReviewAction] = Field(min_length=1)
     unresolved_claims: list[str] = Field(default_factory=list)
@@ -593,6 +612,21 @@ class SourceFeasibilityRecord(BaseModel):
             raise ValueError(
                 "EVIDENCE_AVAILABLE requires an authoritative evidence URL"
             )
+        if self.reviewed_on > date.today():
+            raise ValueError("source review date cannot be in the future")
+        if set(self.dimension_evidence) - SOURCE_FEASIBILITY_DIMENSIONS:
+            raise ValueError("unknown dimension_evidence key")
+        for dimension, state in self.dimensions.items():
+            claims = self.dimension_evidence.get(dimension, [])
+            if state == EvidenceState.EVIDENCE_AVAILABLE and not any(
+                claim.basis == "DIRECT_FACT" for claim in claims
+            ):
+                raise ValueError(f"{dimension}: EVIDENCE_AVAILABLE requires direct claim evidence")
+            for claim in claims:
+                if str(claim.url) not in self.authoritative_evidence_urls:
+                    raise ValueError(f"{dimension}: claim URL missing from authoritative evidence URLs")
+                if claim.accessed_on > self.reviewed_on:
+                    raise ValueError("claim evidence cannot postdate its review")
         for values, label in (
             (self.authoritative_evidence_urls, "authoritative evidence URLs"),
             (self.candidate_task_instance_ids, "candidate task instance IDs"),
@@ -608,7 +642,7 @@ class SourceFeasibilityLedger(GovernedArtifact):
 
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: Literal[1]
+    schema_version: Literal[2]
     candidate_reviews: list[SourceFeasibilityRecord]
     synthetic_control: SourceFeasibilityRecord
 
@@ -695,6 +729,10 @@ def audit_repository(root: str | Path) -> GovernanceAudit:
     _audit_source_feasibility(
         repository, decisions, task_instances, sources, audit
     )
+    # The discovery layer depends on governance types, not on runtime task adapters.
+    from kreyolbench.source_discovery import audit_source_discovery
+
+    audit_source_discovery(repository, sources, taxonomy, domains, task_instances, decisions, audit)
 
     if benchmark is not None:
         _validate_benchmark(

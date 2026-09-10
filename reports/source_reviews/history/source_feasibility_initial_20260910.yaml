@@ -1,0 +1,513 @@
+# Historical schema-v1 snapshot; not the active audit ledger.
+schema_version: 1
+status: "SUBMITTED_TO_REVIEW"
+decision_ids: ["KB-DATA-001","KB-DATA-003","KB-ENG-007"]
+requires_expert_validation: true
+release_candidate: false
+candidate_reviews:
+  -
+    source_id: "aka_official"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/aka_official.md"
+    authoritative_evidence_urls: ["https://www.akademikreyol.net/"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "EVIDENCE_AVAILABLE"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_COLLECTION","SEEK_LEGAL_REVIEW"]
+    unresolved_claims: ["publication-level rights and licenses","versioned normative authority per document"]
+    candidate_task_instance_ids: ["kb_norm_orthography_v0_1"]
+    recommended_child_records: ["specific AKA orthography resolutions","specific AKA terminology publications"]
+    authorization_effect: "NONE"
+  -
+    source_id: "aka_publications"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/aka_publications.md"
+    authoritative_evidence_urls: ["https://www.akademikreyol.net/"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "EVIDENCE_AVAILABLE"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","REQUEST_PERMISSION","SEEK_LINGUISTIC_REVIEW"]
+    unresolved_claims: ["document-specific permissions","normative scope and supersession of each publication"]
+    candidate_task_instance_ids: ["kb_norm_orthography_v0_1"]
+    recommended_child_records: ["one record per selected resolution or publication"]
+    authorization_effect: "NONE"
+  -
+    source_id: "haiti_civil_protection_resources"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/haiti_civil_protection_resources.md"
+    authoritative_evidence_urls: ["https://www.servicespublics.gouv.ht/site/rsmo/DPC"]
+    dimensions:
+      endpoint_provider_identity: "PARTIAL"
+      metadata_accessibility: "BLOCKED"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["VERIFY_ENDPOINT","VERIFY_LICENSE","SEEK_LEGAL_REVIEW"]
+    unresolved_claims: ["current endpoint availability","item inventory","Haitian Creole coverage","rights holder and reuse terms"]
+    candidate_task_instance_ids: ["kb_ret_hybrid_query_v0_1"]
+    recommended_child_records: ["versioned public-alert or guidance collection after verification"]
+    authorization_effect: "NONE"
+  -
+    source_id: "cmu_haitian"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/cmu_haitian.md"
+    authoritative_evidence_urls: ["https://www.speech.cs.cmu.edu/haitian/"]
+    dimensions:
+      endpoint_provider_identity: "PARTIAL"
+      metadata_accessibility: "BLOCKED"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["VERIFY_ENDPOINT","REGISTER_CHILD_SUBSET","VERIFY_LICENSE"]
+    unresolved_claims: ["current release inventory","subset terms","consent and speaker metadata","Haitian Creole coverage by subset"]
+    candidate_task_instance_ids: []
+    recommended_child_records: ["one record per identifiable CMU corpus or lexicon"]
+    authorization_effect: "NONE"
+  -
+    source_id: "creoleval"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/creoleval.md"
+    authoritative_evidence_urls: ["https://github.com/hclent/CreoleVal","https://aclanthology.org/2024.tacl-1.53/"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "PARTIAL"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","VERIFY_LICENSE","SEEK_SCIENTIFIC_REVIEW"]
+    unresolved_claims: ["upstream license and release rights per subset","Haitian Creole sample provenance","overlap with future evaluation data"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1"]
+    recommended_child_records: ["one record per considered CreoleVal Haitian Creole subset"]
+    authorization_effect: "NONE"
+  -
+    source_id: "diaspora_publications"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/diaspora_publications.md"
+    authoritative_evidence_urls: []
+    dimensions:
+      endpoint_provider_identity: "MISSING"
+      metadata_accessibility: "MISSING"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["RETAIN_DISCOVERY_ONLY","REGISTER_CHILD_COLLECTION"]
+    unresolved_claims: ["publishers and endpoints","rights","geographic and register coverage","privacy and community expectations"]
+    candidate_task_instance_ids: ["kb_norm_orthography_v0_1","kb_lc_token_language_id_v0_1"]
+    recommended_child_records: ["publisher-specific diaspora publication records"]
+    authorization_effect: "NONE"
+  -
+    source_id: "ebible_hat_1985"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/ebible_hat_1985.md"
+    authoritative_evidence_urls: ["https://ebible.org/bible/details.php?id=hat"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "EVIDENCE_AVAILABLE"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "EVIDENCE_AVAILABLE"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "EVIDENCE_AVAILABLE"
+    overall: "CONDITIONAL"
+    recommended_actions: ["VERIFY_LICENSE","SEEK_SCIENTIFIC_REVIEW"]
+    unresolved_claims: ["independent confirmation of the public-domain basis","overlap with pretrained models and other Bible-derived resources"]
+    candidate_task_instance_ids: []
+    recommended_child_records: []
+    authorization_effect: "NONE"
+  -
+    source_id: "haiti_government_communication_portal"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/haiti_government_communication_portal.md"
+    authoritative_evidence_urls: ["https://communication.gouv.ht/"]
+    dimensions:
+      endpoint_provider_identity: "PARTIAL"
+      metadata_accessibility: "BLOCKED"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["VERIFY_ENDPOINT","VERIFY_LICENSE","SEEK_LEGAL_REVIEW"]
+    unresolved_claims: ["current endpoint availability","Haitian Creole proportion","publication inventory","reuse terms"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_ret_hybrid_query_v0_1"]
+    recommended_child_records: ["publisher- and collection-specific government publication records"]
+    authorization_effect: "NONE"
+  -
+    source_id: "haiti_government_publications"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/haiti_government_publications.md"
+    authoritative_evidence_urls: ["https://communication.gouv.ht/"]
+    dimensions:
+      endpoint_provider_identity: "PARTIAL"
+      metadata_accessibility: "BLOCKED"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["VERIFY_ENDPOINT","REGISTER_CHILD_COLLECTION","RETAIN_DISCOVERY_ONLY"]
+    unresolved_claims: ["complete institutional scope","publication ownership","Haitian Creole coverage","per-ministry terms"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_ret_hybrid_query_v0_1"]
+    recommended_child_records: ["one collection record per ministry or public institution"]
+    authorization_effect: "NONE"
+  -
+    source_id: "jhu_kreyol_mt"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/jhu_kreyol_mt.md"
+    authoritative_evidence_urls: ["https://huggingface.co/datasets/jhu-clsp/kreyol-mt","https://aclanthology.org/2024.naacl-long.170/"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "PARTIAL"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","VERIFY_LICENSE","SEEK_SCIENTIFIC_REVIEW"]
+    unresolved_claims: ["Haitian Creole subset inventory and upstream licenses","sentence-level provenance completeness","benchmark contamination"]
+    candidate_task_instance_ids: []
+    recommended_child_records: ["each Haitian Creole language pair and upstream corpus considered"]
+    authorization_effect: "NONE"
+  -
+    source_id: "menfp_educational_resources"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/menfp_educational_resources.md"
+    authoritative_evidence_urls: ["https://menfp.gouv.ht/"]
+    dimensions:
+      endpoint_provider_identity: "PARTIAL"
+      metadata_accessibility: "BLOCKED"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["VERIFY_ENDPOINT","VERIFY_LICENSE","SEEK_LEGAL_REVIEW"]
+    unresolved_claims: ["current endpoint availability","item inventory","Haitian Creole content","minors-related privacy and reuse terms"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_ret_hybrid_query_v0_1"]
+    recommended_child_records: ["one record per selected curriculum or public-information collection"]
+    authorization_effect: "NONE"
+  -
+    source_id: "mit_ayiti_resources"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/mit_ayiti_resources.md"
+    authoritative_evidence_urls: ["https://haiti.mit.edu/resources/"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "PARTIAL"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_COLLECTION","VERIFY_LICENSE","SEEK_LINGUISTIC_REVIEW"]
+    unresolved_claims: ["asset-specific licenses and upstream ownership","parallel-data provenance","version identifiers"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ret_hybrid_query_v0_1","kb_norm_orthography_v0_1"]
+    recommended_child_records: ["one record per selected educational resource or tool"]
+    authorization_effect: "NONE"
+  -
+    source_id: "mspp_publications"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/mspp_publications.md"
+    authoritative_evidence_urls: ["https://mspp.gouv.ht/publications"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "EVIDENCE_AVAILABLE"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","REQUEST_PERMISSION","SEEK_LEGAL_REVIEW"]
+    unresolved_claims: ["document-level rights","stable identifiers and version history","public-information versus sensitive health content"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_ret_hybrid_query_v0_1"]
+    recommended_child_records: ["selected Haitian Creole public-health guidance collection"]
+    authorization_effect: "NONE"
+  -
+    source_id: "haitian_news_candidates"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/haitian_news_candidates.md"
+    authoritative_evidence_urls: []
+    dimensions:
+      endpoint_provider_identity: "MISSING"
+      metadata_accessibility: "MISSING"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["RETAIN_DISCOVERY_ONLY","REGISTER_CHILD_COLLECTION"]
+    unresolved_claims: ["publishers and endpoints","copyright and archive terms","Haitian Creole proportions","corrections and versioning"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_norm_orthography_v0_1","kb_lc_token_language_id_v0_1"]
+    recommended_child_records: ["publisher-specific media records"]
+    authorization_effect: "NONE"
+  -
+    source_id: "opus"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/opus.md"
+    authoritative_evidence_urls: ["https://opus.nlpl.eu/corpora"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "PARTIAL"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","VERIFY_LICENSE","SEEK_SCIENTIFIC_REVIEW"]
+    unresolved_claims: ["Haitian Creole subcorpora and versions","upstream licenses","translation origin and duplication"]
+    candidate_task_instance_ids: []
+    recommended_child_records: ["one record per selected OPUS corpus and language-pair release"]
+    authorization_effect: "NONE"
+  -
+    source_id: "radio_haiti_duke_archive"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/radio_haiti_duke_archive.md"
+    authoritative_evidence_urls: ["https://repository.duke.edu/dc/radiohaiti"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "PARTIAL"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "EVIDENCE_AVAILABLE"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","SEEK_LEGAL_REVIEW","SEEK_ETHICS_REVIEW"]
+    unresolved_claims: ["item-level rights and restrictions","participant expectations","transcript availability","overlap with derived corpus"]
+    candidate_task_instance_ids: ["kb_lc_token_language_id_v0_1"]
+    recommended_child_records: ["rights-cleared item-level archive subset"]
+    authorization_effect: "NONE"
+  -
+    source_id: "radio_haiti_inter_lrec2026"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/radio_haiti_inter_lrec2026.md"
+    authoritative_evidence_urls: ["https://aclanthology.org/2026.lrec-1.241/","https://repository.duke.edu/dc/radiohaiti"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "PARTIAL"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "BLOCKED"
+    recommended_actions: ["VERIFY_RELEASE_ARTIFACT","VERIFY_LICENSE","SEEK_ETHICS_REVIEW"]
+    unresolved_claims: ["corpus release location and license","item-level archive rights","annotation versions","participant-risk review"]
+    candidate_task_instance_ids: ["kb_ie_ner_charspan_v0_1","kb_norm_orthography_v0_1","kb_lc_token_language_id_v0_1"]
+    recommended_child_records: ["versioned released corpus artifact if verified"]
+    authorization_effect: "NONE"
+  -
+    source_id: "social_media_candidates"
+    review_status: "BLOCKED"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/social_media_candidates.md"
+    authoritative_evidence_urls: []
+    dimensions:
+      endpoint_provider_identity: "MISSING"
+      metadata_accessibility: "MISSING"
+      rights_terms_evidence: "MISSING"
+      language_register_evidence: "PARTIAL"
+      provenance_versionability: "MISSING"
+      ethics_privacy_assessability: "BLOCKED"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "MISSING"
+    overall: "BLOCKED"
+    recommended_actions: ["RETAIN_DISCOVERY_ONLY","REGISTER_CHILD_COLLECTION","SEEK_ETHICS_REVIEW"]
+    unresolved_claims: ["platform and community selection","terms and API policy","consent and contextual integrity","deletion and withdrawal handling"]
+    candidate_task_instance_ids: ["kb_norm_orthography_v0_1","kb_lc_token_language_id_v0_1"]
+    recommended_child_records: ["platform- and study-specific protocol records only after ethics review"]
+    authorization_effect: "NONE"
+  -
+    source_id: "universal_dependencies_haitian"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/universal_dependencies_haitian.md"
+    authoritative_evidence_urls: ["https://universaldependencies.org/treebanks/ht_adolphe/index.html"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "EVIDENCE_AVAILABLE"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "EVIDENCE_AVAILABLE"
+      ethics_privacy_assessability: "EVIDENCE_AVAILABLE"
+      task_scientific_fit: "PARTIAL"
+      duplication_contamination_assessability: "EVIDENCE_AVAILABLE"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","VERIFY_LICENSE","SEEK_SCIENTIFIC_REVIEW"]
+    unresolved_claims: ["upstream-text rights compatibility","suitability beyond grammar examples","overlap with Bible-derived resources and pretrained models"]
+    candidate_task_instance_ids: []
+    recommended_child_records: ["version-specific UD Haitian Creole Adolphe treebank record"]
+    authorization_effect: "NONE"
+  -
+    source_id: "un_haiti_ht"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/un_haiti_ht.md"
+    authoritative_evidence_urls: ["https://haiti.un.org/ht"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "PARTIAL"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "PARTIAL"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","VERIFY_LICENSE","SEEK_LEGAL_REVIEW"]
+    unresolved_claims: ["asset-specific UN terms","Haitian Creole versus French content proportions","stable snapshots and translations"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_ret_hybrid_query_v0_1"]
+    recommended_child_records: ["dated Haitian Creole public-information collection"]
+    authorization_effect: "NONE"
+  -
+    source_id: "wikimedia_htwiki"
+    review_status: "SUBMITTED_TO_REVIEW"
+    reviewed_on: "2026-09-10"
+    prepared_by: "Codex"
+    ai_assistance_disclosed: true
+    evidence_path: "reports/source_reviews/wikimedia_htwiki.md"
+    authoritative_evidence_urls: ["https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use","https://dumps.wikimedia.org/htwiki/latest/"]
+    dimensions:
+      endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+      metadata_accessibility: "EVIDENCE_AVAILABLE"
+      rights_terms_evidence: "EVIDENCE_AVAILABLE"
+      language_register_evidence: "EVIDENCE_AVAILABLE"
+      provenance_versionability: "EVIDENCE_AVAILABLE"
+      ethics_privacy_assessability: "PARTIAL"
+      task_scientific_fit: "EVIDENCE_AVAILABLE"
+      duplication_contamination_assessability: "PARTIAL"
+    overall: "CONDITIONAL"
+    recommended_actions: ["REGISTER_CHILD_SUBSET","VERIFY_LICENSE","SEEK_SCIENTIFIC_REVIEW"]
+    unresolved_claims: ["page-level imported-content exceptions","contributor and attribution handling","pretrained-model contamination"]
+    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_ret_hybrid_query_v0_1"]
+    recommended_child_records: ["dated dump and filtered Haitian Creole article subset"]
+    authorization_effect: "NONE"
+synthetic_control:
+  source_id: "sample"
+  review_status: "SUBMITTED_TO_REVIEW"
+  reviewed_on: "2026-09-10"
+  prepared_by: "Codex"
+  ai_assistance_disclosed: true
+  evidence_path: "reports/source_reviews/sample.md"
+  authoritative_evidence_urls: ["https://creativecommons.org/publicdomain/zero/1.0/"]
+  dimensions:
+    endpoint_provider_identity: "EVIDENCE_AVAILABLE"
+    metadata_accessibility: "EVIDENCE_AVAILABLE"
+    rights_terms_evidence: "EVIDENCE_AVAILABLE"
+    language_register_evidence: "PARTIAL"
+    provenance_versionability: "EVIDENCE_AVAILABLE"
+    ethics_privacy_assessability: "EVIDENCE_AVAILABLE"
+    task_scientific_fit: "MISSING"
+    duplication_contamination_assessability: "EVIDENCE_AVAILABLE"
+  overall: "CONDITIONAL"
+  recommended_actions: ["DEFER"]
+  unresolved_claims: []
+  candidate_task_instance_ids: []
+  recommended_child_records: []
+  authorization_effect: "NONE"

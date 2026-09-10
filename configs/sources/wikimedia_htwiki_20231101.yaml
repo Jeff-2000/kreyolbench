@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: "wikimedia_htwiki_20231101"
+record_type: "SOURCE_SUBSET"
+parent_source_id: "wikimedia_htwiki"
+name: "Haitian Wikipedia 20231101 snapshot"
+url: "https://huggingface.co/datasets/wikimedia/wikipedia"
+provider: "wikimedia"
+publisher_owner: "TO_VERIFY_PER_UPSTREAM_COMPONENT"
+data_type: "text_resource"
+access_method: "metadata_review_only"
+license: "TO_VERIFY"
+license_url: "https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md"
+license_evidence: "Provider metadata supports review, not a project permission grant. Verify exact upstream terms and rights holders."
+citation: "Haitian Wikipedia 20231101 snapshot; cite exact release and upstream contributors after verification."
+language_claim: "hat (documented by metadata; no content-level validation)"
+registers: ["TO_VERIFY"]
+domain: "education"
+temporal_coverage: "2023-11-01 snapshot"
+geographic_relevance: "Haiti; sampling and diaspora coverage TO_VERIFY"
+expected_tasks: ["classification", "information_extraction", "retrieval"]
+accessed_on: "2026-09-10"
+collection_date: null
+hash: null
+notes: "The official card lists configuration 20231101.ht and 70,159 train rows. This is a snapshot-specific reported count, not independently verified unique content."
+quality_notes: "Native authorship; factual reliability; imported content; model contamination"
+machine_generated_content_risk: "UNKNOWN"
+pii_risk: "TO_VERIFY"
+duplication_risk: "TO_VERIFY; shared upstream content and model contamination may occur"
+status: "SUBMITTED_TO_REVIEW"
+decision_ids: ["KB-DATA-001","KB-DATA-003"]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: "ENDPOINT_VERIFIED"
+  access_status: "ACCESSIBLE_FOR_REVIEW"
+  legal_review_status: "PENDING"
+  collection_status: "NOT_REQUESTED"
+  derived_use_status: "UNKNOWN"
+  redistribution_status: "UNKNOWN"
+  commercial_use_status: "UNKNOWN"
+  ethics_status: "NOT_STARTED"
+  scientific_status: "PENDING_EXPERT_REVIEW"
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: ["https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md"]

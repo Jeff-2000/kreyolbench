@@ -41,7 +41,11 @@ No corpus files, dumps, documents, audio, models, or archives were downloaded. N
 
 ## Acceptance Gate
 
-Every non-synthetic registered source must have one ledger record and one evidence report. The synthetic `sample` record is reviewed separately and remains excluded from scientific evidence. Human reviewers must confirm or revise these findings before permission requests or child-subset registration proceeds.
+Every non-synthetic registered source must have one ledger record and one evidence report. The synthetic `sample` record is reviewed separately and remains excluded from scientific evidence. Human reviewers must confirm or revise findings before permission requests or source use proceeds. Under KB-DATA-003, metadata-only child registration may proceed with documented identity and language evidence; it grants no authorization.
+
+## Discovery Expansion
+
+See `datasets/SOURCE_DISCOVERY.md` and `reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md`. The initial 21-candidate packet and schema-v1 ledger are historical snapshots. Active feasibility schema v2 requires direct claim-level evidence; inferred suitability remains PARTIAL. Discovery reports include unresolved leads and references that are not registered research corpora. No source count is a corpus-size or coverage measure.
 
 ## Revision History
 

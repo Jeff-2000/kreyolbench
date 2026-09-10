@@ -201,6 +201,14 @@ Validation target:
 - governance audit returns `PASS` with exactly five unresolved task decisions
 - release eligibility remains false
 
+### Expanded Source Discovery
+
+Status: SUBMITTED_TO_REVIEW
+
+Implemented 22 deduplicated leads across text, speech, linguistic and multimodal research: 15 registered-source references, four unresolved leads and three references. Twelve metadata-only source registrations extend the active ledger to 33 candidates plus the synthetic control. Preserved the initial 21-candidate assessment and every existing source authorization state.
+
+Added claim-level feasibility evidence, attributed size records, cross-source provenance relationships, domain/modality hypotheses and engineering decision KB-ENG-008. Corrected Aya origin claims, separated UD treebanks and preserved source-specific rights uncertainty. Inferred task fit and risk assessments remain PARTIAL, not direct evidence. No dataset content was acquired or benchmark scope frozen. Validation results are recorded in the implementation handoff.
+
 ## Revision History
 
 | Date | Change | Status |

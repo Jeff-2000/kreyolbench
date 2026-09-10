@@ -29,6 +29,10 @@ provisional relevance without authorization, and `source_reviews/` contains
 the methodology, template, and source-specific public evidence reports.
 The master paper outline covers the first controlled release only; it does not define the global KreyolBench task universe. Long-term scope is governed by `datasets/TASK_TAXONOMY.md` and `KB-SCOPE-002`.
 
+## Expanded Discovery Review
+
+`SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md` is the current source-review entry point; the original packet describes its initial 21-candidate snapshot. `SOURCE_DOMAIN_MODALITY_MATRIX_V0_1.md` records candidate domains and roadmap-family fit, not measured coverage. `source_reviews/discovery/` holds unresolved leads and references, and `source_reviews/history/` preserves prior ledger and authorization evidence.
+
 ## Rules
 
 - Separate scaffold reports from publication-ready reports.

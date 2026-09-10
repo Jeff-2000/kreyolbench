@@ -56,7 +56,7 @@ Exit criteria:
 Immediate next action:
 
 - recruit identifiable external reviewers using `reports/TASK_SPEC_REVIEW_PACKET_V0_1.md` and `reports/reviews/REVIEW_TEMPLATE.md`;
-- submit `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md` for human review and select a small number of bounded child collections for legal, ethical, linguistic, provenance, and scientific follow-up;
+- submit `reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md` for human review, retaining the original source packet as history; select a small number of bounded collections for legal, ethical, linguistic, provenance, and scientific follow-up;
 - revise rejected specifications and authorize no annotation pilot until every applicable task and source gate passes.
 
 ## v0.2: Dataset Pilot and Annotation Protocol

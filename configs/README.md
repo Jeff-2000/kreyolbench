@@ -47,6 +47,10 @@ The decision registry uses schema version 3. Human review events are append-only
 and record outcome, reviewer, role, date, independence, and an evidence path.
 The latest event must agree with the decision status.
 
+## Source Discovery and Feasibility
+
+`governance/source_discovery.yaml` records deduplicated intake, separate source/lead/reference dispositions, claimed origin, reported sizes and non-authorizing provenance relationships. `governance/source_feasibility.yaml` uses schema v2 with claim-level evidence. Source configs retain schema v2 and their independent authorization gates. See `datasets/SOURCE_DISCOVERY.md` before editing either ledger.
+
 ## Requirements
 
 - Do not add labels or tasks without scientific rationale.

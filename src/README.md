@@ -20,6 +20,7 @@ Requires expert validation: No for software structure; Yes when code encodes sci
 - `io.py`: JSONL and hash utilities.
 - `cli.py`: command-line entry points.
 - `governance.py`: typed statuses, configuration audit, release gates, and scientific-invariant checks.
+- `source_discovery.py`: open-world metadata intake, evidence-backed relationships, reported sizes and source/lead/reference separation; no network access or permission inheritance.
 - `preprocessing/`: text cleaning, PII, dedupe, orthography, OCR helpers.
 - `evaluation/`: metrics, runner, reporting.
 - `baselines/`: baseline scaffolds.

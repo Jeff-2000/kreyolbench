@@ -1,0 +1,49 @@
+# Metadata Discovery Review: FinePDFs Haitian configuration
+
+## Review Record
+
+Current status: SUBMITTED_TO_REVIEW
+
+Prepared by: Codex (AI-assisted metadata analysis, not independent scientific approval or legal counsel).
+
+Reviewed on: 2026-09-10. Lead: `finepdfs_hat`. Source: `finepdfs_hat`.
+
+Disposition: `REGISTERED_SOURCE`. Haitian-language evidence: `DOCUMENTED`.
+
+## Evidence and Identity
+
+| Limited claim | Evidence | Publisher | Access date | Basis |
+| --- | --- | --- | --- | --- |
+| The official card lists hat_Latn train and test paths. A configuration label is not validation of language purity, PDF extraction quality, or domain balance. | [Metadata source](https://huggingface.co/datasets/HuggingFaceFW/finepdfs/blob/main/README.md) | HuggingFaceFW | 2026-09-10 | DIRECT_FACT |
+
+Registry granularity: bounded collection; release selection pending. Registration is a metadata identity decision only.
+
+## Scientific Role and Limitations
+
+Candidate role: PRETRAINING_CANDIDATE. Candidate families: document_multimodal. Domain mappings (other) are review hypotheses, not measured coverage. No v0.1 task membership is created.
+
+Content origin: `UNKNOWN`. Quality, dialect coverage, task fitness, and model independence have not been tested. Evaluation partitions must not silently enter training pools.
+
+## Rights, Ethics, and Contamination
+
+Provider metadata supports review, not a project permission grant. Verify exact upstream terms and rights holders.
+
+Document identity, inherited translations, PII and overlap with model-training corpora require review. No cross-resource overlap rate has been measured.
+
+## Unresolved Claims and Next Review
+
+- 18.5k count
+- human origin
+- OCR quality
+- PII
+- domain and source duplication
+
+Next action: Review extraction and language-identification methodology, document URLs, and per-document rights.
+
+## No Authorization
+
+Authorization effect: `NONE`. No acquisition, annotation, transformation, training, redistribution, scientific inclusion, metric freeze, or release is authorized. Human review is required.
+
+## Revision History
+
+- 2026-09-10: Added metadata-only discovery assessment; no source content acquired.
