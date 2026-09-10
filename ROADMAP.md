@@ -41,6 +41,8 @@ Goals:
 - evidence-based task and source-to-task feasibility matrix
 - open-world task and domain registries
 - stable task-instance identifiers and explicit release membership
+- complete metadata-only feasibility ledger for all registered source candidates
+- public evidence reports and a provisional source-to-task matrix
 
 Exit criteria:
 
@@ -54,7 +56,7 @@ Exit criteria:
 Immediate next action:
 
 - recruit identifiable external reviewers using `reports/TASK_SPEC_REVIEW_PACKET_V0_1.md` and `reports/reviews/REVIEW_TEMPLATE.md`;
-- perform metadata-only legal, ethical, linguistic, and scientific feasibility reviews for specific source collections;
+- submit `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md` for human review and select a small number of bounded child collections for legal, ethical, linguistic, provenance, and scientific follow-up;
 - revise rejected specifications and authorize no annotation pilot until every applicable task and source gate passes.
 
 ## v0.2: Dataset Pilot and Annotation Protocol
@@ -112,3 +114,4 @@ These are non-exhaustive research pathways. They are not validated components or
 | 2026-09-09 | Closed project-policy review and added five provisional task specifications and feasibility gates. | SUBMITTED_TO_REVIEW |
 | 2026-09-09 | Separated the open-world ecosystem from versioned release membership. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Added the pre-external revision phase and made reviewer recruitment plus metadata-only source review the immediate next action. | SUBMITTED_TO_REVIEW |
+| 2026-09-10 | Completed metadata-only source triage; moved the next gate to human packet review and bounded child-source selection. | SUBMITTED_TO_REVIEW |

@@ -18,7 +18,7 @@ domain: language_governance
 temporal_coverage: TO_VERIFY_PER_RESOURCE
 geographic_relevance: Haiti_and_diaspora
 expected_tasks: [normalization, terminology, linguistic_evaluation]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Critical candidate for scientific consultation; contact AKA before any collection beyond metadata review."

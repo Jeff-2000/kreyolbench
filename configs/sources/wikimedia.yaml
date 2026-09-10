@@ -18,7 +18,7 @@ domain: encyclopedia
 temporal_coverage: snapshot_specific
 geographic_relevance: Haiti_and_global
 expected_tasks: [classification, ner, retrieval, normalization]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Preserve attribution, page revision identifiers, snapshot date, and content-level exceptions."

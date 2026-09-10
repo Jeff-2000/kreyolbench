@@ -10,7 +10,7 @@ data_type: religious_text
 access_method: metadata_review_before_download
 license: PUBLIC_DOMAIN_NOTICE_TO_VERIFY
 license_url: https://ebible.org/bible/details.php?id=hat
-license_evidence: "The existing registry claimed a public-domain notice; that claim must be reverified before use."
+license_evidence: "The official record presents a public-domain notice and basis; independent legal verification remains required before use."
 citation: "Bib La Haitian Creole Bible 1985, eBible.org; edition and upstream citation TO_VERIFY."
 language_claim: hat
 registers: [religious, formal]
@@ -18,7 +18,7 @@ domain: religion
 temporal_coverage: 1985_edition_TO_VERIFY
 geographic_relevance: Haiti
 expected_tasks: [language_modeling, normalization]
-accessed_on: null
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Do not treat a religious translation as representative general Kreyol."
@@ -31,8 +31,8 @@ decision_ids: [KB-DATA-001, KB-DATA-003]
 requires_expert_validation: true
 release_candidate: false
 source_governance:
-  discovery_status: DISCOVERED
-  access_status: UNKNOWN
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
   legal_review_status: PENDING
   collection_status: PERMISSION_UNKNOWN
   derived_use_status: UNKNOWN

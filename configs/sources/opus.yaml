@@ -18,7 +18,7 @@ domain: parallel_text
 temporal_coverage: TO_VERIFY_PER_SUBSET
 geographic_relevance: MULTI_REGION
 expected_tasks: [translation]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Create a SOURCE_SUBSET record before using any Haitian Creole pair or OPUS corpus."

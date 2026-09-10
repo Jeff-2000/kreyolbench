@@ -615,6 +615,30 @@ Requires expert approval: No
 
 Expert decision: Not required
 
+## KB-ENG-007
+
+Title: Machine-readable metadata-only source-feasibility ledger
+
+Date: 2026-09-10
+
+Status: TO_REVIEW_LATER
+
+Context: Source-registry authorization axes do not express the strength of public metadata evidence available for deciding which candidates deserve legal, ethical, linguistic, or scientific follow-up.
+
+Decision: Maintain one versioned feasibility record for every registered research candidate and a separate synthetic-control record. Each record reports eight evidence dimensions, authoritative URLs, unresolved claims, candidate task fit, and permitted next-review actions. Its authorization effect is always `NONE`.
+
+Alternatives considered: encode feasibility in free-text source notes; treat endpoint visibility as permission; add numeric readiness scores; review only pilot-facing sources.
+
+Scientific rationale: None beyond preserving a reviewable boundary between factual metadata evidence and later human authorization or scientific-inclusion decisions.
+
+Engineering implications: `audit-governance` enforces complete registry coverage, evidence paths, task references, non-authorizing conclusions, and unchanged source gates.
+
+Risks: evidence may become stale; official pages can be incomplete; a `CONDITIONAL` conclusion may be misread as approval unless the no-authorization rule remains prominent.
+
+Requires expert approval: No
+
+Expert decision: Not required
+
 ## Revision History
 
 | Date | Change | Status |
@@ -625,3 +649,4 @@ Expert decision: Not required
 | 2026-09-09 | Closed KB-DATA-001, added independent task review, five provisional task decisions, and example-level provenance traceability. | IN_PROGRESS |
 | 2026-09-09 | Added the open-world task-scope proposal and extensible taxonomy/release architecture. | IN_PROGRESS |
 | 2026-09-10 | Recorded the internal task audit, qualified external-review policy, five revision events, and reviewer-evidence enforcement. | IN_PROGRESS |
+| 2026-09-10 | Added the metadata-only source-feasibility ledger decision without changing source authorization. | IN_PROGRESS |

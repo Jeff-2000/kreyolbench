@@ -13,7 +13,7 @@ Owner: Data Governance working group
 
 Requires expert validation: Yes
 
-Governing decisions: `KB-DATA-001`, `KB-DATA-003`, `KB-ENG-003`
+Governing decisions: `KB-DATA-001`, `KB-DATA-003`, `KB-ENG-003`, `KB-ENG-007`
 
 ## Core Principle
 
@@ -106,6 +106,24 @@ exception: it may be committed and redistributed, but its scientific status is
 8. Record collection date, version, hash, and provenance before acquisition.
 9. Re-audit before annotation, derived release, or public redistribution.
 
+## Metadata-Only Feasibility Ledger
+
+`configs/governance/source_feasibility.yaml` records one public metadata review
+for every non-synthetic candidate and a separate synthetic control. It assesses
+endpoint identity, metadata accessibility, rights evidence, language/register,
+provenance/versionability, ethics/privacy, provisional task fit, and
+duplication/contamination.
+
+Evidence states are `EVIDENCE_AVAILABLE`, `PARTIAL`, `MISSING`, and `BLOCKED`.
+Permitted conclusions are `CONDITIONAL` and `BLOCKED`; metadata review cannot
+declare a source `PILOT_FEASIBLE`. Every record must set
+`authorization_effect: NONE`. Reports live under `reports/source_reviews/`, and
+the consolidated packet is `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md`.
+
+Feasibility is not an authorization axis. It prioritizes later human review and
+cannot elevate legal, ethical, collection, derived-use, redistribution,
+scientific, or release status.
+
 ## Acceptance Criteria
 
 - Every committed record validates against schema version 2.
@@ -124,3 +142,4 @@ exception: it may be committed and redistributed, but its scientific status is
 | 2026-09-08 | Aligned documented fields with executable source configurations. | SUBMITTED_TO_REVIEW |
 | 2026-09-09 | Adopted open-world discovery and multi-axis schema v2; expanded candidate families without authorizing collection. | SUBMITTED_TO_REVIEW |
 | 2026-09-09 | Linked source governance to the example-level provenance contract. | SUBMITTED_TO_REVIEW |
+| 2026-09-10 | Added complete metadata-only feasibility coverage and machine-enforced no-authorization rules. | SUBMITTED_TO_REVIEW |

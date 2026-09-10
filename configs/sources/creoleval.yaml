@@ -18,7 +18,7 @@ domain: benchmark
 temporal_coverage: TO_VERIFY_PER_SUBSET
 geographic_relevance: MULTI_REGION
 expected_tasks: [classification, machine_translation, language_model_evaluation]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Do not treat the repository as one uniformly licensed dataset; register Haitian Creole subsets separately."

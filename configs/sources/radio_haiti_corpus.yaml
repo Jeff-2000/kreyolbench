@@ -18,7 +18,7 @@ domain: media_and_oral_history
 temporal_coverage: TO_VERIFY_FROM_CORPUS_DOCUMENTATION
 geographic_relevance: Haiti_and_diaspora
 expected_tasks: [asr, codeswitch, pos_tagging, speech_retrieval]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Publication discovery is not permission to acquire or redistribute the released corpus."

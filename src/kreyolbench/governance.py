@@ -176,6 +176,23 @@ class FeasibilityConclusion(str, Enum):
     BLOCKED = "BLOCKED"
 
 
+class SourceReviewAction(str, Enum):
+    """Permitted metadata-review next actions; none authorize source use."""
+
+    VERIFY_ENDPOINT = "VERIFY_ENDPOINT"
+    VERIFY_LICENSE = "VERIFY_LICENSE"
+    VERIFY_RELEASE_ARTIFACT = "VERIFY_RELEASE_ARTIFACT"
+    REGISTER_CHILD_COLLECTION = "REGISTER_CHILD_COLLECTION"
+    REGISTER_CHILD_SUBSET = "REGISTER_CHILD_SUBSET"
+    REQUEST_PERMISSION = "REQUEST_PERMISSION"
+    SEEK_LEGAL_REVIEW = "SEEK_LEGAL_REVIEW"
+    SEEK_ETHICS_REVIEW = "SEEK_ETHICS_REVIEW"
+    SEEK_LINGUISTIC_REVIEW = "SEEK_LINGUISTIC_REVIEW"
+    SEEK_SCIENTIFIC_REVIEW = "SEEK_SCIENTIFIC_REVIEW"
+    RETAIN_DISCOVERY_ONLY = "RETAIN_DISCOVERY_ONLY"
+    DEFER = "DEFER"
+
+
 class GovernedArtifact(BaseModel):
     """Governance fields embedded in benchmark configuration artifacts."""
 
@@ -519,6 +536,83 @@ class TaskFeasibilityMatrix(GovernedArtifact):
     tasks: list[TaskFeasibilityRecord]
 
 
+SOURCE_FEASIBILITY_DIMENSIONS = {
+    "endpoint_provider_identity",
+    "metadata_accessibility",
+    "rights_terms_evidence",
+    "language_register_evidence",
+    "provenance_versionability",
+    "ethics_privacy_assessability",
+    "task_scientific_fit",
+    "duplication_contamination_assessability",
+}
+
+
+class SourceFeasibilityRecord(BaseModel):
+    """Metadata-only evidence about one registered source candidate."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    source_id: str = Field(min_length=1)
+    review_status: ReviewStatus
+    reviewed_on: date
+    prepared_by: str = Field(min_length=1)
+    ai_assistance_disclosed: Literal[True]
+    evidence_path: str = Field(min_length=1)
+    authoritative_evidence_urls: list[str] = Field(default_factory=list)
+    dimensions: dict[str, EvidenceState]
+    overall: FeasibilityConclusion
+    recommended_actions: list[SourceReviewAction] = Field(min_length=1)
+    unresolved_claims: list[str] = Field(default_factory=list)
+    candidate_task_instance_ids: list[str] = Field(default_factory=list)
+    recommended_child_records: list[str] = Field(default_factory=list)
+    authorization_effect: Literal["NONE"]
+
+    @model_validator(mode="after")
+    def validate_metadata_only_scope(self) -> "SourceFeasibilityRecord":
+        dimensions = set(self.dimensions)
+        if dimensions != SOURCE_FEASIBILITY_DIMENSIONS:
+            missing = sorted(SOURCE_FEASIBILITY_DIMENSIONS - dimensions)
+            extra = sorted(dimensions - SOURCE_FEASIBILITY_DIMENSIONS)
+            raise ValueError(
+                f"source feasibility dimensions mismatch; missing={missing}, extra={extra}"
+            )
+        if self.review_status not in {
+            ReviewStatus.SUBMITTED_TO_REVIEW,
+            ReviewStatus.BLOCKED,
+        }:
+            raise ValueError(
+                "metadata source reviews must be SUBMITTED_TO_REVIEW or BLOCKED"
+            )
+        if self.overall == FeasibilityConclusion.PILOT_FEASIBLE:
+            raise ValueError("metadata-only review cannot declare a source PILOT_FEASIBLE")
+        if (
+            EvidenceState.EVIDENCE_AVAILABLE in self.dimensions.values()
+            and not self.authoritative_evidence_urls
+        ):
+            raise ValueError(
+                "EVIDENCE_AVAILABLE requires an authoritative evidence URL"
+            )
+        for values, label in (
+            (self.authoritative_evidence_urls, "authoritative evidence URLs"),
+            (self.candidate_task_instance_ids, "candidate task instance IDs"),
+            (self.recommended_child_records, "recommended child records"),
+        ):
+            if len(values) != len(set(values)):
+                raise ValueError(f"{label} must be unique")
+        return self
+
+
+class SourceFeasibilityLedger(GovernedArtifact):
+    """Complete metadata review ledger for candidate and synthetic sources."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    schema_version: Literal[1]
+    candidate_reviews: list[SourceFeasibilityRecord]
+    synthetic_control: SourceFeasibilityRecord
+
+
 class GovernanceAudit(BaseModel):
     """Deterministic output contract for repository governance audits."""
 
@@ -597,6 +691,9 @@ def audit_repository(root: str | Path) -> GovernanceAudit:
     }
     _audit_task_feasibility(
         repository, decisions, task_instances, pilot_task_ids, sources, audit
+    )
+    _audit_source_feasibility(
+        repository, decisions, task_instances, sources, audit
     )
 
     if benchmark is not None:
@@ -1103,6 +1200,111 @@ def _audit_task_feasibility(
             f"{_display(path, root)}: feasibility tasks do not match v0.1 pilot; "
             f"expected={sorted(pilot_task_ids)}, actual={sorted(assessed_tasks)}"
         )
+
+
+def _audit_source_feasibility(
+    root: Path,
+    decisions: dict[str, DecisionRecord],
+    task_instances: dict[str, TaskInstanceRecord],
+    sources: dict[str, SourceRecord],
+    audit: GovernanceAudit,
+) -> None:
+    path = root / "configs" / "governance" / "source_feasibility.yaml"
+    payload = _load_mapping(path, root, audit)
+    if payload is None:
+        return
+    try:
+        ledger = SourceFeasibilityLedger.model_validate(payload)
+    except ValidationError as exc:
+        audit.errors.append(
+            f"{_display(path, root)}: invalid source feasibility ledger: "
+            f"{_validation_message(exc)}"
+        )
+        return
+    _validate_governed_artifact(payload, path, root, decisions, audit)
+
+    candidate_ids = [record.source_id for record in ledger.candidate_reviews]
+    if len(candidate_ids) != len(set(candidate_ids)):
+        audit.errors.append(f"{_display(path, root)}: duplicate candidate source review")
+
+    expected_candidates = set(sources) - {"sample"}
+    if set(candidate_ids) != expected_candidates:
+        audit.errors.append(
+            f"{_display(path, root)}: source review coverage mismatch; "
+            f"expected={sorted(expected_candidates)}, actual={sorted(set(candidate_ids))}"
+        )
+    if ledger.synthetic_control.source_id != "sample":
+        audit.errors.append(
+            f"{_display(path, root)}: synthetic_control must reference source_id sample"
+        )
+
+    for record in [*ledger.candidate_reviews, ledger.synthetic_control]:
+        source = sources.get(record.source_id)
+        if source is None:
+            audit.errors.append(
+                f"{_display(path, root)}: unknown reviewed source {record.source_id}"
+            )
+            continue
+        evidence = (root / record.evidence_path).resolve()
+        try:
+            evidence.relative_to(root)
+        except ValueError:
+            audit.errors.append(
+                f"{_display(path, root)}: {record.source_id} evidence_path "
+                "must remain inside the repository"
+            )
+        else:
+            if not evidence.is_file():
+                audit.errors.append(
+                    f"{_display(path, root)}: {record.source_id} evidence_path "
+                    f"does not exist: {record.evidence_path}"
+                )
+        unknown_tasks = sorted(
+            set(record.candidate_task_instance_ids) - set(task_instances)
+        )
+        if unknown_tasks:
+            audit.errors.append(
+                f"{_display(path, root)}: {record.source_id} references unknown "
+                f"task instances: {unknown_tasks}"
+            )
+        if source.record_type == SourceRecordType.SOURCE_FAMILY:
+            prohibited_actions = {
+                SourceReviewAction.REQUEST_PERMISSION,
+            }
+            if prohibited_actions.intersection(record.recommended_actions):
+                audit.errors.append(
+                    f"{_display(path, root)}: SOURCE_FAMILY {record.source_id} "
+                    "cannot be recommended directly for permission or collection"
+                )
+
+        governance = source.source_governance
+        if record.source_id == "sample":
+            if (
+                source.release_candidate
+                or governance.scientific_status
+                != ScientificInclusionStatus.EXCLUDED
+            ):
+                audit.errors.append(
+                    f"{_display(path, root)}: synthetic sample must remain "
+                    "scientifically excluded and non-releaseable"
+                )
+            continue
+        if (
+            source.release_candidate
+            or source.status == ReviewStatus.EXPERT_VALIDATED
+            or governance.collection_status == CollectionStatus.APPROVED
+            or governance.derived_use_status == PermissionStatus.APPROVED
+            or governance.redistribution_status == RedistributionStatus.APPROVED
+            or governance.scientific_status
+            in {
+                ScientificInclusionStatus.PILOT_ONLY,
+                ScientificInclusionStatus.APPROVED,
+            }
+        ):
+            audit.errors.append(
+                f"{_display(path, root)}: metadata-only review cannot accompany "
+                f"an authorized source state for {record.source_id}"
+            )
 
 
 def _validate_label_schema(

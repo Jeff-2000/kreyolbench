@@ -25,6 +25,7 @@ from kreyolbench.governance import (
     ReviewStatus,
     ScopeStatus,
     ScientificInclusionStatus,
+    SourceReviewAction,
     SourceRecordType,
     audit_repository,
 )
@@ -96,6 +97,7 @@ def test_review_status_is_not_a_scope_status():
         ReviewOutcome,
         ReviewIndependence,
         ConflictStatus,
+        SourceReviewAction,
     ],
 )
 def test_governance_enum_values_are_strict(enum_type):
@@ -574,7 +576,7 @@ def test_source_redistribution_policy_v2(
     assert bool(source_errors) is should_error
 
 
-def test_collection_approval_does_not_imply_redistribution(tmp_path: Path):
+def test_metadata_review_rejects_collection_authorization_elevation(tmp_path: Path):
     root = _copy_audit_fixture(tmp_path)
     path = root / "configs" / "sources" / "mspp.yaml"
     payload = _load_yaml(path)
@@ -584,7 +586,139 @@ def test_collection_approval_does_not_imply_redistribution(tmp_path: Path):
 
     audit = audit_repository(root)
 
-    assert not [error for error in audit.errors if "mspp" in error]
+    assert any(
+        "metadata-only review cannot accompany an authorized source state" in error
+        and "mspp_publications" in error
+        for error in audit.errors
+    )
+
+
+def test_source_feasibility_covers_all_candidates_and_sample_control():
+    ledger = _load_yaml(
+        REPOSITORY_ROOT / "configs" / "governance" / "source_feasibility.yaml"
+    )
+    source_ids = {
+        _load_yaml(path)["source_id"]
+        for path in (REPOSITORY_ROOT / "configs" / "sources").glob("*.yaml")
+    }
+    candidate_ids = {item["source_id"] for item in ledger["candidate_reviews"]}
+
+    assert len(candidate_ids) == 21
+    assert candidate_ids == source_ids - {"sample"}
+    assert ledger["synthetic_control"]["source_id"] == "sample"
+    assert ledger["synthetic_control"]["authorization_effect"] == "NONE"
+
+
+def test_missing_source_feasibility_record_fails(tmp_path: Path):
+    root = _copy_audit_fixture(tmp_path)
+    path = root / "configs" / "governance" / "source_feasibility.yaml"
+    payload = _load_yaml(path)
+    payload["candidate_reviews"].pop()
+    _write_yaml(path, payload)
+
+    audit = audit_repository(root)
+
+    assert any("source review coverage mismatch" in error for error in audit.errors)
+
+
+def test_source_feasibility_evidence_path_must_exist(tmp_path: Path):
+    root = _copy_audit_fixture(tmp_path)
+    path = root / "configs" / "governance" / "source_feasibility.yaml"
+    payload = _load_yaml(path)
+    payload["candidate_reviews"][0]["evidence_path"] = (
+        "reports/source_reviews/missing.md"
+    )
+    _write_yaml(path, payload)
+
+    audit = audit_repository(root)
+
+    assert any("evidence_path does not exist" in error for error in audit.errors)
+
+
+def test_source_feasibility_task_reference_must_resolve(tmp_path: Path):
+    root = _copy_audit_fixture(tmp_path)
+    path = root / "configs" / "governance" / "source_feasibility.yaml"
+    payload = _load_yaml(path)
+    payload["candidate_reviews"][0]["candidate_task_instance_ids"] = [
+        "kb_unknown_task"
+    ]
+    _write_yaml(path, payload)
+
+    audit = audit_repository(root)
+
+    assert any("references unknown task instances" in error for error in audit.errors)
+
+
+def test_source_feasibility_available_evidence_requires_url(tmp_path: Path):
+    root = _copy_audit_fixture(tmp_path)
+    path = root / "configs" / "governance" / "source_feasibility.yaml"
+    payload = _load_yaml(path)
+    payload["candidate_reviews"][0]["authoritative_evidence_urls"] = []
+    _write_yaml(path, payload)
+
+    audit = audit_repository(root)
+
+    assert any(
+        "EVIDENCE_AVAILABLE requires an authoritative evidence URL" in error
+        for error in audit.errors
+    )
+
+
+def test_source_metadata_review_cannot_declare_pilot_feasible(tmp_path: Path):
+    root = _copy_audit_fixture(tmp_path)
+    path = root / "configs" / "governance" / "source_feasibility.yaml"
+    payload = _load_yaml(path)
+    payload["candidate_reviews"][0]["overall"] = "PILOT_FEASIBLE"
+    _write_yaml(path, payload)
+
+    audit = audit_repository(root)
+
+    assert any(
+        "cannot declare a source PILOT_FEASIBLE" in error for error in audit.errors
+    )
+
+
+def test_source_family_cannot_be_recommended_for_permission(tmp_path: Path):
+    root = _copy_audit_fixture(tmp_path)
+    path = root / "configs" / "governance" / "source_feasibility.yaml"
+    payload = _load_yaml(path)
+    family = next(
+        item
+        for item in payload["candidate_reviews"]
+        if item["source_id"] == "aka_official"
+    )
+    family["recommended_actions"] = ["REQUEST_PERMISSION"]
+    _write_yaml(path, payload)
+
+    audit = audit_repository(root)
+
+    assert any(
+        "SOURCE_FAMILY aka_official cannot be recommended directly" in error
+        for error in audit.errors
+    )
+
+
+def test_synthetic_control_may_be_reusable_but_stays_scientifically_excluded():
+    audit = audit_repository(REPOSITORY_ROOT)
+
+    assert not [
+        error for error in audit.errors if "authorized source state for sample" in error
+    ]
+
+
+def test_synthetic_control_cannot_become_scientific_evidence(tmp_path: Path):
+    root = _copy_audit_fixture(tmp_path)
+    path = root / "configs" / "sources" / "sample.yaml"
+    payload = _load_yaml(path)
+    payload["source_governance"]["scientific_status"] = "PILOT_ONLY"
+    _write_yaml(path, payload)
+
+    audit = audit_repository(root)
+
+    assert any(
+        "synthetic sample must remain scientifically excluded" in error
+        for error in audit.errors
+    )
 
 
 def test_source_family_cannot_receive_blanket_approval(tmp_path: Path):
