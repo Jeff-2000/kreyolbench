@@ -23,6 +23,10 @@ review of the five provisional v0.1 task specifications.
 pre-review and cannot satisfy the external task-review gate.
 `reviews/` contains reusable external-review evidence requirements and forms.
 `V0_1_TASK_FEASIBILITY_MATRIX.md` records evidence gaps and source-to-task fit.
+`SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md` consolidates metadata-only reviews
+for all registered source candidates. `SOURCE_TO_TASK_MATRIX_V0_1.md` records
+provisional relevance without authorization, and `source_reviews/` contains
+the methodology, template, and source-specific public evidence reports.
 The master paper outline covers the first controlled release only; it does not define the global KreyolBench task universe. Long-term scope is governed by `datasets/TASK_TAXONOMY.md` and `KB-SCOPE-002`.
 
 ## Rules
@@ -40,3 +44,4 @@ The master paper outline covers the first controlled release only; it does not d
 | 2026-09-08 | Added the v0.1 expert-review packet. | TO_REVIEW_LATER |
 | 2026-09-09 | Added the task review packet and evidence-based feasibility matrix. | TO_REVIEW_LATER |
 | 2026-09-10 | Added the internal audit record and qualified external-review evidence templates. | TO_REVIEW_LATER |
+| 2026-09-10 | Added complete metadata-only source feasibility reports and a source-to-task matrix. | SUBMITTED_TO_REVIEW |

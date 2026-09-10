@@ -18,7 +18,7 @@ domain: media_and_oral_history
 temporal_coverage: archival_TO_VERIFY_PER_ITEM
 geographic_relevance: Haiti_and_diaspora
 expected_tasks: [asr, codeswitch, ner, retrieval, diachronic_analysis]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "High-priority research resource; preserve item identifiers and conduct item-level rights and sensitivity review."

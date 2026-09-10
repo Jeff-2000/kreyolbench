@@ -18,7 +18,7 @@ domain: linguistics
 temporal_coverage: TO_VERIFY_PER_TREEBANK
 geographic_relevance: Haiti_TO_VERIFY
 expected_tasks: [pos_tagging, dependency_parsing, linguistic_evaluation]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Create child records for each treebank and exact release version before use."

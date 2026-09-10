@@ -18,7 +18,7 @@ domain: education
 temporal_coverage: TO_VERIFY_PER_RESOURCE
 geographic_relevance: Haiti
 expected_tasks: [retrieval, normalization, terminology, education_evaluation]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Create child records for each resource or corpus; do not apply the page license automatically to linked assets."

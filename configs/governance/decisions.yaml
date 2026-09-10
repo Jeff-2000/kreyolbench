@@ -285,3 +285,9 @@ decisions:
     status: TO_REVIEW_LATER
     requires_expert_approval: false
     review_history: []
+
+  - id: KB-ENG-007
+    title: Machine-readable metadata-only source-feasibility ledger
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []

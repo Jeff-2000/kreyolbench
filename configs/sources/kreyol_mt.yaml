@@ -18,7 +18,7 @@ domain: machine_translation
 temporal_coverage: TO_VERIFY_PER_SUBSET
 geographic_relevance: MULTI_REGION
 expected_tasks: [translation, translation_evaluation]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Do not infer uniform rights or Haitian Creole coverage from the collection-level record."

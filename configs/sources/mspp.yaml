@@ -8,9 +8,9 @@ provider: Ministere de la Sante Publique et de la Population
 publisher_owner: MSPP
 data_type: html_and_pdf_documents
 access_method: targeted_document_review_before_collection
-license: TO_VERIFY_PER_DOCUMENT
-license_url: https://mspp.gouv.ht/
-license_evidence: "Official publication does not by itself establish permission to collect or redistribute document text."
+license: ALL_RIGHTS_RESERVED_AND_DOCUMENT_SPECIFIC_REVIEW_REQUIRED
+license_url: https://mspp.gouv.ht/publications
+license_evidence: "The official publications page displays 'Tous droits reserves'; document-specific permission and ownership still require review."
 citation: "Cite each MSPP document, publisher, URL, date, and retrieval date."
 language_claim: fra_hat_mixed_TO_VERIFY
 registers: [health, administrative, public_information]
@@ -18,7 +18,7 @@ domain: public_health
 temporal_coverage: TO_VERIFY
 geographic_relevance: Haiti
 expected_tasks: [classification, ner, retrieval, normalization]
-accessed_on: null
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Review document language, rights, sensitive health content, and PDF/OCR handling individually."
@@ -31,8 +31,8 @@ decision_ids: [KB-DATA-001, KB-DATA-003]
 requires_expert_validation: true
 release_candidate: false
 source_governance:
-  discovery_status: DISCOVERED
-  access_status: UNKNOWN
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
   legal_review_status: PENDING
   collection_status: PERMISSION_UNKNOWN
   derived_use_status: UNKNOWN
@@ -42,4 +42,4 @@ source_governance:
   scientific_status: PENDING_EXPERT_REVIEW
   reviewed_by: null
   reviewed_on: null
-  evidence_urls: [https://mspp.gouv.ht/]
+  evidence_urls: [https://mspp.gouv.ht/publications]

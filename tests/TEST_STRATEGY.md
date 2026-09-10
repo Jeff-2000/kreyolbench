@@ -66,6 +66,10 @@ Should include:
 - NER character spans may represent nesting but must not cross; nested annotation is not mandatory until reviewed.
 - Retrieval qrels must resolve to existing queries and documents.
 - Data with unapproved redistribution status must not appear in public release paths.
+- Every non-synthetic source must have exactly one metadata-feasibility record.
+- The synthetic fixture must have a separate control record and remain scientifically excluded.
+- Metadata feasibility must never imply source authorization or pilot readiness.
+- Source families must not be recommended directly for collection permission.
 
 ## Governance Audit Coverage
 
@@ -89,6 +93,9 @@ Implemented checks now cover:
 - explicit versioned release membership
 - exclusion of roadmap, discovery, feasibility-only, and deferred tasks from automatic release inclusion
 - deterministic text and JSON CLI output
+- source-feasibility coverage, evidence paths, and task-reference resolution
+- non-authorizing feasibility conclusions and unchanged source approval gates
+- synthetic-control scientific exclusion
 
 Near-duplicate detection, document-group leakage, and release-manifest validation remain future work because their thresholds and storage contracts require scientific review.
 
@@ -106,3 +113,4 @@ Near-duplicate detection, document-group leakage, and release-manifest validatio
 | 2026-09-08 | Added executable governance and scientific-invariant coverage. | SUBMITTED_TO_REVIEW |
 | 2026-09-09 | Added task-contract, provenance, review-history, and retrieval-artifact coverage. | SUBMITTED_TO_REVIEW |
 | 2026-09-09 | Added open-world taxonomy, domain, task-instance, and release-membership coverage. | SUBMITTED_TO_REVIEW |
+| 2026-09-10 | Added source-feasibility coverage, evidence, family, synthetic-control, and no-authorization checks. | SUBMITTED_TO_REVIEW |

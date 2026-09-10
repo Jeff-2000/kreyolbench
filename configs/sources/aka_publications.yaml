@@ -18,7 +18,7 @@ domain: language_governance
 temporal_coverage: TO_VERIFY_PER_DOCUMENT
 geographic_relevance: Haiti_and_diaspora
 expected_tasks: [normalization, terminology, retrieval, linguistic_evaluation]
-accessed_on: 2026-09-09
+accessed_on: 2026-09-10
 collection_date: null
 hash: null
 notes: "Inventory titles and metadata only until written permission or document-specific terms are recorded."

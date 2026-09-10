@@ -172,6 +172,35 @@ Validation target:
 - exactly the five task decisions remain unresolved
 - release eligibility remains false
 
+### Metadata-Only Source Feasibility Review
+
+Status: SUBMITTED_TO_REVIEW
+
+Implemented:
+
+- added a typed feasibility ledger with eight non-numeric evidence dimensions
+- reviewed all 21 non-synthetic source candidates and the synthetic test control
+- added public source-specific evidence reports, a consolidated review packet,
+  and a provisional source-to-task matrix
+- added audit checks for complete coverage, evidence paths, task references,
+  source-family restrictions, non-authorizing conclusions, and unchanged gates
+- reconciled only directly observed public metadata without elevating permissions
+
+Scientific state:
+
+- 12 candidates are `CONDITIONAL` for further human review and 9 are `BLOCKED`
+- these are metadata-triage conclusions, not readiness or authorization states
+- all legal, ethical, collection, derived-use, redistribution, scientific, and
+  release gates remain non-approved
+- the synthetic control remains excluded from scientific evidence
+- no source content was downloaded, scraped, annotated, transformed, or redistributed
+
+Validation target:
+
+- exactly 21 candidate reviews and one synthetic-control review resolve
+- governance audit returns `PASS` with exactly five unresolved task decisions
+- release eligibility remains false
+
 ## Revision History
 
 | Date | Change | Status |
@@ -183,3 +212,4 @@ Validation target:
 | 2026-09-09 | Added task specifications, feasibility evidence, external review gates, and example provenance. | SUBMITTED_TO_REVIEW |
 | 2026-09-09 | Added open-world task/domain taxonomy and bounded release membership. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Revised all five task specifications after the AI-assisted internal audit and added qualified external human review enforcement. | SUBMITTED_TO_REVIEW |
+| 2026-09-10 | Added complete metadata-only source feasibility evidence and enforcement without authorizing source use. | SUBMITTED_TO_REVIEW |
