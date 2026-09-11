@@ -603,7 +603,7 @@ def test_source_feasibility_covers_all_candidates_and_sample_control():
     }
     candidate_ids = {item["source_id"] for item in ledger["candidate_reviews"]}
 
-    assert len(candidate_ids) == 21
+    assert len(candidate_ids) == len(ledger["candidate_reviews"])
     assert candidate_ids == source_ids - {"sample"}
     assert ledger["synthetic_control"]["source_id"] == "sample"
     assert ledger["synthetic_control"]["authorization_effect"] == "NONE"

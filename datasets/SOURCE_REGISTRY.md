@@ -124,6 +124,10 @@ Feasibility is not an authorization axis. It prioritizes later human review and
 cannot elevate legal, ethical, collection, derived-use, redistribution,
 scientific, or release status.
 
+## Discovery Intake and Evidence Version 2
+
+See `SOURCE_DISCOVERY.md` for the open-world intake and the expanded review packet. Current feasibility schema v2 requires claim-level URLs, publisher attribution, dates and direct evidence for each EVIDENCE_AVAILABLE dimension. Historical assessments are retained, not silently overwritten. Registered sources, unresolved leads and reference-only resources are separate. Relationships never transfer rights, and reported sizes are not aggregated into unique corpus totals.
+
 ## Acceptance Criteria
 
 - Every committed record validates against schema version 2.

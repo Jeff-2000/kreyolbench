@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: "ud_haitian_autogramm"
+record_type: "SOURCE_SUBSET"
+parent_source_id: "universal_dependencies_haitian"
+name: "UD Haitian Creole Autogramm"
+url: "https://universaldependencies.org/treebanks/ht_autogramm/index.html"
+provider: "Universal Dependencies contributors"
+publisher_owner: "TO_VERIFY_PER_UPSTREAM_COMPONENT"
+data_type: "text_resource"
+access_method: "metadata_review_only"
+license: "TO_VERIFY"
+license_url: "https://universaldependencies.org/treebanks/ht_autogramm/index.html"
+license_evidence: "The treebank page states CC BY-SA 4.0; upstream text, release, and annotation rights remain subject to separate review."
+citation: "UD Haitian Creole Autogramm; cite exact release and upstream contributors after verification."
+language_claim: "hat (documented by metadata; no content-level validation)"
+registers: ["TO_VERIFY"]
+domain: "religion"
+temporal_coverage: "TO_VERIFY"
+geographic_relevance: "Haiti; sampling and diaspora coverage TO_VERIFY"
+expected_tasks: ["linguistic_robustness"]
+accessed_on: "2026-09-10"
+collection_date: null
+hash: null
+notes: "The official treebank page identifies Autogramm with Bible, novel, VOA and PAPDA sources. It is distinct from Adolphe and reports non-UD-to-UD conversion."
+quality_notes: "Version-specific counts; upstream-text permissions; source balance; conversion quality"
+machine_generated_content_risk: "UNKNOWN"
+pii_risk: "TO_VERIFY"
+duplication_risk: "TO_VERIFY; shared upstream content and model contamination may occur"
+status: "SUBMITTED_TO_REVIEW"
+decision_ids: ["KB-DATA-001","KB-DATA-003"]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: "ENDPOINT_VERIFIED"
+  access_status: "ACCESSIBLE_FOR_REVIEW"
+  legal_review_status: "PENDING"
+  collection_status: "NOT_REQUESTED"
+  derived_use_status: "UNKNOWN"
+  redistribution_status: "UNKNOWN"
+  commercial_use_status: "UNKNOWN"
+  ethics_status: "NOT_STARTED"
+  scientific_status: "PENDING_EXPERT_REVIEW"
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: ["https://universaldependencies.org/treebanks/ht_autogramm/index.html"]

@@ -1,0 +1,45 @@
+source_schema_version: 2
+source_id: "cmu_haitian_phatjmo"
+record_type: "SOURCE_SUBSET"
+parent_source_id: "cmu_haitian"
+name: "phatjmo CMU Haitian mirror candidate"
+url: "https://huggingface.co/datasets/phatjmo/cmu_haitian"
+provider: "phatjmo"
+publisher_owner: "TO_VERIFY_PER_UPSTREAM_COMPONENT"
+data_type: "speech_text_resource"
+access_method: "metadata_review_only"
+license: "TO_VERIFY"
+license_url: "https://huggingface.co/datasets/phatjmo/cmu_haitian"
+license_evidence: "MIT badge and reproduced CMU notice require reconciliation; uploader authority to license original recordings is unverified."
+citation: "phatjmo CMU Haitian mirror candidate; cite exact release and upstream contributors after verification."
+language_claim: "hat (documented by metadata; no content-level validation)"
+registers: ["TO_VERIFY"]
+domain: "other"
+temporal_coverage: "TO_VERIFY"
+geographic_relevance: "Haiti; sampling and diaspora coverage TO_VERIFY"
+expected_tasks: ["speech_audio"]
+accessed_on: "2026-09-10"
+collection_date: null
+hash: null
+notes: "The upload describes CMU Haitian speech. Its MIT badge coexists with reproduced CMU notice conditions; this is not proof of authorized relicensing."
+quality_notes: "Mirror identity and hashes; license compatibility; speaker linkage; train/test leakage"
+machine_generated_content_risk: "UNKNOWN"
+pii_risk: "high"
+duplication_risk: "TO_VERIFY; shared upstream content and model contamination may occur"
+status: "SUBMITTED_TO_REVIEW"
+decision_ids: ["KB-DATA-001","KB-DATA-003"]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: "ENDPOINT_VERIFIED"
+  access_status: "ACCESSIBLE_FOR_REVIEW"
+  legal_review_status: "PENDING"
+  collection_status: "NOT_REQUESTED"
+  derived_use_status: "UNKNOWN"
+  redistribution_status: "UNKNOWN"
+  commercial_use_status: "UNKNOWN"
+  ethics_status: "NOT_STARTED"
+  scientific_status: "PENDING_EXPERT_REVIEW"
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls: ["https://huggingface.co/datasets/phatjmo/cmu_haitian"]

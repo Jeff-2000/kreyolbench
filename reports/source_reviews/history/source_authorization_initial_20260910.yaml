@@ -1,0 +1,355 @@
+recorded_on: "2026-09-10"
+purpose: "Regression snapshot: metadata expansion must not change existing source authorization."
+sources:
+  jhu_kreyol_mt:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://huggingface.co/datasets/jhu-clsp/kreyol-mt","https://aclanthology.org/2024.naacl-long.170/"]
+  wikimedia_htwiki:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "CONDITIONAL"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "CONDITIONAL"
+      redistribution_status: "CONDITIONAL"
+      commercial_use_status: "CONDITIONAL"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use","https://dumps.wikimedia.org/htwiki/latest/"]
+  opus:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://opus.nlpl.eu/corpora"]
+  mit_ayiti_resources:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://haiti.mit.edu/resources/"]
+  un_haiti_ht:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://haiti.un.org/ht"]
+  diaspora_publications:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "DISCOVERED"
+      access_status: "UNKNOWN"
+      legal_review_status: "NOT_STARTED"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: []
+  mspp_publications:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://mspp.gouv.ht/publications"]
+  ebible_hat_1985:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://ebible.org/bible/details.php?id=hat"]
+  radio_haiti_duke_archive:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "CONDITIONAL"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "CONDITIONAL"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://repository.duke.edu/dc/radiohaiti"]
+  haiti_government_publications:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "NOT_STARTED"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://communication.gouv.ht/"]
+  sample:
+    status: "TO_REVIEW_LATER"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "NOT_APPLICABLE"
+      collection_status: "NOT_APPLICABLE"
+      derived_use_status: "APPROVED"
+      redistribution_status: "APPROVED"
+      commercial_use_status: "APPROVED"
+      ethics_status: "NOT_APPLICABLE"
+      scientific_status: "EXCLUDED"
+      reviewed_by: "KreyolBench maintainers"
+      reviewed_on: "2026-09-09"
+      evidence_urls: ["https://creativecommons.org/publicdomain/zero/1.0/"]
+  aka_official:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://www.akademikreyol.net/"]
+  creoleval:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://github.com/hclent/CreoleVal","https://aclanthology.org/2024.tacl-1.53/"]
+  haiti_civil_protection_resources:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://www.servicespublics.gouv.ht/site/rsmo/DPC"]
+  cmu_haitian:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "DISCOVERED"
+      access_status: "UNKNOWN"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://www.speech.cs.cmu.edu/haitian/"]
+  social_media_candidates:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "DISCOVERED"
+      access_status: "UNKNOWN"
+      legal_review_status: "NOT_STARTED"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: []
+  menfp_educational_resources:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://menfp.gouv.ht/"]
+  haiti_government_communication_portal:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://communication.gouv.ht/"]
+  universal_dependencies_haitian:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://universaldependencies.org/","https://universaldependencies.org/treebanks/ht_adolphe/index.html"]
+  aka_publications:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "NOT_STARTED"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://www.akademikreyol.net/"]
+  haitian_news_candidates:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "DISCOVERED"
+      access_status: "UNKNOWN"
+      legal_review_status: "NOT_STARTED"
+      collection_status: "NOT_REQUESTED"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: []
+  radio_haiti_inter_lrec2026:
+    status: "SUBMITTED_TO_REVIEW"
+    release_candidate: false
+    source_governance:
+      discovery_status: "ENDPOINT_VERIFIED"
+      access_status: "ACCESSIBLE_FOR_REVIEW"
+      legal_review_status: "PENDING"
+      collection_status: "PERMISSION_UNKNOWN"
+      derived_use_status: "UNKNOWN"
+      redistribution_status: "UNKNOWN"
+      commercial_use_status: "UNKNOWN"
+      ethics_status: "PENDING"
+      scientific_status: "PENDING_EXPERT_REVIEW"
+      reviewed_by: null
+      reviewed_on: null
+      evidence_urls: ["https://aclanthology.org/2026.lrec-1.241/"]

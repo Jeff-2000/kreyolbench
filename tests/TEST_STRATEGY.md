@@ -97,6 +97,8 @@ Implemented checks now cover:
 - non-authorizing feasibility conclusions and unchanged source approval gates
 - synthetic-control scientific exclusion
 
+Discovery tests additionally cover intake completeness, duplicate identities, separate source/lead/reference dispositions, claim-level evidence, reported-size units and revisions, source relationships, domain/family references, origin uncertainty, preserved historical evidence, and unchanged authorization states. The historical snapshot has 21 candidates; current coverage is dynamic.
+
 Near-duplicate detection, document-group leakage, and release-manifest validation remain future work because their thresholds and storage contracts require scientific review.
 
 ## Acceptance Criteria

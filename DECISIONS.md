@@ -639,6 +639,30 @@ Requires expert approval: No
 
 Expert decision: Not required
 
+## KB-ENG-008
+
+Title: Open-world discovery intake and claim-level metadata evidence
+
+Date: 2026-09-10
+
+Status: TO_REVIEW_LATER
+
+Context: Repeated resource names, derivatives and unverified language claims must not inflate corpus coverage or imply authorization.
+
+Decision: Preserve each intake, deduplicate canonical resource/configuration/revision identities, separate registered sources from unresolved leads and references, and record evidence-backed relationships without inheriting rights. Feasibility schema v2 requires direct claim evidence for every EVIDENCE_AVAILABLE dimension. Historical schema-v1 evidence remains archived.
+
+Alternatives considered: append every mention as a dataset; force references into source configs; retain one generic evidence URL for all dimensions.
+
+Scientific rationale: No new task, metric, release membership, source permission or scientific approval is introduced.
+
+Engineering implications: Discovery is a separate typed module integrated into the existing audit. Coverage is registry-driven rather than fixed at 21. Reported sizes retain units, revisions and evidence; they are never automatically summed.
+
+Risks: metadata can be stale or wrong; machine validation checks evidence structure, not truth. Broad domain mappings are hypotheses, not coverage measurements.
+
+Requires expert approval: No
+
+Expert decision: Not required for engineering; source findings remain SUBMITTED_TO_REVIEW or BLOCKED.
+
 ## Revision History
 
 | Date | Change | Status |

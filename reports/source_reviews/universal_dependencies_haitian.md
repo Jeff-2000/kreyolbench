@@ -37,6 +37,10 @@ Register a version-specific UD Haitian Creole Adolphe child record with upstream
 
 Upstream text rights; exact release version; manual validation level; contamination; validity outside grammar examples.
 
+## Expansion Clarification
+
+The preceding findings describe Adolphe only, not all Haitian UD resources. Separate metadata-only records now identify `ud_haitian_adolphe` and `ud_haitian_autogramm`. The [Autogramm page](https://universaldependencies.org/treebanks/ht_autogramm/index.html) identifies different upstream texts and conversion history. No treebank count or annotation-quality claim should be generalized across them; exact releases and rights remain unapproved.
+
 ## Next Review Action
 
 Verify license compatibility and source provenance, then assess the treebank only for clearly defined linguistic uses.
