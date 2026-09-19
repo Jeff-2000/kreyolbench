@@ -1,0 +1,790 @@
+schema_version: 1
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+- KB-DATA-001
+- KB-DATA-003
+- KB-SRCREV-001
+- KB-ENG-009
+- KB-SRCREV-002
+- KB-DATA-004
+- KB-ENG-010
+requires_expert_validation: true
+release_candidate: false
+entries:
+- source_id: aka_official
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: aka_publications
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: aya_collection_haitian
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: babel_haitian_ldc2017s03
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: cmu_haitian
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: cmu_haitian_phatjmo
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: creoleval
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: creoleval_mit_haiti
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: diaspora_publications
+  tier: DISCOVERY_FUTURE_GOVERNANCE_REQUIRED
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: ebible_hat_1985
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: finepdfs_hat
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: flores_plus_hat
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: haiti_civil_protection_resources
+  tier: DISCOVERY_FUTURE_GOVERNANCE_REQUIRED
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: haiti_government_communication_portal
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: haiti_government_publications
+  tier: DISCOVERY_FUTURE_GOVERNANCE_REQUIRED
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: haitian_disaster_sms_munro
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: haitian_news_candidates
+  tier: DISCOVERY_FUTURE_GOVERNANCE_REQUIRED
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: jhu_kreyol_mt
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: mc4_ht
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: menfp_educational_resources
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: mission_4636_open_nonsensitive
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: mission_4636_restricted_sensitive
+  tier: DISCOVERY_FUTURE_GOVERNANCE_REQUIRED
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: mit_ayiti_resources
+  tier: PENDING_PROJECT_LEAD_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: mspp_publications
+  tier: PENDING_PROJECT_LEAD_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: northern_haitian_creole_corpus
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: opus
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: radio_haiti_duke_archive
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: PARTIAL
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: radio_haiti_inter_lrec2026
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: social_media_candidates
+  tier: DISCOVERY_FUTURE_GOVERNANCE_REQUIRED
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: ud_haitian_adolphe
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: ud_haitian_autogramm
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: un_haiti_ht
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: universal_dependencies_haitian
+  tier: COMPARISON_CONTAMINATION_FUTURE_INFRASTRUCTURE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: voxlingua107_hat
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: wikimedia_htwiki
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: PARTIAL
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: wikimedia_htwiki_20231101
+  tier: HIGH_PRIORITY_NEXT_STAGE_REVIEW
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE
+- source_id: xp3x_hat
+  tier: NOT_IN_PROJECT_LEAD_REVIEW_SCOPE
+  dimensions:
+    native_haitian_creole_value: PARTIAL
+    linguistic_authenticity: PARTIAL
+    domain_diversity: PARTIAL
+    register_diversity: PARTIAL
+    temporal_diversity: PARTIAL
+    geographic_diaspora_diversity: PARTIAL
+    spoken_language_value: PARTIAL
+    code_switching_value: PARTIAL
+    orthographic_value: PARTIAL
+    task_relevance: PARTIAL
+    provenance_quality: PARTIAL
+    rights_clarity: MISSING
+    ethics_burden: PARTIAL
+    contamination_assessability: PARTIAL
+    long_term_infrastructure_value: PARTIAL
+  rationale: Categorical planning tier based on current metadata and review scope; it is not a score, authorization,
+    or release decision.
+  authorization_effect: NONE

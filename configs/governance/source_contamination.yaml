@@ -1,0 +1,1041 @@
+schema_version: 2
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+- KB-SPLIT-001
+- KB-SRCREV-001
+- KB-SRCREV-002
+- KB-DATA-004
+- KB-ENG-009
+- KB-ENG-010
+requires_expert_validation: true
+release_candidate: false
+entries:
+- resource_ref: source:aka_official
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:aka_publications
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:aya_collection_haitian
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:babel_haitian_ldc2017s03
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:cmu_haitian
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs:
+  - source:cmu_haitian_phatjmo
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:cmu_haitian_phatjmo
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs:
+  - source:cmu_haitian
+  derived_resource_refs: []
+  possible_overlap_refs:
+  - source:cmu_haitian
+  training_status: PROHIBITED
+  status: KNOWN_OVERLAP
+  evidence_state: EVIDENCE_AVAILABLE
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:creoleval
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits:
+  - all evaluation components
+  parent_resource_refs: []
+  derived_resource_refs:
+  - source:creoleval_mit_haiti
+  possible_overlap_refs: []
+  training_status: PROHIBITED
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:creoleval_mit_haiti
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs:
+  - source:creoleval
+  derived_resource_refs: []
+  possible_overlap_refs:
+  - source:creoleval
+  training_status: REQUIRES_REVIEW
+  status: KNOWN_OVERLAP
+  evidence_state: EVIDENCE_AVAILABLE
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:diaspora_publications
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:ebible_hat_1985
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:finepdfs_hat
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:flores_plus_hat
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: '4.6'
+  protected_splits:
+  - dev
+  - devtest
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: PROHIBITED
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:haiti_civil_protection_resources
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:haiti_government_communication_portal
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:haiti_government_publications
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:haitian_disaster_sms_munro
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs:
+  - source:mission_4636_open_nonsensitive
+  - source:mission_4636_restricted_sensitive
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:haitian_news_candidates
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:jhu_kreyol_mt
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:mc4_ht
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:menfp_educational_resources
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:mission_4636_open_nonsensitive
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs:
+  - source:haitian_disaster_sms_munro
+  derived_resource_refs: []
+  possible_overlap_refs:
+  - source:haitian_disaster_sms_munro
+  training_status: REQUIRES_REVIEW
+  status: KNOWN_OVERLAP
+  evidence_state: EVIDENCE_AVAILABLE
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:mission_4636_restricted_sensitive
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs:
+  - source:haitian_disaster_sms_munro
+  derived_resource_refs: []
+  possible_overlap_refs:
+  - source:haitian_disaster_sms_munro
+  training_status: PROHIBITED
+  status: KNOWN_OVERLAP
+  evidence_state: EVIDENCE_AVAILABLE
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:mit_ayiti_resources
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:mspp_publications
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:northern_haitian_creole_corpus
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: PROHIBITED
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:opus
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:radio_haiti_duke_archive
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:radio_haiti_inter_lrec2026
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:social_media_candidates
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:ud_haitian_adolphe
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: UD 2.18
+  protected_splits: []
+  parent_resource_refs:
+  - source:universal_dependencies_haitian
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:ud_haitian_autogramm
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: UD 2.18
+  protected_splits: []
+  parent_resource_refs:
+  - source:universal_dependencies_haitian
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:un_haiti_ht
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:universal_dependencies_haitian
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs:
+  - source:ud_haitian_autogramm
+  - source:ud_haitian_adolphe
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:voxlingua107_hat
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:wikimedia_htwiki
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs:
+  - source:wikimedia_htwiki_20231101
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:wikimedia_htwiki_20231101
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs:
+  - source:wikimedia_htwiki
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: source:xp3x_hat
+  resource_kind: REGISTERED_SOURCE
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: lead:apics_structure49
+  resource_kind: REFERENCE_ONLY
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: NOT_APPLICABLE
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: lead:apics_survey49
+  resource_kind: REFERENCE_ONLY
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: NOT_APPLICABLE
+  status: CONTAMINATION_NOT_ESTABLISHED
+  evidence_state: MISSING
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: lead:jsbeaudry_stem
+  resource_kind: UNVERIFIED_LEAD
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: REQUIRES_REVIEW
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: lead:vicr_translated
+  resource_kind: UNVERIFIED_LEAD
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: NOT_APPLICABLE
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE
+- resource_ref: lead:xm3600
+  resource_kind: REFERENCE_ONLY
+  subset: ALL_OR_TO_VERIFY
+  revision: TO_VERIFY
+  protected_splits: []
+  parent_resource_refs: []
+  derived_resource_refs: []
+  possible_overlap_refs: []
+  training_status: NOT_APPLICABLE
+  status: ELEVATED_RISK
+  evidence_state: PARTIAL
+  rationale:
+  - No absence-of-contamination claim is made; exact overlap remains unknown unless explicitly evidenced.
+  - Protected evaluation splits and benchmark components must never enter training pools.
+  required_provenance:
+  - source_id
+  - provenance_unit_id
+  - source_item_locator
+  - source_version
+  - content_hash
+  - origin_type
+  - derivation_steps
+  - split_name
+  authorization_effect: NONE

@@ -8,9 +8,9 @@ provider: eBible.org
 publisher_owner: TO_VERIFY
 data_type: religious_text
 access_method: metadata_review_before_download
-license: PUBLIC_DOMAIN_NOTICE_TO_VERIFY
+license: PROVIDER_ASSERTED_PUBLIC_DOMAIN_HAT_1985_ONLY
 license_url: https://ebible.org/bible/details.php?id=hat
-license_evidence: "The official record presents a public-domain notice and basis; independent legal verification remains required before use."
+license_evidence: "eBible identifies Bib La / Haitian Creole Bible 1985 as HAT/HATPDS and states that this edition is public domain due to 1985 publication without notice and no registration within five years. This is provider evidence, not KreyolBench legal advice, and does not apply to other editions."
 citation: "Bib La Haitian Creole Bible 1985, eBible.org; edition and upstream citation TO_VERIFY."
 language_claim: hat
 registers: [religious, formal]
@@ -21,7 +21,7 @@ expected_tasks: [language_modeling, normalization]
 accessed_on: 2026-09-10
 collection_date: null
 hash: null
-notes: "Do not treat a religious translation as representative general Kreyol."
+notes: "The provider assertion applies only to the 1985 HAT/HATPDS edition. Do not treat a religious translation as representative general Kreyol."
 quality_notes: "Highly domain-specific text; edition, upstream rights, translation provenance, and duplication require review."
 machine_generated_content_risk: low
 pii_risk: low

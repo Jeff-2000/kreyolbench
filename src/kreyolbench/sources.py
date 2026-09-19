@@ -150,6 +150,7 @@ def known_source_families() -> list[str]:
         "creoleval",
         "diaspora_publications",
         "haiti_government_publications",
+        "haitian_disaster_sms_munro",
         "haitian_news_candidates",
         "mit_ayiti_resources",
         "opus",

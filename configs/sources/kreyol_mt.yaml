@@ -21,13 +21,13 @@ expected_tasks: [translation, translation_evaluation]
 accessed_on: 2026-09-10
 collection_date: null
 hash: null
-notes: "Do not infer uniform rights or Haitian Creole coverage from the collection-level record."
+notes: "Repository metadata confirms hat-ara, hat-aze, hat-deu, hat-eng, hat-fra, hat-nep, hat-zho, and kea-hat directories. This aggregate is outside v0.1. Create pair- and upstream-component child records before any use; directory existence does not establish uniform rights, origin, quality, or scientific fitness."
 quality_notes: "Audit language pairs, domains, source provenance, translations, duplicates, contamination, and licenses."
 machine_generated_content_risk: high
 pii_risk: unknown
 duplication_risk: high
 status: SUBMITTED_TO_REVIEW
-decision_ids: [KB-DATA-001, KB-DATA-003]
+decision_ids: [KB-DATA-001, KB-DATA-003, KB-SRCREV-002, KB-DATA-004, KB-ENG-010]
 requires_expert_validation: true
 release_candidate: false
 source_governance:

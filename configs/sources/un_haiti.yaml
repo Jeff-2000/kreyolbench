@@ -10,7 +10,7 @@ data_type: html_documents
 access_method: targeted_document_review_before_collection
 license: TO_VERIFY_PER_PAGE
 license_url: https://haiti.un.org/ht
-license_evidence: "Public access does not establish a uniform right to redistribute page text."
+license_evidence: "General UN website terms can limit use to personal non-commercial copying and restrict redistribution or derivative works unless asset-specific terms apply. Public access does not establish corpus reuse rights."
 citation: "Cite each United Nations in Haiti page, credited author, URL, date, and retrieval date."
 language_claim: hat_interface_with_mixed_page_content_TO_VERIFY
 registers: [civic, development, public_information]
@@ -42,4 +42,6 @@ source_governance:
   scientific_status: PENDING_EXPERT_REVIEW
   reviewed_by: null
   reviewed_on: null
-  evidence_urls: [https://haiti.un.org/ht]
+  evidence_urls:
+    - https://haiti.un.org/ht
+    - https://treaties.un.org/pages/Overview.aspx?path=overview%2FusageAgreement%2Fpage1_en.xml

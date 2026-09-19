@@ -22,6 +22,8 @@ KreyolBench remains open to evidence-driven expansion across task families, doma
 
 Status: IN_PROGRESS
 
+The 2026-09-18 Project-Lead source-feasibility review is implemented. It prioritizes bounded next-stage source review but authorizes no acquisition. MIT-Ayiti and MSPP remain pending Project-Lead review; the five task specifications remain under independent external review.
+
 Goals:
 
 - public package scaffold
@@ -43,6 +45,8 @@ Goals:
 - stable task-instance identifiers and explicit release membership
 - complete metadata-only feasibility ledger for all registered source candidates
 - public evidence reports and a provisional source-to-task matrix
+- complete source-use and contamination-firewall ledgers for registered sources and discovery/reference leads
+- typed multimodal provenance with a documented native Haitian vision-language evidence gap
 
 Exit criteria:
 
@@ -56,7 +60,7 @@ Exit criteria:
 Immediate next action:
 
 - recruit identifiable external reviewers using `reports/TASK_SPEC_REVIEW_PACKET_V0_1.md` and `reports/reviews/REVIEW_TEMPLATE.md`;
-- submit `reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md` for human review, retaining the original source packet as history; select a small number of bounded collections for legal, ethical, linguistic, provenance, and scientific follow-up;
+- select bounded high-priority source components for rights-holder, legal, ethics, linguistic, provenance, and contamination follow-up using the validated metadata packet; keep acquisition blocked;
 - revise rejected specifications and authorize no annotation pilot until every applicable task and source gate passes.
 
 ## v0.2: Dataset Pilot and Annotation Protocol
@@ -115,3 +119,4 @@ These are non-exhaustive research pathways. They are not validated components or
 | 2026-09-09 | Separated the open-world ecosystem from versioned release membership. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Added the pre-external revision phase and made reviewer recruitment plus metadata-only source review the immediate next action. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Completed metadata-only source triage; moved the next gate to human packet review and bounded child-source selection. | SUBMITTED_TO_REVIEW |
+| 2026-09-19 | Implemented expanded Project-Lead source decisions, protected-evaluation firewalls, multimodal provenance, and exact source-use coverage. | SUBMITTED_TO_REVIEW |

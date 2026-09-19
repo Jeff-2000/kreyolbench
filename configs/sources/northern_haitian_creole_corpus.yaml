@@ -1,0 +1,47 @@
+source_schema_version: 2
+source_id: northern_haitian_creole_corpus
+record_type: SOURCE_COLLECTION
+parent_source_id: null
+name: Corpus of Northern Haitian Creole
+url: https://creole-nlp.github.io/
+provider: Corpus authors and former Indiana University Creole Institute
+publisher_owner: TO_VERIFY_WITH_CURRENT_CUSTODIAN
+data_type: speech_audio_and_transcription
+access_method: metadata_review_only_archive_unresolved
+license: TO_VERIFY
+license_url: null
+license_evidence: "Scholarly sources document the corpus, but the current archive, custodian, consent terms, license, and exact release are unresolved."
+citation: "Valdman et al. Corpus of Northern Haitian Creole; pin exact scholarly and archive citations before use."
+language_claim: "Northern Haitian Creole documented in scholarly descriptions"
+registers: [spoken_interview, regional, sociolinguistic]
+domain: everyday_conversation
+temporal_coverage: "recorded circa 2007; exact release metadata TO_VERIFY"
+geographic_relevance: "Cap-Haitien and Northern Haiti"
+expected_tasks: [speech_audio, linguistic_robustness, language_contact]
+accessed_on: 2026-09-18
+collection_date: null
+hash: null
+notes: "Scholarly descriptions report about ten recorded/transcribed interviews and approximately nine to ten hours. Speaker count is not treated as verified release metadata."
+quality_notes: "Actual archive, exact version, current custodian, consent, rights, participant metadata, transcription conventions, and regional sampling require review."
+machine_generated_content_risk: LOW_FOR_ORIGINAL_AUDIO_TRANSCRIPTION_PIPELINE_TO_VERIFY
+pii_risk: HIGH_SPEAKER_AND_INTERVIEW_CONTENT
+duplication_risk: TO_VERIFY
+status: BLOCKED
+decision_ids: [KB-DATA-001, KB-DATA-003, KB-SRCREV-002, KB-DATA-004]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: UNAVAILABLE
+  legal_review_status: NOT_STARTED
+  collection_status: PERMISSION_UNKNOWN
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://creole-nlp.github.io/
+    - https://aclanthology.org/2025.jeptalnrecital-taln.33/

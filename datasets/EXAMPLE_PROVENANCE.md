@@ -1,5 +1,11 @@
 # Example-Level Provenance Contract
 
+Canonical `origin_type` values are `HUMAN_ORIGINAL`, `HUMAN_TRANSLATED`, `MACHINE_TRANSLATED`, `LLM_GENERATED`, `SYNTHETIC_OTHER`, `ASR_DERIVED`, `OCR_DERIVED`, `HUMAN_TRANSCRIBED`, `MIXED`, and `UNKNOWN`.
+
+Origin is not the same as derivation. Preserve ordered `derivation_steps` for OCR, ASR, human transcription, normalization, translation, filtering, and other transformations. A downstream transformation must not overwrite deeper content origin.
+
+For image-text or other multimodal artifacts, apply `MULTIMODAL_PROVENANCE.md`; media rights and caption rights are independent.
+
 ## Purpose
 
 Define persistent provenance for every benchmark example and retrieval document. This contract implements conditions 7 and 8 of validated decision `KB-DATA-001`; it does not grant permission to use any source.
@@ -60,6 +66,7 @@ Each step records a stable step ID, contiguous sequence number, type, tool or re
 - Link multiple benchmark examples derived from the same source unit so split logic can group them.
 - Record translation, transcription, OCR, ASR, and generation routes where determinable.
 - Treat `UNKNOWN` and `MIXED` as analysis strata in contamination and robustness reviews.
+- Use `CONTAMINATION_NOT_ESTABLISHED`, never `CONTAMINATION_FREE`, when overlap has not been demonstrated but absence cannot be proven.
 - Do not use synthetic fixtures as benchmark evidence.
 
 ## Acceptance Criteria
@@ -86,3 +93,4 @@ Define the private/public provenance projection before real source acquisition a
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-09 | Added typed example provenance and content-origin requirements. | TO_REVIEW_LATER |
+| 2026-09-18 | Linked example provenance to source contamination and diversity accounting. | TO_REVIEW_LATER |

@@ -10,7 +10,7 @@ data_type: annotated_speech_corpus
 access_method: paper_and_release_artifact_verification
 license: TO_VERIFY_FROM_ACTUAL_RELEASE
 license_url: null
-license_evidence: "The publication describes a corpus release; KreyolBench has not yet verified the distribution endpoint or governing license."
+license_evidence: "The primary LREC 2026 paper explicitly reports release of 50 hours of audio and annotations. KreyolBench has not verified the distribution endpoint, exact artifact/version, corpus license, annotation license, or archive-to-corpus rights chain."
 citation: "Radio Haiti-Inter: A Large-Scale Annotated Corpus of Spoken Haitian Creole, LREC 2026; verify full author list from paper."
 language_claim: spoken_hat_with_code_switching
 registers: [spoken, broadcast, interview, code_switching, diachronic]
@@ -21,7 +21,7 @@ expected_tasks: [asr, codeswitch, pos_tagging, speech_retrieval]
 accessed_on: 2026-09-10
 collection_date: null
 hash: null
-notes: "Publication discovery is not permission to acquire or redistribute the released corpus."
+notes: "The paper verifies scientific identity, Haitian Creole relevance, ASR-derived transcription, POS tags, time alignment, confidence information, manual quality evaluation, code-switching relevance, and a claimed 50-hour release. It does not authorize KreyolBench acquisition or reuse."
 quality_notes: "Verify corpus version, audio linkage, transcript confidence, annotation methods, splits, speaker metadata, and license."
 machine_generated_content_risk: medium
 pii_risk: high

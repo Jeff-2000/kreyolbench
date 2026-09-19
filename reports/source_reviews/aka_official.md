@@ -5,9 +5,9 @@
 - Source ID: `aka_official`
 - Registry type: `SOURCE_FAMILY`
 - Review status: `SUBMITTED_TO_REVIEW`
-- Overall conclusion: `CONDITIONAL`
-- Reviewed on: 2026-09-10
-- Prepared by: Codex
+- Scientific feasibility summary: `CONDITIONAL` (non-authoritative; independent governance axes control use)
+- Current review updated on: 2026-09-18
+- Implemented by: Codex, with Project-Lead decision attributed separately
 - AI assistance disclosed: true
 - Authorization effect: `NONE`
 
@@ -45,3 +45,31 @@ Identify priority child publications and seek legal and linguistic review at doc
 ## No-Authorization Statement
 
 This metadata review authorizes no collection, download, annotation, transformation, derived use, redistribution, scientific inclusion, release membership, or publication claim.
+
+## Project-Lead Review Event
+
+- Event type: `PROJECT_LEAD_REVIEW_DECISION`
+- Reviewer: Jeff Pierre
+- Role: Project Lead and Scientific Reviewer
+- Review date: 2026-09-18
+- Independence: `INTERNAL_PROJECT_LEAD`
+- Decision: `RETAIN_CONDITIONAL`
+- Scientific feasibility after review: `CONDITIONAL`
+- Authorization effect: `NONE`
+
+This is a human Project-Lead feasibility and prioritization decision. It does not approve collection, transformation, annotation, derived use, redistribution, scientific inclusion, release membership, or publication claims.
+
+## External Evidence Required
+
+Source-specific rights, provenance, version, legal, ethical, linguistic, contamination, and representativeness questions remain open where applicable. Repository inspection cannot substitute for rights-holder clarification, legal counsel, ethics review, archive or source-owner confirmation, or qualified Haitian Creole review.
+
+Consequence if unresolved: no collection, annotation, derived use, redistribution, scientific inclusion, or release.
+
+## Exact Next Action
+
+Identify exact normative documents, versions, supersession, scope, rights evidence, and Haitian Creole orthographic review.
+
+## Review History
+
+- 2026-09-10: `ORIGINAL_CODEX_METADATA_ASSESSMENT`; AI-assisted metadata triage; no human scientific decision.
+- 2026-09-18: `PROJECT_LEAD_REVIEW_DECISION`; Jeff Pierre; `RETAIN_CONDITIONAL`.

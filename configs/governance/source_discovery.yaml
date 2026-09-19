@@ -1,771 +1,1340 @@
-schema_version: 1
-status: "SUBMITTED_TO_REVIEW"
-decision_ids: ["KB-DATA-001","KB-DATA-003","KB-SCOPE-002","KB-ENG-008"]
+schema_version: 2
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+- KB-DATA-001
+- KB-DATA-003
+- KB-SCOPE-002
+- KB-ENG-008
+- KB-SRCREV-002
+- KB-DATA-004
+- KB-DATA-005
+- KB-ENG-010
 requires_expert_validation: true
 release_candidate: false
 open_world: true
 ai_assistance_disclosed: true
-authorization_effect: "NONE"
+authorization_effect: NONE
 intakes:
-  -
-    intake_id: "jeff_pierre_20260910_expansion"
-    received_on: "2026-09-10"
-    supplied_by: "Jeff Pierre"
-    lead_ids: ["jsbeaudry_stem","wikipedia_20231101_ht","flores_plus_hat","xp3x_hat","aya_haitian","finepdfs_hat","mc4_ht","kreyol_mt","creoleval","mit_haiti_parallel","cmu_original","cmu_hf_mirror","babel_haitian","voxlingua107_hat","northern_haitian","ud_autogramm","ud_adolphe","munro_sms","apics_survey49","apics_structure49","xm3600","vicr_translated"]
+- intake_id: jeff_pierre_20260910_expansion
+  received_on: '2026-09-10'
+  supplied_by: Jeff Pierre
+  lead_ids:
+  - jsbeaudry_stem
+  - wikipedia_20231101_ht
+  - flores_plus_hat
+  - xp3x_hat
+  - aya_haitian
+  - finepdfs_hat
+  - mc4_ht
+  - kreyol_mt
+  - creoleval
+  - mit_haiti_parallel
+  - cmu_original
+  - cmu_hf_mirror
+  - babel_haitian
+  - voxlingua107_hat
+  - northern_haitian
+  - ud_autogramm
+  - ud_adolphe
+  - munro_sms
+  - apics_survey49
+  - apics_structure49
+  - xm3600
+  - vicr_translated
 leads:
-  -
-    lead_id: "jsbeaudry_stem"
-    name: "jsbeaudry continued-pretraining lead"
-    canonical_url: "https://huggingface.co/datasets/jsbeaudry/creole-text-continued-pretraining"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10","https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/"]
-    disposition: "UNVERIFIED_LEAD"
-    source_id: null
-    language_evidence: "CLAIMED"
-    language_claims: []
-    roles: ["PRETRAINING_CANDIDATE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["science_stem"]
-    candidate_task_family_ids: ["llm_evaluation"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/jsbeaudry_stem.md"
-    review_status: "BLOCKED"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["STEM coverage","11.1k unique documents","authorship","license","revision"]
-    next_action: "Verify the dataset card, upstream documents, generation process, and per-source rights before registration."
-    authorization_effect: "NONE"
-  -
-    lead_id: "wikipedia_20231101_ht"
-    name: "Haitian Wikipedia 20231101 snapshot"
-    canonical_url: "https://huggingface.co/datasets/wikimedia/wikipedia"
-    configuration: "20231101.ht"
-    revision: "20231101"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10","https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "wikimedia_htwiki_20231101"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The official card lists configuration 20231101.ht and 70,159 train rows. This is a snapshot-specific reported count, not independently verified unique content."
-        url: "https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md"
-        publisher: "wikimedia"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["PRETRAINING_CANDIDATE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["education"]
-    candidate_task_family_ids: ["classification","information_extraction","retrieval"]
-    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ie_ner_charspan_v0_1","kb_ret_hybrid_query_v0_1"]
-    reported_sizes:
-      -
-        value: 70159
-        unit: "ROWS"
-        configuration: "20231101.ht"
-        split: "train"
-        revision: "20231101"
-        verification_state: "UPSTREAM_REPORTED"
-        evidence:
-          claim: "The official card lists configuration 20231101.ht and 70,159 train rows. This is a snapshot-specific reported count, not independently verified unique content."
-          url: "https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md"
-          publisher: "wikimedia"
-          accessed_on: "2026-09-10"
-          basis: "DIRECT_FACT"
-        notes: "Upstream metadata count, not verified unique content; do not sum overlapping collections."
-    evidence_path: "reports/source_reviews/wikimedia_htwiki_20231101.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Native authorship","factual reliability","imported content","model contamination"]
-    next_action: "Audit page provenance and imported-content terms; compare overlap with parent dumps and training corpora."
-    authorization_effect: "NONE"
-  -
-    lead_id: "flores_plus_hat"
-    name: "FLORES+ Haitian Creole"
-    canonical_url: "https://huggingface.co/datasets/openlanguagedata/flores_plus"
-    configuration: "hat_Latn"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10","https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "flores_plus_hat"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The official card lists hat_Latn with dev and devtest. The card labels language creation expert-generated; translation fitness still needs subset review."
-        url: "https://huggingface.co/datasets/openlanguagedata/flores_plus/blob/main/README.md"
-        publisher: "openlanguagedata"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["EVALUATION_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["translation"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/flores_plus_hat.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Exact revision and split counts","translation quality","overlap with instruction corpora"]
-    next_action: "Pin the Haitian release and preserve evaluation splits; audit upstream overlap before any training-use proposal."
-    authorization_effect: "NONE"
-  -
-    lead_id: "xp3x_hat"
-    name: "xP3x Haitian Creole"
-    canonical_url: "https://huggingface.co/datasets/CohereLabs/xP3x"
-    configuration: "hat_Latn"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10","https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "xp3x_hat"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The card lists Haitian Creole hat_Latn within an instruction-training mixture. Its size is not a count of independent gold evaluation examples."
-        url: "https://huggingface.co/datasets/CohereLabs/xP3x"
-        publisher: "CohereLabs"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["INSTRUCTION_TUNING_CANDIDATE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["llm_evaluation"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/xp3x_hat.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Haitian upstream inventory","origin by component","prompt duplication","exact release"]
-    next_action: "Audit construction scripts, upstream tasks, prompt replication, and possible FLORES-family overlap."
-    authorization_effect: "NONE"
-  -
-    lead_id: "aya_haitian"
-    name: "Aya Collection Haitian language split"
-    canonical_url: "https://huggingface.co/datasets/CohereLabs/aya_collection_language_split"
-    configuration: "haitian"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10","https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "aya_collection_haitian"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The parent collection reports hat as 4,120,342 translated entries and zero templated entries; translation uses NLLB. This does not establish human-written multi-turn conversation."
-        url: "https://huggingface.co/datasets/CohereLabs/aya_collection"
-        publisher: "CohereLabs"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["INSTRUCTION_TUNING_CANDIDATE"]
-    content_origin: "MACHINE_TRANSLATION"
-    origin_evidence:
-      -
-        claim: "The parent card describes NLLB machine translation and lists hat entries in the translated column."
-        url: "https://huggingface.co/datasets/CohereLabs/aya_collection"
-        publisher: "Cohere Labs"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    modalities: ["text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["llm_evaluation"]
-    candidate_task_instance_ids: []
-    reported_sizes:
-      -
-        value: 4120342
-        unit: "ROWS"
-        configuration: "haitian"
-        split: "TO_VERIFY"
-        revision: "TO_VERIFY"
-        verification_state: "UPSTREAM_REPORTED"
-        evidence:
-          claim: "The parent collection reports hat as 4,120,342 translated entries and zero templated entries; translation uses NLLB. This does not establish human-written multi-turn conversation."
-          url: "https://huggingface.co/datasets/CohereLabs/aya_collection"
-          publisher: "CohereLabs"
-          accessed_on: "2026-09-10"
-          basis: "DIRECT_FACT"
-        notes: "Upstream metadata count, not verified unique content; do not sum overlapping collections."
-    evidence_path: "reports/source_reviews/aya_collection_haitian.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Language-split revision","unique examples","quality of translation","conversation claims"]
-    next_action: "Reconcile the language-split revision with the parent statistics and audit upstream licenses and template overlap."
-    authorization_effect: "NONE"
-  -
-    lead_id: "finepdfs_hat"
-    name: "FinePDFs Haitian configuration"
-    canonical_url: "https://huggingface.co/datasets/HuggingFaceFW/finepdfs"
-    configuration: "hat_Latn"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10","https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "finepdfs_hat"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The official card lists hat_Latn train and test paths. A configuration label is not validation of language purity, PDF extraction quality, or domain balance."
-        url: "https://huggingface.co/datasets/HuggingFaceFW/finepdfs/blob/main/README.md"
-        publisher: "HuggingFaceFW"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["PRETRAINING_CANDIDATE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text","document"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["classification","retrieval","document_multimodal"]
-    candidate_task_instance_ids: ["kb_cls_topic_multilabel_v0_1","kb_ret_hybrid_query_v0_1"]
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/finepdfs_hat.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["18.5k count","human origin","OCR quality","PII","domain and source duplication"]
-    next_action: "Review extraction and language-identification methodology, document URLs, and per-document rights."
-    authorization_effect: "NONE"
-  -
-    lead_id: "mc4_ht"
-    name: "mC4 Haitian configuration"
-    canonical_url: "https://huggingface.co/datasets/allenai/c4"
-    configuration: "ht"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10","https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "mc4_ht"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The official ht configuration uses multilingual/c4-ht files with train and validation splits. It is the multilingual collection, not English-only C4."
-        url: "https://huggingface.co/datasets/allenai/c4/blob/main/README.md"
-        publisher: "allenai"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["PRETRAINING_CANDIDATE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["linguistic_robustness","normalization","language_contact"]
-    candidate_task_instance_ids: ["kb_norm_orthography_v0_1","kb_lc_token_language_id_v0_1"]
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/mc4_ht.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Approximately 248k claim","unique documents","language purity","upstream rights","PII"]
-    next_action: "Review crawl provenance, filtering and language identification; inventory source domains before any representativeness claim."
-    authorization_effect: "NONE"
-  -
-    lead_id: "kreyol_mt"
-    name: "Kreyol-MT existing collection"
-    canonical_url: "https://huggingface.co/datasets/jhu-clsp/kreyol-mt"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "jhu_kreyol_mt"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The existing reviewed collection is a multilingual parallel-resource candidate. Repeated mentions do not create another independent corpus."
-        url: "https://huggingface.co/datasets/jhu-clsp/kreyol-mt"
-        publisher: "jhu-clsp"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["PRETRAINING_CANDIDATE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["translation"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/kreyol_mt.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Subset licenses","overlap with OPUS and other parallel corpora","sentence provenance"]
-    next_action: "Retain existing gates; identify exact Haitian language pairs and upstream subsets."
-    authorization_effect: "NONE"
-  -
-    lead_id: "creoleval"
-    name: "CreoleVal existing family"
-    canonical_url: "https://github.com/hclent/CreoleVal"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "creoleval"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The repository describes a composite benchmark with heterogeneous licenses and task/language coverage. Its tasks are not all Haitian tasks."
-        url: "https://github.com/hclent/CreoleVal"
-        publisher: "Research authors and resource maintainers"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["EVALUATION_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["linguistic_robustness"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/creoleval.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Task-by-language coverage","upstream licenses","evaluation contamination"]
-    next_action: "Review one selected Haitian subset at a time; do not infer eight complete Haitian tasks from aggregate coverage."
-    authorization_effect: "NONE"
-  -
-    lead_id: "mit_haiti_parallel"
-    name: "MIT-Haiti corpus via CreoleVal"
-    canonical_url: "https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "creoleval_mit_haiti"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The MIT-Haiti README documents ht-en, ht-fr and ht-es children's-story parallel data and separate lesson-plan/blog monolingual data."
-        url: "https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti"
-        publisher: "CreoleVal contributors"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["EVALUATION_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["education","science_stem"]
-    candidate_task_family_ids: ["translation"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/creoleval_mit_haiti.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Precise license variant","Manual-verification protocol","Upstream ownership","Pinned subset revision"]
-    next_action: "Resolve the exact parallel subset, language pairs, manual-verification process, and per-asset license text."
-    authorization_effect: "NONE"
-  -
-    lead_id: "cmu_original"
-    name: "CMU Haitian resource family"
-    canonical_url: "https://www.speech.cs.cmu.edu/haitian/"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "cmu_haitian"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The scholarly Creole NLP directory identifies CMU Haitian speech and text resources. The original endpoint remains unresolved in the initial review; mirror claims are not first-party proof."
-        url: "https://creole-nlp.github.io/"
-        publisher: "Research authors and resource maintainers"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["SPEECH_RESOURCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["speech","text"]
-    candidate_domain_ids: ["health"]
-    candidate_task_family_ids: ["speech_audio"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/cmu_original.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["20-hour claim","IPN orthography claim","original subset licenses and consent"]
-    next_action: "Verify original releases and distinguish DIPLOMAT speech, lexicons, and text subsets."
-    authorization_effect: "NONE"
-  -
-    lead_id: "cmu_hf_mirror"
-    name: "phatjmo CMU Haitian mirror candidate"
-    canonical_url: "https://huggingface.co/datasets/phatjmo/cmu_haitian"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "cmu_haitian_phatjmo"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The upload describes CMU Haitian speech. Its MIT badge coexists with reproduced CMU notice conditions; this is not proof of authorized relicensing."
-        url: "https://huggingface.co/datasets/phatjmo/cmu_haitian"
-        publisher: "phatjmo"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["SPEECH_RESOURCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["speech","text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["speech_audio"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/cmu_haitian_phatjmo.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Mirror identity and hashes","license compatibility","speaker linkage","train/test leakage"]
-    next_action: "Reconcile original files, transformations, split definitions, uploader authority, and speaker consent."
-    authorization_effect: "NONE"
-  -
-    lead_id: "babel_haitian"
-    name: "IARPA Babel Haitian LDC2017S03"
-    canonical_url: "https://catalog.ldc.upenn.edu/LDC2017S03"
-    configuration: "IARPA-babel201b-v0.2b"
-    revision: "IARPA-babel201b-v0.2b"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "babel_haitian_ldc2017s03"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The catalog identifies approximately 203 hours of conversational and scripted Haitian telephone speech in IARPA-babel201b-v0.2b and separate licensing agreements."
-        url: "https://catalog.ldc.upenn.edu/LDC2017S03"
-        publisher: "Linguistic Data Consortium"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["SPEECH_RESOURCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["speech","text"]
-    candidate_domain_ids: ["everyday_conversation"]
-    candidate_task_family_ids: ["speech_audio"]
-    candidate_task_instance_ids: []
-    reported_sizes:
-      -
-        value: 203
-        unit: "HOURS"
-        configuration: "IARPA-babel201b-v0.2b"
-        split: "TO_VERIFY"
-        revision: "IARPA-babel201b-v0.2b"
-        verification_state: "UPSTREAM_REPORTED"
-        evidence:
-          claim: "The catalog identifies approximately 203 hours of conversational and scripted Haitian telephone speech in IARPA-babel201b-v0.2b and separate licensing agreements."
-          url: "https://catalog.ldc.upenn.edu/LDC2017S03"
-          publisher: "Linguistic Data Consortium"
-          accessed_on: "2026-09-10"
-          basis: "DIRECT_FACT"
-        notes: "Approximate catalog duration; not a KreyolBench measurement."
-    evidence_path: "reports/source_reviews/babel_haitian_ldc2017s03.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Allowed research and redistribution scope","consent","evaluation split access"]
-    next_action: "Review applicable agreement and ethics, including minors and speaker privacy; no access purchase or data request is made."
-    authorization_effect: "NONE"
-  -
-    lead_id: "voxlingua107_hat"
-    name: "VoxLingua107 Haitian lead"
-    canonical_url: "https://www.voxlingua107.org/"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "UNVERIFIED_LEAD"
-    source_id: null
-    language_evidence: "CLAIMED"
-    language_claims: []
-    roles: ["SPEECH_RESOURCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["speech"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["speech_audio","language_contact"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/voxlingua107_hat.md"
-    review_status: "BLOCKED"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Haitian subset release","96-hour claim","transcripts","YouTube rights and consent"]
-    next_action: "Verify the official language inventory and Haitian duration, collection terms, and speaker/source provenance."
-    authorization_effect: "NONE"
-  -
-    lead_id: "northern_haitian"
-    name: "Corpus of Northern Haitian Creole lead"
-    canonical_url: "https://www.indiana.edu/~creole/"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "UNVERIFIED_LEAD"
-    source_id: null
-    language_evidence: "CLAIMED"
-    language_claims: []
-    roles: ["SPEECH_RESOURCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["speech","text"]
-    candidate_domain_ids: ["everyday_conversation"]
-    candidate_task_family_ids: ["speech_audio","linguistic_robustness"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/northern_haitian.md"
-    review_status: "BLOCKED"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Current collection endpoint","catalog identity","licensing","dialect metadata","consent"]
-    next_action: "Locate the current archive and custodian; verify regional sampling and permission process."
-    authorization_effect: "NONE"
-  -
-    lead_id: "ud_autogramm"
-    name: "UD Haitian Creole Autogramm"
-    canonical_url: "https://universaldependencies.org/treebanks/ht_autogramm/index.html"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "ud_haitian_autogramm"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The official treebank page identifies Autogramm with Bible, novel, VOA and PAPDA sources. It is distinct from Adolphe and reports non-UD-to-UD conversion."
-        url: "https://universaldependencies.org/treebanks/ht_autogramm/index.html"
-        publisher: "Universal Dependencies contributors"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["LINGUISTIC_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["religion","literature","news"]
-    candidate_task_family_ids: ["linguistic_robustness"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/ud_haitian_autogramm.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Version-specific counts","upstream-text permissions","source balance","conversion quality"]
-    next_action: "Pin a treebank release, reconcile narrative/statistical counts, and review upstream texts and annotation conversion."
-    authorization_effect: "NONE"
-  -
-    lead_id: "ud_adolphe"
-    name: "UD Haitian Creole Adolphe"
-    canonical_url: "https://universaldependencies.org/treebanks/ht_adolphe/index.html"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "ud_haitian_adolphe"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "The official page identifies Adolphe, a Bible-related source, and programmatic annotation. Narrative word counts and generated statistics disagree."
-        url: "https://universaldependencies.org/treebanks/ht_adolphe/index.html"
-        publisher: "Universal Dependencies contributors"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["LINGUISTIC_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["religion"]
-    candidate_task_family_ids: ["linguistic_robustness"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/ud_haitian_adolphe.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Count reconciliation","manual correction evidence","rights","religious-domain limitation"]
-    next_action: "Pin the release and inspect annotation methodology and upstream rights before proposing a syntactic task."
-    authorization_effect: "NONE"
-  -
-    lead_id: "munro_sms"
-    name: "Haitian Disaster Response SMS research collection"
-    canonical_url: "https://aclanthology.org/2010.amta-workshop.1/"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REGISTERED_SOURCE"
-    source_id: "haitian_disaster_sms_munro"
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "Munro's primary paper documents emergency translation in Haiti. The scholarly resource directory describes SMS access through the authors, not a public cleared download."
-        url: "https://aclanthology.org/2010.amta-workshop.1/"
-        publisher: "Research authors and resource maintainers"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["LINGUISTIC_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["disaster_response","humanitarian_response"]
-    candidate_task_family_ids: ["language_contact","retrieval"]
-    candidate_task_instance_ids: ["kb_ret_hybrid_query_v0_1","kb_lc_token_language_id_v0_1"]
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/haitian_disaster_sms_munro.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Current artifact and custodian","sensitive requests and locations","consent","rights","deletions"]
-    next_action: "Seek human ethics review of emergency-context consent and reidentification risk before contacting custodians."
-    authorization_effect: "NONE"
-  -
-    lead_id: "apics_survey49"
-    name: "APiCS Haitian Creole survey chapter 49"
-    canonical_url: "https://apics-online.info/surveys/49"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REFERENCE_ONLY"
-    source_id: null
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "This is a scholarly Haitian Creole survey, not a general-purpose training corpus. Historical demographic statements must not be presented as current estimates."
-        url: "https://apics-online.info/surveys/49"
-        publisher: "Research authors and resource maintainers"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["LINGUISTIC_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["text"]
-    candidate_domain_ids: ["history","culture"]
-    candidate_task_family_ids: ["linguistic_robustness","language_contact"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/apics_survey49.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Edition/version","reuse license","applicability of historical claims to present populations"]
-    next_action: "Use as cited linguistic context; verify publication and rights before any text reuse."
-    authorization_effect: "NONE"
-  -
-    lead_id: "apics_structure49"
-    name: "APiCS Haitian Creole structure contribution 49"
-    canonical_url: "https://apics-online.info/contributions/49"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REFERENCE_ONLY"
-    source_id: null
-    language_evidence: "DOCUMENTED"
-    language_claims:
-      -
-        claim: "This is a structured typological contribution about Haitian Creole, distinct from the survey chapter and from a natural-text corpus."
-        url: "https://apics-online.info/contributions/49"
-        publisher: "Research authors and resource maintainers"
-        accessed_on: "2026-09-10"
-        basis: "DIRECT_FACT"
-    roles: ["LINGUISTIC_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["structured_linguistic"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["linguistic_robustness"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/apics_structure49.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Feature provenance","licensing","task validity","avoiding conversion of reference facts into unreviewed gold labels"]
-    next_action: "Review feature definitions, citation, version, and reuse terms before any challenge-set proposal."
-    authorization_effect: "NONE"
-  -
-    lead_id: "xm3600"
-    name: "XM3600 multimodal methodology reference"
-    canonical_url: "https://google.github.io/crossmodal-3600/"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "REFERENCE_ONLY"
-    source_id: null
-    language_evidence: "UNKNOWN"
-    language_claims: []
-    roles: ["MULTIMODAL_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["image","text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["document_multimodal"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/xm3600.md"
-    review_status: "SUBMITTED_TO_REVIEW"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Haitian coverage","image/caption license separation","cultural relevance to Haiti"]
-    next_action: "Verify the language inventory; retain methodology relevance without claiming a Haitian dataset."
-    authorization_effect: "NONE"
-  -
-    lead_id: "vicr_translated"
-    name: "Translated VICR release lead"
-    canonical_url: "https://aclanthology.org/2025.findings-naacl.287/"
-    configuration: "TO_VERIFY"
-    revision: "TO_VERIFY"
-    discovery_attribution: ["Jeff Pierre supplied dataset leads, 2026-09-10"]
-    disposition: "UNVERIFIED_LEAD"
-    source_id: null
-    language_evidence: "UNKNOWN"
-    language_claims: []
-    roles: ["MULTIMODAL_REFERENCE"]
-    content_origin: "UNKNOWN"
-    origin_evidence: []
-    modalities: ["image","text"]
-    candidate_domain_ids: ["other"]
-    candidate_task_family_ids: ["document_multimodal"]
-    candidate_task_instance_ids: []
-    reported_sizes: []
-    evidence_path: "reports/source_reviews/discovery/vicr_translated.md"
-    review_status: "BLOCKED"
-    reviewed_on: "2026-09-10"
-    unresolved_claims: ["Haitian inclusion","release URL and version","translation fidelity","underlying image licenses"]
-    next_action: "Resolve the exact translated release, its languages, image rights, and judgment provenance."
-    authorization_effect: "NONE"
+- lead_id: jsbeaudry_stem
+  name: jsbeaudry continued-pretraining lead
+  canonical_url: https://huggingface.co/datasets/jsbeaudry/creole-text-continued-pretraining
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  - https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/
+  disposition: UNVERIFIED_LEAD
+  source_id: null
+  language_evidence: CLAIMED
+  language_claims: []
+  roles:
+  - PRETRAINING_CANDIDATE
+  - DISCOVERY_ONLY
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - science_stem
+  candidate_task_family_ids:
+  - llm_evaluation
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/jsbeaudry_stem.md
+  review_status: BLOCKED
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - provider identity and intended release
+  - STEM composition
+  - origin and upstream lineage
+  - rights and unique-document count
+  next_action: Verify the dataset card, upstream documents, generation process, and per-source rights before registration.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: wikipedia_20231101_ht
+  name: Haitian Wikipedia 20231101 snapshot
+  canonical_url: https://huggingface.co/datasets/wikimedia/wikipedia
+  configuration: 20231101.ht
+  revision: '20231101'
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  - https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/
+  disposition: REGISTERED_SOURCE
+  source_id: wikimedia_htwiki_20231101
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The official card lists configuration 20231101.ht and 70,159 train rows. This is a snapshot-specific
+      reported count, not independently verified unique content.
+    url: https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md
+    publisher: wikimedia
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - CORPUS_CANDIDATE
+  - PRETRAINING_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - education
+  candidate_task_family_ids:
+  - classification
+  - information_extraction
+  - retrieval
+  candidate_task_instance_ids:
+  - kb_cls_topic_multilabel_v0_1
+  - kb_ie_ner_charspan_v0_1
+  - kb_ret_hybrid_query_v0_1
+  reported_sizes:
+  - value: 70159
+    unit: ROWS
+    configuration: 20231101.ht
+    split: train
+    revision: '20231101'
+    verification_state: UPSTREAM_REPORTED
+    evidence:
+      claim: The official card lists configuration 20231101.ht and 70,159 train rows. This is a snapshot-specific
+        reported count, not independently verified unique content.
+      url: https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md
+      publisher: wikimedia
+      accessed_on: '2026-09-10'
+      basis: DIRECT_FACT
+    notes: Upstream metadata count, not verified unique content; do not sum overlapping collections.
+  evidence_path: reports/source_reviews/wikimedia_htwiki_20231101.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Native authorship
+  - factual reliability
+  - imported content
+  - model contamination
+  next_action: Audit page provenance and imported-content terms; compare overlap with parent dumps and training
+    corpora.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: flores_plus_hat
+  name: FLORES+ Haitian Creole
+  canonical_url: https://huggingface.co/datasets/openlanguagedata/flores_plus
+  configuration: hat_Latn
+  revision: '4.6'
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  - https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/
+  disposition: REGISTERED_SOURCE
+  source_id: flores_plus_hat
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The official card lists hat_Latn with dev and devtest. The card labels language creation expert-generated;
+      translation fitness still needs subset review.
+    url: https://huggingface.co/datasets/openlanguagedata/flores_plus/blob/main/README.md
+    publisher: openlanguagedata
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - BENCHMARK_EVALUATION_REFERENCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - translation
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/flores_plus_hat.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - immutable file hashes
+  - component-level redistribution interpretation
+  - cross-resource overlap
+  next_action: Pin the Haitian release and preserve evaluation splits; audit upstream overlap before any training-use
+    proposal.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: xp3x_hat
+  name: xP3x Haitian Creole
+  canonical_url: https://huggingface.co/datasets/CohereLabs/xP3x
+  configuration: hat_Latn
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  - https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/
+  disposition: REGISTERED_SOURCE
+  source_id: xp3x_hat
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The card lists Haitian Creole hat_Latn within an instruction-training mixture. Its size is not a count
+      of independent gold evaluation examples.
+    url: https://huggingface.co/datasets/CohereLabs/xP3x
+    publisher: CohereLabs
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - INSTRUCTION_TUNING_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - llm_evaluation
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/xp3x_hat.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Haitian upstream inventory
+  - origin by component
+  - prompt duplication
+  - exact release
+  next_action: Audit construction scripts, upstream tasks, prompt replication, and possible FLORES-family overlap.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: aya_haitian
+  name: Aya Collection Haitian language split
+  canonical_url: https://huggingface.co/datasets/CohereLabs/aya_collection_language_split
+  configuration: haitian
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  - https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/
+  disposition: REGISTERED_SOURCE
+  source_id: aya_collection_haitian
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The parent collection reports hat as 4,120,342 translated entries and zero templated entries; translation
+      uses NLLB. This does not establish human-written multi-turn conversation.
+    url: https://huggingface.co/datasets/CohereLabs/aya_collection
+    publisher: CohereLabs
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - INSTRUCTION_TUNING_CANDIDATE
+  content_origin: MACHINE_TRANSLATED
+  origin_evidence:
+  - claim: The parent card describes NLLB machine translation and lists hat entries in the translated column.
+    url: https://huggingface.co/datasets/CohereLabs/aya_collection
+    publisher: Cohere Labs
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  modalities:
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - llm_evaluation
+  candidate_task_instance_ids: []
+  reported_sizes:
+  - value: 4120342
+    unit: ROWS
+    configuration: haitian
+    split: TO_VERIFY
+    revision: TO_VERIFY
+    verification_state: UPSTREAM_REPORTED
+    evidence:
+      claim: The parent collection reports hat as 4,120,342 translated entries and zero templated entries; translation
+        uses NLLB. This does not establish human-written multi-turn conversation.
+      url: https://huggingface.co/datasets/CohereLabs/aya_collection
+      publisher: CohereLabs
+      accessed_on: '2026-09-10'
+      basis: DIRECT_FACT
+    notes: Upstream metadata count, not verified unique content; do not sum overlapping collections.
+  evidence_path: reports/source_reviews/aya_collection_haitian.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-10'
+  unresolved_claims:
+  - Language-split revision
+  - unique examples
+  - quality of translation
+  - conversation claims
+  next_action: Reconcile the language-split revision with the parent statistics and audit upstream licenses and
+    template overlap.
+  authorization_effect: NONE
+- lead_id: finepdfs_hat
+  name: FinePDFs Haitian configuration
+  canonical_url: https://huggingface.co/datasets/HuggingFaceFW/finepdfs
+  configuration: hat_Latn
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  - https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/
+  disposition: REGISTERED_SOURCE
+  source_id: finepdfs_hat
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The official card lists hat_Latn train and test paths. A configuration label is not validation of language
+      purity, PDF extraction quality, or domain balance.
+    url: https://huggingface.co/datasets/HuggingFaceFW/finepdfs/blob/main/README.md
+    publisher: HuggingFaceFW
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - PRETRAINING_CANDIDATE
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  content_origin: OCR_DERIVED
+  origin_evidence:
+  - claim: The dataset card describes PDF text extraction and OCR-oriented processing from Common Crawl PDFs.
+    url: https://huggingface.co/datasets/HuggingFaceFW/finepdfs
+    publisher: Hugging Face FineWeb team
+    accessed_on: '2026-09-18'
+    basis: DIRECT_FACT
+  modalities:
+  - text
+  - document
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - classification
+  - retrieval
+  - document_multimodal
+  candidate_task_instance_ids:
+  - kb_cls_topic_multilabel_v0_1
+  - kb_ret_hybrid_query_v0_1
+  reported_sizes: []
+  evidence_path: reports/source_reviews/finepdfs_hat.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - 18.5k count
+  - human origin
+  - OCR quality
+  - PII
+  - domain and source duplication
+  next_action: Review extraction and language-identification methodology, document URLs, and per-document rights.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: mc4_ht
+  name: mC4 Haitian configuration
+  canonical_url: https://huggingface.co/datasets/allenai/c4
+  configuration: ht
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  - https://www.linkedin.com/pulse/how-haitian-developers-can-find-high-quality-creole-datasets-beaudry-hj4ue/
+  disposition: REGISTERED_SOURCE
+  source_id: mc4_ht
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The official ht configuration uses multilingual/c4-ht files with train and validation splits. It is the
+      multilingual collection, not English-only C4.
+    url: https://huggingface.co/datasets/allenai/c4/blob/main/README.md
+    publisher: allenai
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - PRETRAINING_CANDIDATE
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - linguistic_robustness
+  - normalization
+  - language_contact
+  candidate_task_instance_ids:
+  - kb_norm_orthography_v0_1
+  - kb_lc_token_language_id_v0_1
+  reported_sizes: []
+  evidence_path: reports/source_reviews/mc4_ht.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Approximately 248k claim
+  - unique documents
+  - language purity
+  - upstream rights
+  - PII
+  next_action: Review crawl provenance, filtering and language identification; inventory source domains before any
+    representativeness claim.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: kreyol_mt
+  name: Kreyol-MT existing collection
+  canonical_url: https://huggingface.co/datasets/jhu-clsp/kreyol-mt
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: jhu_kreyol_mt
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The existing reviewed collection is a multilingual parallel-resource candidate. Repeated mentions do
+      not create another independent corpus.
+    url: https://huggingface.co/datasets/jhu-clsp/kreyol-mt
+    publisher: jhu-clsp
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - translation
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/kreyol_mt.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Subset licenses
+  - overlap with OPUS and other parallel corpora
+  - sentence provenance
+  next_action: Retain existing gates; identify exact Haitian language pairs and upstream subsets.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: creoleval
+  name: CreoleVal existing family
+  canonical_url: https://github.com/hclent/CreoleVal
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: creoleval
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The repository describes a composite benchmark with heterogeneous licenses and task/language coverage.
+      Its tasks are not all Haitian tasks.
+    url: https://github.com/hclent/CreoleVal
+    publisher: Research authors and resource maintainers
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - BENCHMARK_COMPARISON_REFERENCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - linguistic_robustness
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/creoleval.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Task-by-language coverage
+  - upstream licenses
+  - evaluation contamination
+  next_action: Review one selected Haitian subset at a time; do not infer eight complete Haitian tasks from aggregate
+    coverage.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: mit_haiti_parallel
+  name: MIT-Haiti corpus via CreoleVal
+  canonical_url: https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: creoleval_mit_haiti
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The MIT-Haiti README documents ht-en, ht-fr and ht-es children's-story parallel data and separate lesson-plan/blog
+      monolingual data.
+    url: https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti
+    publisher: CreoleVal contributors
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - GOLD_DATA_CANDIDATE
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - education
+  - science_stem
+  candidate_task_family_ids:
+  - translation
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/creoleval_mit_haiti.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Precise license variant
+  - Manual-verification protocol
+  - Upstream ownership
+  - Pinned subset revision
+  next_action: Resolve the exact parallel subset, language pairs, manual-verification process, and per-asset license
+    text.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: cmu_original
+  name: CMU Haitian resource family
+  canonical_url: https://www.speech.cs.cmu.edu/haitian/
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: cmu_haitian
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The scholarly Creole NLP directory identifies CMU Haitian speech and text resources. The original endpoint
+      remains unresolved in the initial review; mirror claims are not first-party proof.
+    url: https://creole-nlp.github.io/
+    publisher: Research authors and resource maintainers
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - SPEECH_RESOURCE
+  - CORPUS_CANDIDATE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - speech
+  - text
+  candidate_domain_ids:
+  - health
+  candidate_task_family_ids:
+  - speech_audio
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/cmu_original.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - 20-hour claim
+  - IPN orthography claim
+  - original subset licenses and consent
+  next_action: Verify original releases and distinguish DIPLOMAT speech, lexicons, and text subsets.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: cmu_hf_mirror
+  name: phatjmo CMU Haitian mirror candidate
+  canonical_url: https://huggingface.co/datasets/phatjmo/cmu_haitian
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: cmu_haitian_phatjmo
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The upload describes CMU Haitian speech. Its MIT badge coexists with reproduced CMU notice conditions;
+      this is not proof of authorized relicensing.
+    url: https://huggingface.co/datasets/phatjmo/cmu_haitian
+    publisher: phatjmo
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - MIRROR_REFERENCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - speech
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - speech_audio
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/cmu_haitian_phatjmo.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Mirror identity and hashes
+  - license compatibility
+  - speaker linkage
+  - train/test leakage
+  next_action: Reconcile original files, transformations, split definitions, uploader authority, and speaker consent.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: babel_haitian
+  name: IARPA Babel Haitian LDC2017S03
+  canonical_url: https://catalog.ldc.upenn.edu/LDC2017S03
+  configuration: IARPA-babel201b-v0.2b
+  revision: IARPA-babel201b-v0.2b
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: babel_haitian_ldc2017s03
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The catalog identifies approximately 203 hours of conversational and scripted Haitian telephone speech
+      in IARPA-babel201b-v0.2b and separate licensing agreements.
+    url: https://catalog.ldc.upenn.edu/LDC2017S03
+    publisher: Linguistic Data Consortium
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - SPEECH_RESOURCE
+  - RESTRICTED_RESEARCH_RESOURCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - speech
+  - text
+  candidate_domain_ids:
+  - everyday_conversation
+  candidate_task_family_ids:
+  - speech_audio
+  candidate_task_instance_ids: []
+  reported_sizes:
+  - value: 203
+    unit: HOURS
+    configuration: IARPA-babel201b-v0.2b
+    split: TO_VERIFY
+    revision: IARPA-babel201b-v0.2b
+    verification_state: UPSTREAM_REPORTED
+    evidence:
+      claim: The catalog identifies approximately 203 hours of conversational and scripted Haitian telephone speech
+        in IARPA-babel201b-v0.2b and separate licensing agreements.
+      url: https://catalog.ldc.upenn.edu/LDC2017S03
+      publisher: Linguistic Data Consortium
+      accessed_on: '2026-09-10'
+      basis: DIRECT_FACT
+    notes: Approximate catalog duration; not a KreyolBench measurement.
+  evidence_path: reports/source_reviews/babel_haitian_ldc2017s03.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Allowed research and redistribution scope
+  - consent
+  - evaluation split access
+  next_action: Review applicable agreement and ethics, including minors and speaker privacy; no access purchase
+    or data request is made.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: voxlingua107_hat
+  name: VoxLingua107 Haitian lead
+  canonical_url: https://cs.taltech.ee/staff/tanel.alumae/data/voxlingua107/
+  configuration: hat
+  revision: provider-current-2026-09-18
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: voxlingua107_hat
+  language_evidence: DOCUMENTED
+  language_claims:
+  - &id001
+    claim: The provider table lists Haitian with approximately 96 hours of speech.
+    url: https://cs.taltech.ee/staff/tanel.alumae/data/voxlingua107/
+    publisher: Tallinn University of Technology
+    accessed_on: '2026-09-18'
+    basis: DIRECT_FACT
+  roles:
+  - SPEECH_RESOURCE
+  - CORPUS_CANDIDATE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - speech
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - speech_audio
+  - language_contact
+  candidate_task_instance_ids: []
+  reported_sizes:
+  - value: 96
+    unit: HOURS
+    configuration: hat
+    split: all
+    revision: provider-current-2026-09-18
+    verification_state: UPSTREAM_REPORTED
+    evidence: *id001
+    notes: Provider-reported duration for spoken language identification; no transcript claim.
+  evidence_path: reports/source_reviews/voxlingua107_hat.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - exact immutable release
+  - source-video and speaker rights
+  - consent and deletion handling
+  - redistribution and derived-use conditions
+  next_action: Verify the official language inventory and Haitian duration, collection terms, and speaker/source
+    provenance.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: northern_haitian
+  name: Corpus of Northern Haitian Creole lead
+  canonical_url: https://www.isca-archive.org/interspeech_2025/havard25_interspeech.html
+  configuration: scholarly_documented_collection
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: northern_haitian_creole_corpus
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The scholarly source describes Northern Haitian Creole interviews associated with Cap-Haitien.
+    url: https://www.isca-archive.org/interspeech_2025/havard25_interspeech.html
+    publisher: ISCA Archive
+    accessed_on: '2026-09-18'
+    basis: DIRECT_FACT
+  roles:
+  - SPEECH_RESOURCE
+  - LINGUISTIC_REFERENCE
+  - RESTRICTED_RESEARCH_RESOURCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - speech
+  - text
+  candidate_domain_ids:
+  - everyday_conversation
+  candidate_task_family_ids:
+  - speech_audio
+  - linguistic_robustness
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/northern_haitian_creole_corpus.md
+  review_status: BLOCKED
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - current archive and custodian
+  - exact duration and speaker count
+  - consent and access terms
+  - transcript and annotation status
+  next_action: Locate the current archive and custodian; verify regional sampling and permission process.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: ud_autogramm
+  name: UD Haitian Creole Autogramm
+  canonical_url: https://universaldependencies.org/treebanks/ht_autogramm/index.html
+  configuration: TO_VERIFY
+  revision: UD 2.18
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: ud_haitian_autogramm
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The official treebank page identifies Autogramm with Bible, novel, VOA and PAPDA sources. It is distinct
+      from Adolphe and reports non-UD-to-UD conversion.
+    url: https://universaldependencies.org/treebanks/ht_autogramm/index.html
+    publisher: Universal Dependencies contributors
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - LINGUISTIC_REFERENCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - religion
+  - literature
+  - news
+  candidate_task_family_ids:
+  - linguistic_robustness
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/ud_haitian_autogramm.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Version-specific counts
+  - upstream-text permissions
+  - source balance
+  - conversion quality
+  next_action: Pin a treebank release, reconcile narrative/statistical counts, and review upstream texts and annotation
+    conversion.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: ud_adolphe
+  name: UD Haitian Creole Adolphe
+  canonical_url: https://universaldependencies.org/treebanks/ht_adolphe/index.html
+  configuration: TO_VERIFY
+  revision: UD 2.18
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: ud_haitian_adolphe
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: The official page identifies Adolphe, a Bible-related source, and programmatic annotation. Narrative
+      word counts and generated statistics disagree.
+    url: https://universaldependencies.org/treebanks/ht_adolphe/index.html
+    publisher: Universal Dependencies contributors
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - LINGUISTIC_REFERENCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - religion
+  candidate_task_family_ids:
+  - linguistic_robustness
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/ud_haitian_adolphe.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Count reconciliation
+  - manual correction evidence
+  - rights
+  - religious-domain limitation
+  next_action: Pin the release and inspect annotation methodology and upstream rights before proposing a syntactic
+    task.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: munro_sms
+  name: Haitian Disaster Response SMS research collection
+  canonical_url: https://aclanthology.org/2010.amta-workshop.1/
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REGISTERED_SOURCE
+  source_id: haitian_disaster_sms_munro
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: Munro's primary paper documents emergency translation in Haiti. The scholarly resource directory describes
+      SMS access through the authors, not a public cleared download.
+    url: https://aclanthology.org/2010.amta-workshop.1/
+    publisher: Research authors and resource maintainers
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - CORPUS_CANDIDATE
+  - RESTRICTED_RESEARCH_RESOURCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - disaster_response
+  - humanitarian_response
+  candidate_task_family_ids:
+  - language_contact
+  - retrieval
+  candidate_task_instance_ids:
+  - kb_ret_hybrid_query_v0_1
+  - kb_lc_token_language_id_v0_1
+  reported_sizes: []
+  evidence_path: reports/source_reviews/haitian_disaster_sms_munro.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Current artifact and custodian
+  - sensitive requests and locations
+  - consent
+  - rights
+  - deletions
+  next_action: Seek human ethics review of emergency-context consent and reidentification risk before contacting
+    custodians.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: apics_survey49
+  name: APiCS Haitian Creole survey chapter 49
+  canonical_url: https://apics-online.info/surveys/49
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REFERENCE_ONLY
+  source_id: null
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: This is a scholarly Haitian Creole survey, not a general-purpose training corpus. Historical demographic
+      statements must not be presented as current estimates.
+    url: https://apics-online.info/surveys/49
+    publisher: Research authors and resource maintainers
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - LINGUISTIC_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - text
+  candidate_domain_ids:
+  - history
+  - culture
+  candidate_task_family_ids:
+  - linguistic_robustness
+  - language_contact
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/apics_survey49.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Edition/version
+  - reuse license
+  - applicability of historical claims to present populations
+  next_action: Use as cited linguistic context; verify publication and rights before any text reuse.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: apics_structure49
+  name: APiCS Haitian Creole structure contribution 49
+  canonical_url: https://apics-online.info/contributions/49
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REFERENCE_ONLY
+  source_id: null
+  language_evidence: DOCUMENTED
+  language_claims:
+  - claim: This is a structured typological contribution about Haitian Creole, distinct from the survey chapter
+      and from a natural-text corpus.
+    url: https://apics-online.info/contributions/49
+    publisher: Research authors and resource maintainers
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  roles:
+  - LINGUISTIC_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - structured_linguistic
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - linguistic_robustness
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/apics_structure49.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Feature provenance
+  - licensing
+  - task validity
+  - avoiding conversion of reference facts into unreviewed gold labels
+  next_action: Review feature definitions, citation, version, and reuse terms before any challenge-set proposal.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: xm3600
+  name: XM3600 multimodal methodology reference
+  canonical_url: https://google.github.io/crossmodal-3600/
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: REFERENCE_ONLY
+  source_id: null
+  language_evidence: UNKNOWN
+  language_claims: []
+  roles:
+  - MULTIMODAL_METHODOLOGY_REFERENCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - image
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - document_multimodal
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/xm3600.md
+  review_status: SUBMITTED_TO_REVIEW
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Haitian coverage
+  - image/caption license separation
+  - cultural relevance to Haiti
+  next_action: Verify the language inventory; retain methodology relevance without claiming a Haitian dataset.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
+- lead_id: vicr_translated
+  name: Translated VICR release lead
+  canonical_url: https://aclanthology.org/2025.findings-naacl.287/
+  configuration: TO_VERIFY
+  revision: TO_VERIFY
+  discovery_attribution:
+  - Jeff Pierre supplied dataset leads, 2026-09-10
+  disposition: UNVERIFIED_LEAD
+  source_id: null
+  language_evidence: UNKNOWN
+  language_claims: []
+  roles:
+  - MULTIMODAL_METHODOLOGY_REFERENCE
+  - MACHINE_TRANSLATED_EVALUATION_REFERENCE
+  - CONTAMINATION_REFERENCE
+  content_origin: UNKNOWN
+  origin_evidence: []
+  modalities:
+  - image
+  - text
+  candidate_domain_ids:
+  - other
+  candidate_task_family_ids:
+  - document_multimodal
+  candidate_task_instance_ids: []
+  reported_sizes: []
+  evidence_path: reports/source_reviews/discovery/vicr_translated.md
+  review_status: BLOCKED
+  reviewed_on: '2026-09-18'
+  unresolved_claims:
+  - Haitian inclusion
+  - release URL and version
+  - translation fidelity
+  - underlying image licenses
+  next_action: Resolve the exact translated release, its languages, image rights, and judgment provenance.
+  authorization_effect: NONE
+  review_history:
+  - event_type: PROJECT_LEAD_REVIEW_DECISION
+    actor: Jeff Pierre
+    actor_role: Project Lead and Scientific Reviewer
+    occurred_on: '2026-09-18'
+    decision: ACCEPT_WITH_REQUIRED_CORRECTIONS
+    independence: INTERNAL_PROJECT_LEAD
+    evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+    human_attestation: true
+    ai_assistance_disclosed: true
+    notes: The Project Lead made this metadata-discovery decision after human review of the evidence and an AI-assisted
+      research synthesis; authorization effect remains NONE.
 relationships:
-  -
-    from_source_id: "wikimedia_htwiki_20231101"
-    to_source_id: "wikimedia_htwiki"
-    relation: "SNAPSHOT_OF"
-    evidence:
-      claim: "The card's 20231101.ht configuration identifies an extraction of Haitian Wikipedia."
-      url: "https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md"
-      publisher: "Wikimedia dataset maintainers"
-      accessed_on: "2026-09-10"
-      basis: "DIRECT_FACT"
-    authorization_effect: "NONE"
-  -
-    from_source_id: "cmu_haitian_phatjmo"
-    to_source_id: "cmu_haitian"
-    relation: "CLAIMED_DERIVATIVE_OF"
-    evidence:
-      claim: "The uploader describes CMU Haitian data and reproduces a CMU notice; file identity is not independently verified."
-      url: "https://huggingface.co/datasets/phatjmo/cmu_haitian"
-      publisher: "phatjmo"
-      accessed_on: "2026-09-10"
-      basis: "DIRECT_FACT"
-    authorization_effect: "NONE"
-  -
-    from_source_id: "creoleval_mit_haiti"
-    to_source_id: "creoleval"
-    relation: "HOSTED_WITHIN"
-    evidence:
-      claim: "CreoleVal hosts its MIT-Haiti corpus directory."
-      url: "https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti"
-      publisher: "CreoleVal contributors"
-      accessed_on: "2026-09-10"
-      basis: "DIRECT_FACT"
-    authorization_effect: "NONE"
-  -
-    from_source_id: "creoleval_mit_haiti"
-    to_source_id: "mit_ayiti_resources"
-    relation: "ORIGINATES_FROM"
-    evidence:
-      claim: "The README credits MIT-Ayiti educational material and collaboration; this is not a permission grant to KreyolBench."
-      url: "https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti"
-      publisher: "CreoleVal contributors"
-      accessed_on: "2026-09-10"
-      basis: "DIRECT_FACT"
-    authorization_effect: "NONE"
-  -
-    from_source_id: "xp3x_hat"
-    to_source_id: "flores_plus_hat"
-    relation: "POSSIBLE_SHARED_UPSTREAM"
-    evidence:
-      claim: "Both are multilingual task resources; audit original FLORES lineage and Haitian xP3x construction before claiming independent test data. No Haitian row overlap measured."
-      url: "https://huggingface.co/datasets/CohereLabs/xP3x"
-      publisher: "Cohere Labs; reviewer inference"
-      accessed_on: "2026-09-10"
-      basis: "INFERENCE"
-    authorization_effect: "NONE"
+- from_source_id: wikimedia_htwiki_20231101
+  to_source_id: wikimedia_htwiki
+  relation: SNAPSHOT_OF
+  evidence:
+    claim: The card's 20231101.ht configuration identifies an extraction of Haitian Wikipedia.
+    url: https://huggingface.co/datasets/wikimedia/wikipedia/blob/main/README.md
+    publisher: Wikimedia dataset maintainers
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  authorization_effect: NONE
+- from_source_id: cmu_haitian_phatjmo
+  to_source_id: cmu_haitian
+  relation: CLAIMED_DERIVATIVE_OF
+  evidence:
+    claim: The uploader describes CMU Haitian data and reproduces a CMU notice; file identity is not independently
+      verified.
+    url: https://huggingface.co/datasets/phatjmo/cmu_haitian
+    publisher: phatjmo
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  authorization_effect: NONE
+- from_source_id: creoleval_mit_haiti
+  to_source_id: creoleval
+  relation: HOSTED_WITHIN
+  evidence:
+    claim: CreoleVal hosts its MIT-Haiti corpus directory.
+    url: https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti
+    publisher: CreoleVal contributors
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  authorization_effect: NONE
+- from_source_id: creoleval_mit_haiti
+  to_source_id: mit_ayiti_resources
+  relation: ORIGINATES_FROM
+  evidence:
+    claim: The README credits MIT-Ayiti educational material and collaboration; this is not a permission grant to
+      KreyolBench.
+    url: https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti
+    publisher: CreoleVal contributors
+    accessed_on: '2026-09-10'
+    basis: DIRECT_FACT
+  authorization_effect: NONE
+- from_source_id: xp3x_hat
+  to_source_id: flores_plus_hat
+  relation: POSSIBLE_SHARED_UPSTREAM
+  evidence:
+    claim: Both are multilingual task resources; audit original FLORES lineage and Haitian xP3x construction before
+      claiming independent test data. No Haitian row overlap measured.
+    url: https://huggingface.co/datasets/CohereLabs/xP3x
+    publisher: Cohere Labs; reviewer inference
+    accessed_on: '2026-09-10'
+    basis: INFERENCE
+  authorization_effect: NONE
+- from_source_id: mission_4636_open_nonsensitive
+  to_source_id: haitian_disaster_sms_munro
+  relation: ORIGINATES_FROM
+  evidence:
+    claim: mission_4636_open_nonsensitive is governed as originates from haitian_disaster_sms_munro.
+    url: https://aclanthology.org/2010.amta-workshop.1/
+    publisher: ACL Anthology
+    accessed_on: '2026-09-18'
+    basis: DIRECT_FACT
+  authorization_effect: NONE
+- from_source_id: mission_4636_restricted_sensitive
+  to_source_id: haitian_disaster_sms_munro
+  relation: ORIGINATES_FROM
+  evidence:
+    claim: mission_4636_restricted_sensitive is governed as originates from haitian_disaster_sms_munro.
+    url: https://aclanthology.org/2010.amta-workshop.1/
+    publisher: ACL Anthology
+    accessed_on: '2026-09-18'
+    basis: DIRECT_FACT
+  authorization_effect: NONE

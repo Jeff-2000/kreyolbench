@@ -1,0 +1,46 @@
+source_schema_version: 2
+source_id: mission_4636_open_nonsensitive
+record_type: SOURCE_SUBSET
+parent_source_id: haitian_disaster_sms_munro
+name: Mission 4636 open or non-sensitive research subset candidate
+url: https://aclanthology.org/2010.amta-workshop.1/
+provider: Mission 4636 custodians and research authors
+publisher_owner: TO_VERIFY_WITH_CUSTODIAN
+data_type: humanitarian_sms_text
+access_method: metadata_review_only
+license: TO_VERIFY_ATTRIBUTION_AND_SUBSET_TERMS
+license_url: null
+license_evidence: "The Project-Lead decision recognizes a documented privacy-selected open/non-sensitive concept; the exact artifact, terms, and selection evidence remain unresolved."
+citation: "Mission 4636 research subset; exact artifact and attribution citation required before use."
+language_claim: "Haitian disaster-response messages; item-level language validation required"
+registers: [informal, humanitarian, crisis, code_switching]
+domain: disaster_response
+temporal_coverage: "2010 Haiti earthquake response"
+geographic_relevance: Haiti
+expected_tasks: [retrieval, language_contact, linguistic_robustness]
+accessed_on: 2026-09-18
+collection_date: null
+hash: null
+notes: "Conceptual child record only. Future acquisition requires independent inspection of privacy selection, attribution, dignity, provenance, and residual sensitivity."
+quality_notes: "Exact open artifact, privacy-selection procedure, duplicates, translation history, deletion handling, and residual PII require review."
+machine_generated_content_risk: UNKNOWN_TRANSLATION_AND_PROCESSING_HISTORY
+pii_risk: HIGH_UNTIL_ITEM_LEVEL_SCREENING
+duplication_risk: HIGH_PUBLIC_RESEARCH_REUSE
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003, KB-SRCREV-002, KB-DATA-004]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: DISCOVERED
+  access_status: UNKNOWN
+  legal_review_status: PENDING
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: CONDITIONAL
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://aclanthology.org/2010.amta-workshop.1/

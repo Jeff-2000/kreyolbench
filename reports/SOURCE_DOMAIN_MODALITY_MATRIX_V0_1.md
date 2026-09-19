@@ -4,6 +4,8 @@ Current status: SUBMITTED_TO_REVIEW
 
 Prepared by: Codex, AI-assisted. Date: 2026-09-10. Authorization effect: NONE.
 
+Historical role: this discovery matrix records the 2026-09-10 expansion view. The active representativeness projection is `configs/governance/source_diversity.yaml`, documented in `datasets/SOURCE_DIVERSITY.md`. Neither artifact measures achieved corpus coverage or authorizes source use.
+
 ## Interpretation
 
 This matrix combines original registry domain claims with the new intake's candidate domain mappings. A candidate is not measured coverage. Absence means a discovery gap in this inventory, not evidence that no resource exists. Reference-only and unverified leads cannot satisfy corpus coverage.

@@ -176,6 +176,85 @@ class FeasibilityConclusion(str, Enum):
     BLOCKED = "BLOCKED"
 
 
+class IdentityVerificationStatus(str, Enum):
+    """Granularity at which a source identity has been verified."""
+
+    UNVERIFIED = "UNVERIFIED"
+    PARTIAL = "PARTIAL"
+    VERIFIED_FAMILY_LEVEL = "VERIFIED_FAMILY_LEVEL"
+    VERIFIED_COLLECTION_LEVEL = "VERIFIED_COLLECTION_LEVEL"
+    VERIFIED_SUBSET_LEVEL = "VERIFIED_SUBSET_LEVEL"
+
+
+class HaitianLanguageEvidenceStatus(str, Enum):
+    UNKNOWN = "UNKNOWN"
+    PARTIAL = "PARTIAL"
+    VERIFIED = "VERIFIED"
+
+
+class ScientificFeasibilityStatus(str, Enum):
+    """Scientific triage only; never an authorization state."""
+
+    CONDITIONAL = "CONDITIONAL"
+    BLOCKED = "BLOCKED"
+    PENDING_PROJECT_LEAD_REVIEW = "PENDING_PROJECT_LEAD_REVIEW"
+    NOT_IN_REVIEW_SCOPE = "NOT_IN_REVIEW_SCOPE"
+
+
+class TaskFitStatus(str, Enum):
+    CANDIDATE = "CANDIDATE"
+    INDIRECT = "INDIRECT"
+    NO_CURRENT_FIT = "NO_CURRENT_FIT"
+    NOT_REVIEWED = "NOT_REVIEWED"
+
+
+class ReadinessStatus(str, Enum):
+    READY = "READY"
+    PARTIAL = "PARTIAL"
+    BLOCKED = "BLOCKED"
+    UNKNOWN = "UNKNOWN"
+
+
+class PrivacySensitivityStatus(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    UNKNOWN = "UNKNOWN"
+    EXTERNAL_REVIEW_REQUIRED = "EXTERNAL_REVIEW_REQUIRED"
+
+
+class ContaminationStatus(str, Enum):
+    ELEVATED_RISK = "ELEVATED_RISK"
+    KNOWN_OVERLAP = "KNOWN_OVERLAP"
+    CONTAMINATION_NOT_ESTABLISHED = "CONTAMINATION_NOT_ESTABLISHED"
+    NOT_ASSESSED = "NOT_ASSESSED"
+    NOT_APPLICABLE = "NOT_APPLICABLE"
+
+
+class SourceReviewEventType(str, Enum):
+    ORIGINAL_CODEX_METADATA_ASSESSMENT = "ORIGINAL_CODEX_METADATA_ASSESSMENT"
+    PROJECT_LEAD_REVIEW_DECISION = "PROJECT_LEAD_REVIEW_DECISION"
+    IMPLEMENTATION_EVIDENCE_CHECK = "IMPLEMENTATION_EVIDENCE_CHECK"
+
+
+class SourceReviewDecision(str, Enum):
+    ACCEPT_WITH_REQUIRED_CORRECTIONS = "ACCEPT_WITH_REQUIRED_CORRECTIONS"
+    RETAIN_CONDITIONAL = "RETAIN_CONDITIONAL"
+    RETAIN_BLOCKED = "RETAIN_BLOCKED"
+    REVISE_TO_CONDITIONAL = "REVISE_TO_CONDITIONAL"
+    EVIDENCE_UPDATED = "EVIDENCE_UPDATED"
+
+
+class ExternalResolver(str, Enum):
+    RIGHTS_HOLDER = "RIGHTS_HOLDER"
+    LEGAL_COUNSEL = "LEGAL_COUNSEL"
+    ARCHIVE_CURATOR = "ARCHIVE_CURATOR"
+    ETHICS_REVIEWER = "ETHICS_REVIEWER"
+    HAITIAN_CREOLE_EXPERT = "HAITIAN_CREOLE_EXPERT"
+    SOURCE_OWNER = "SOURCE_OWNER"
+    INDEPENDENT_EXPERT = "INDEPENDENT_EXPERT"
+
+
 class SourceReviewAction(str, Enum):
     """Permitted metadata-review next actions; none authorize source use."""
 
@@ -476,6 +555,7 @@ class SourceRecord(GovernedArtifact):
     expected_tasks: list[str]
     accessed_on: date | None
     collection_date: date | None
+    source_version: str | None = None
     hash: str | None
     notes: str
     quality_notes: str
@@ -483,6 +563,14 @@ class SourceRecord(GovernedArtifact):
     pii_risk: str
     duplication_risk: str
     source_governance: SourceGovernanceRecord
+
+    @model_validator(mode="after")
+    def require_frozen_release_identity(self) -> "SourceRecord":
+        if self.release_candidate and (not self.source_version or not self.hash):
+            raise ValueError(
+                "release-candidate sources require an immutable source_version and hash"
+            )
+        return self
 
 
 FEASIBILITY_DIMENSIONS = {
@@ -566,6 +654,69 @@ class MetadataClaim(BaseModel):
         return self
 
 
+class SourceAssessmentAxes(BaseModel):
+    """Independent scientific axes that cannot grant source authorization."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    identity_verification: IdentityVerificationStatus
+    haitian_language_evidence: HaitianLanguageEvidenceStatus
+    scientific_feasibility: ScientificFeasibilityStatus
+    task_fit: TaskFitStatus
+    provenance_readiness: ReadinessStatus
+    privacy_sensitivity: PrivacySensitivityStatus
+    contamination_status: ContaminationStatus
+
+
+class ExternalEvidenceRequirement(BaseModel):
+    """An issue that repository inspection cannot legitimately close."""
+
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+
+    issue: str = Field(min_length=1)
+    resolver: ExternalResolver
+    evidence_required: str = Field(min_length=1)
+    consequence_if_unresolved: str = Field(min_length=1)
+    status: Literal["OPEN"] = "OPEN"
+
+
+class SourceReviewEvent(BaseModel):
+    """Append-only attribution for metadata, human decisions, and evidence checks."""
+
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+
+    event_type: SourceReviewEventType
+    actor: str = Field(min_length=1)
+    actor_role: str = Field(min_length=1)
+    occurred_on: date
+    decision: SourceReviewDecision
+    independence: ReviewIndependence | None = None
+    evidence_path: str = Field(min_length=1)
+    human_attestation: bool
+    ai_assistance_disclosed: bool
+    notes: str = Field(min_length=1)
+
+    @model_validator(mode="after")
+    def validate_attribution(self) -> "SourceReviewEvent":
+        if self.occurred_on > date.today():
+            raise ValueError("source review event cannot be in the future")
+        if self.event_type == SourceReviewEventType.PROJECT_LEAD_REVIEW_DECISION:
+            if not self.human_attestation:
+                raise ValueError("Project-Lead decisions require human attestation")
+            if self.independence != ReviewIndependence.INTERNAL_PROJECT_LEAD:
+                raise ValueError("Project-Lead decisions require INTERNAL_PROJECT_LEAD")
+            if self.actor != "Jeff Pierre":
+                raise ValueError("Project-Lead decisions must identify Jeff Pierre")
+        elif self.human_attestation:
+            raise ValueError("non-human source review events cannot claim human attestation")
+        if self.event_type == SourceReviewEventType.IMPLEMENTATION_EVIDENCE_CHECK:
+            if not self.ai_assistance_disclosed or self.actor != "Codex":
+                raise ValueError("implementation evidence checks must disclose Codex assistance")
+            if self.decision != SourceReviewDecision.EVIDENCE_UPDATED:
+                raise ValueError("implementation evidence checks cannot make human decisions")
+        return self
+
+
 class SourceFeasibilityRecord(BaseModel):
     """Metadata-only evidence about one registered source candidate."""
 
@@ -580,7 +731,10 @@ class SourceFeasibilityRecord(BaseModel):
     authoritative_evidence_urls: list[str] = Field(default_factory=list)
     dimensions: dict[str, EvidenceState]
     dimension_evidence: dict[str, list[MetadataClaim]] = Field(default_factory=dict)
-    overall: FeasibilityConclusion
+    assessment_axes: SourceAssessmentAxes
+    summary_conclusion: FeasibilityConclusion
+    review_history: list[SourceReviewEvent] = Field(min_length=1)
+    external_evidence_required: list[ExternalEvidenceRequirement] = Field(default_factory=list)
     recommended_actions: list[SourceReviewAction] = Field(min_length=1)
     unresolved_claims: list[str] = Field(default_factory=list)
     candidate_task_instance_ids: list[str] = Field(default_factory=list)
@@ -603,8 +757,14 @@ class SourceFeasibilityRecord(BaseModel):
             raise ValueError(
                 "metadata source reviews must be SUBMITTED_TO_REVIEW or BLOCKED"
             )
-        if self.overall == FeasibilityConclusion.PILOT_FEASIBLE:
+        if self.summary_conclusion == FeasibilityConclusion.PILOT_FEASIBLE:
             raise ValueError("metadata-only review cannot declare a source PILOT_FEASIBLE")
+        scientific_feasibility = self.assessment_axes.scientific_feasibility
+        if scientific_feasibility in {
+            ScientificFeasibilityStatus.CONDITIONAL,
+            ScientificFeasibilityStatus.BLOCKED,
+        } and self.summary_conclusion.value != scientific_feasibility.value:
+            raise ValueError("summary conclusion must mirror, not override, scientific feasibility")
         if (
             EvidenceState.EVIDENCE_AVAILABLE in self.dimensions.values()
             and not self.authoritative_evidence_urls
@@ -634,6 +794,14 @@ class SourceFeasibilityRecord(BaseModel):
         ):
             if len(values) != len(set(values)):
                 raise ValueError(f"{label} must be unique")
+        event_keys = [
+            (event.event_type, event.actor, event.occurred_on, event.decision)
+            for event in self.review_history
+        ]
+        if len(event_keys) != len(set(event_keys)):
+            raise ValueError("source review history must not contain duplicate events")
+        if self.source_id != "sample" and not self.external_evidence_required:
+            raise ValueError("non-synthetic sources require explicit external-evidence gates")
         return self
 
 
@@ -642,9 +810,38 @@ class SourceFeasibilityLedger(GovernedArtifact):
 
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: Literal[2]
+    schema_version: Literal[3]
     candidate_reviews: list[SourceFeasibilityRecord]
     synthetic_control: SourceFeasibilityRecord
+    pending_project_lead_source_review: list[str]
+    outside_project_lead_review_scope: list[str]
+
+    @model_validator(mode="after")
+    def validate_project_lead_coverage(self) -> "SourceFeasibilityLedger":
+        pending = set(self.pending_project_lead_source_review)
+        outside = set(self.outside_project_lead_review_scope)
+        if pending & outside:
+            raise ValueError("pending and outside-scope source lists must be disjoint")
+        records = {record.source_id: record for record in self.candidate_reviews}
+        for source_id in pending:
+            record = records.get(source_id)
+            if record is None:
+                raise ValueError(f"pending Project-Lead source is not registered: {source_id}")
+            if any(
+                event.event_type == SourceReviewEventType.PROJECT_LEAD_REVIEW_DECISION
+                for event in record.review_history
+            ):
+                raise ValueError(f"pending source cannot claim Project-Lead review: {source_id}")
+        for source_id, record in records.items():
+            has_human_review = any(
+                event.event_type == SourceReviewEventType.PROJECT_LEAD_REVIEW_DECISION
+                for event in record.review_history
+            )
+            if source_id not in pending | outside and not has_human_review:
+                raise ValueError(f"reviewed source lacks Project-Lead event: {source_id}")
+            if source_id in outside and has_human_review:
+                raise ValueError(f"outside-scope source cannot claim Project-Lead review: {source_id}")
+        return self
 
 
 class GovernanceAudit(BaseModel):
@@ -729,6 +926,9 @@ def audit_repository(root: str | Path) -> GovernanceAudit:
     _audit_source_feasibility(
         repository, decisions, task_instances, sources, audit
     )
+    from kreyolbench.source_assessments import audit_source_assessments
+
+    audit_source_assessments(repository, sources, decisions, audit)
     # The discovery layer depends on governance types, not on runtime task adapters.
     from kreyolbench.source_discovery import audit_source_discovery
 
@@ -1297,6 +1497,21 @@ def _audit_source_feasibility(
                     f"{_display(path, root)}: {record.source_id} evidence_path "
                     f"does not exist: {record.evidence_path}"
                 )
+        for event in record.review_history:
+            event_evidence = (root / event.evidence_path).resolve()
+            try:
+                event_evidence.relative_to(root)
+            except ValueError:
+                audit.errors.append(
+                    f"{_display(path, root)}: {record.source_id} review-event evidence "
+                    "must remain inside the repository"
+                )
+            else:
+                if not event_evidence.is_file():
+                    audit.errors.append(
+                        f"{_display(path, root)}: {record.source_id} review-event evidence "
+                        f"does not exist: {event.evidence_path}"
+                    )
         unknown_tasks = sorted(
             set(record.candidate_task_instance_ids) - set(task_instances)
         )

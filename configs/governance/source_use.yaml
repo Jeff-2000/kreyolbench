@@ -1,0 +1,455 @@
+schema_version: 1
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+- KB-DATA-001
+- KB-DATA-004
+- KB-DATA-005
+- KB-SRCREV-002
+- KB-ENG-010
+requires_expert_validation: true
+release_candidate: false
+entries:
+- resource_ref: source:aka_official
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/aka_official.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:aka_publications
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/aka_publications.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:aya_collection_haitian
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/aya_collection_haitian.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:babel_haitian_ldc2017s03
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - SPEECH_RESOURCE
+  - RESTRICTED_RESEARCH_RESOURCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/babel_haitian_ldc2017s03.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:cmu_haitian
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - SPEECH_RESOURCE
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/cmu_haitian.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:cmu_haitian_phatjmo
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - MIRROR_REFERENCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: PROHIBITED
+  evaluation_eligibility: PROHIBITED
+  evidence_path: reports/source_reviews/cmu_haitian_phatjmo.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:creoleval
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - BENCHMARK_COMPARISON_REFERENCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: PROHIBITED
+  evaluation_eligibility: PROTECTED_REFERENCE
+  evidence_path: reports/source_reviews/creoleval.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:creoleval_mit_haiti
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - GOLD_DATA_CANDIDATE
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/creoleval_mit_haiti.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:diaspora_publications
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/diaspora_publications.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:ebible_hat_1985
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/ebible_hat_1985.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:finepdfs_hat
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - PRETRAINING_CANDIDATE
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/finepdfs_hat.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:flores_plus_hat
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - BENCHMARK_EVALUATION_REFERENCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: PROHIBITED
+  evaluation_eligibility: PROTECTED_REFERENCE
+  evidence_path: reports/source_reviews/flores_plus_hat.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:haiti_civil_protection_resources
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/haiti_civil_protection_resources.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:haiti_government_communication_portal
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/haiti_government_communication_portal.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:haiti_government_publications
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/haiti_government_publications.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:haitian_disaster_sms_munro
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  - RESTRICTED_RESEARCH_RESOURCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/haitian_disaster_sms_munro.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:haitian_news_candidates
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/haitian_news_candidates.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:jhu_kreyol_mt
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/jhu_kreyol_mt.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:mc4_ht
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - PRETRAINING_CANDIDATE
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/mc4_ht.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:menfp_educational_resources
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/menfp_educational_resources.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:mission_4636_open_nonsensitive
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - GOLD_DATA_CANDIDATE
+  - CORPUS_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/mission_4636_open_nonsensitive.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:mission_4636_restricted_sensitive
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - RESTRICTED_RESEARCH_RESOURCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: PROHIBITED
+  evaluation_eligibility: PROHIBITED
+  evidence_path: reports/source_reviews/mission_4636_restricted_sensitive.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:mit_ayiti_resources
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/mit_ayiti_resources.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:mspp_publications
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/mspp_publications.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:northern_haitian_creole_corpus
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - SPEECH_RESOURCE
+  - LINGUISTIC_REFERENCE
+  - RESTRICTED_RESEARCH_RESOURCE
+  training_eligibility: PROHIBITED
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/northern_haitian_creole_corpus.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:opus
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/opus.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:radio_haiti_duke_archive
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/radio_haiti_duke_archive.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:radio_haiti_inter_lrec2026
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - SPEECH_RESOURCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/radio_haiti_inter_lrec2026.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:social_media_candidates
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/social_media_candidates.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:ud_haitian_adolphe
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - LINGUISTIC_REFERENCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/ud_haitian_adolphe.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:ud_haitian_autogramm
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - LINGUISTIC_REFERENCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/ud_haitian_autogramm.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:un_haiti_ht
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/un_haiti_ht.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:universal_dependencies_haitian
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/universal_dependencies_haitian.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:voxlingua107_hat
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - SPEECH_RESOURCE
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/voxlingua107_hat.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:wikimedia_htwiki
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/wikimedia_htwiki.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:wikimedia_htwiki_20231101
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - CORPUS_CANDIDATE
+  - PRETRAINING_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/wikimedia_htwiki_20231101.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: source:xp3x_hat
+  resource_kind: REGISTERED_SOURCE
+  roles:
+  - INSTRUCTION_TUNING_CANDIDATE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: REQUIRES_REVIEW
+  evidence_path: reports/source_reviews/xp3x_hat.md
+  rationale: Scientific role and eligibility are provisional and independent from legal, ethics, scientific-inclusion,
+    task, and release authorization.
+  authorization_effect: NONE
+- resource_ref: lead:apics_structure49
+  resource_kind: REFERENCE_ONLY
+  roles:
+  - LINGUISTIC_REFERENCE
+  training_eligibility: NOT_APPLICABLE
+  evaluation_eligibility: REFERENCE_ONLY
+  evidence_path: reports/source_reviews/discovery/apics_structure49.md
+  rationale: Discovery or methodology role only; no Haitian corpus coverage or authorization is inferred.
+  authorization_effect: NONE
+- resource_ref: lead:apics_survey49
+  resource_kind: REFERENCE_ONLY
+  roles:
+  - LINGUISTIC_REFERENCE
+  training_eligibility: NOT_APPLICABLE
+  evaluation_eligibility: REFERENCE_ONLY
+  evidence_path: reports/source_reviews/discovery/apics_survey49.md
+  rationale: Discovery or methodology role only; no Haitian corpus coverage or authorization is inferred.
+  authorization_effect: NONE
+- resource_ref: lead:jsbeaudry_stem
+  resource_kind: UNVERIFIED_LEAD
+  roles:
+  - PRETRAINING_CANDIDATE
+  - DISCOVERY_ONLY
+  training_eligibility: REQUIRES_REVIEW
+  evaluation_eligibility: PROHIBITED
+  evidence_path: reports/source_reviews/discovery/jsbeaudry_stem.md
+  rationale: Discovery or methodology role only; no Haitian corpus coverage or authorization is inferred.
+  authorization_effect: NONE
+- resource_ref: lead:vicr_translated
+  resource_kind: UNVERIFIED_LEAD
+  roles:
+  - MULTIMODAL_METHODOLOGY_REFERENCE
+  - MACHINE_TRANSLATED_EVALUATION_REFERENCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: NOT_APPLICABLE
+  evaluation_eligibility: REFERENCE_ONLY
+  evidence_path: reports/source_reviews/discovery/vicr_translated.md
+  rationale: Discovery or methodology role only; no Haitian corpus coverage or authorization is inferred.
+  authorization_effect: NONE
+- resource_ref: lead:xm3600
+  resource_kind: REFERENCE_ONLY
+  roles:
+  - MULTIMODAL_METHODOLOGY_REFERENCE
+  - CONTAMINATION_REFERENCE
+  training_eligibility: NOT_APPLICABLE
+  evaluation_eligibility: REFERENCE_ONLY
+  evidence_path: reports/source_reviews/discovery/xm3600.md
+  rationale: Discovery or methodology role only; no Haitian corpus coverage or authorization is inferred.
+  authorization_effect: NONE

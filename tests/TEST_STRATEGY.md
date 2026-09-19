@@ -59,6 +59,11 @@ Should include:
 
 ## Scientific Invariants
 
+- Source feasibility never implies collection, derived-use, redistribution, scientific-inclusion, or release authorization.
+- Project-Lead events, Codex metadata assessments, and implementation evidence checks remain distinguishable and append-only.
+- Every non-synthetic source is covered by feasibility, prioritization, diversity, and contamination ledgers.
+- `CONTAMINATION_NOT_ESTABLISHED` is not equivalent to contamination-free.
+
 - Raw text linkage must be preserved when normalized text exists.
 - Test IDs must never occur in train.
 - Source metadata must be present.

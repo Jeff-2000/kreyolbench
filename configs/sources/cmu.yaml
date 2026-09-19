@@ -10,7 +10,7 @@ data_type: speech_and_language_resource_family
 access_method: manual_or_scripted_download_after_review
 license: TO_VERIFY_PER_SUBSET
 license_url: https://www.speech.cs.cmu.edu/haitian/
-license_evidence: "The resource page is known, but each downloadable subset and bundled notice requires review."
+license_evidence: "A CMU institutional news page documents a public release with minimal restrictions in 2010; exact surviving artifacts, bundled terms, and current permitted uses remain unresolved."
 citation: "Cite the CMU resource page and the citation or notice bundled with each selected subset."
 language_claim: hat
 registers: [spoken, TO_VERIFY]
@@ -21,13 +21,13 @@ expected_tasks: [asr, speech, language_modeling]
 accessed_on: null
 collection_date: null
 hash: null
-notes: "Discovery record only; create child records for reviewed resources."
-quality_notes: "Resource quality, speaker composition, transcription conventions, and terms require subset review."
+notes: "CMU institutionally documents the Haitian Creole resource history and a 2010 public release at family level. Separate child records are required for speech, transcripts, ASR/TTS artifacts, lexicons, language-model text, and medical phrases. Mirrors do not inherit the original provider's rights or provenance."
+quality_notes: "Resolve each component's identity, current location, rights, speaker composition, consent context, transcription conventions, hashes, and relationship to mirrors before scientific use."
 machine_generated_content_risk: unknown
 pii_risk: medium
 duplication_risk: unknown
 status: SUBMITTED_TO_REVIEW
-decision_ids: [KB-DATA-001, KB-DATA-003]
+decision_ids: [KB-DATA-001, KB-DATA-003, KB-SRCREV-002, KB-DATA-004, KB-ENG-010]
 requires_expert_validation: true
 release_candidate: false
 source_governance:
@@ -42,4 +42,6 @@ source_governance:
   scientific_status: PENDING_EXPERT_REVIEW
   reviewed_by: null
   reviewed_on: null
-  evidence_urls: [https://www.speech.cs.cmu.edu/haitian/]
+  evidence_urls:
+    - https://www.speech.cs.cmu.edu/haitian/
+    - https://www.cs.cmu.edu/news/2010/carnegie-mellon-releases-data-haitian-creole-hasten-development-translation-tools

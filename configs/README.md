@@ -24,6 +24,8 @@ Requires expert validation: Yes for scientific task, label, source, and orthogra
 - `orthography/variants.yaml` records spelling/normalization variants.
 - `governance/decisions.yaml` provides the executable decision-status and review-event registry.
 - `governance/task_feasibility.yaml` records evidence-based readiness without numerical scoring.
+- `governance/source_feasibility.yaml` separates scientific feasibility, evidence, attribution, and external-evidence gates from authorization.
+- `governance/source_prioritization.yaml`, `source_diversity.yaml`, and `source_contamination.yaml` provide complete non-authoritative planning coverage for registered non-synthetic sources.
 
 Most governed configurations include:
 
@@ -49,7 +51,7 @@ The latest event must agree with the decision status.
 
 ## Source Discovery and Feasibility
 
-`governance/source_discovery.yaml` records deduplicated intake, separate source/lead/reference dispositions, claimed origin, reported sizes and non-authorizing provenance relationships. `governance/source_feasibility.yaml` uses schema v2 with claim-level evidence. Source configs retain schema v2 and their independent authorization gates. See `datasets/SOURCE_DISCOVERY.md` before editing either ledger.
+`governance/source_discovery.yaml` records deduplicated intake, separate source/lead/reference dispositions, claimed origin, reported sizes and non-authorizing provenance relationships. `governance/source_feasibility.yaml` uses schema v3 with independent feasibility axes, claim-level evidence, append-only review events, and external-evidence requirements. Source configs retain schema v2 and their independent authorization gates. See `datasets/SOURCE_DISCOVERY.md` before editing either ledger.
 
 ## Requirements
 

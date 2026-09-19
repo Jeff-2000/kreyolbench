@@ -4,7 +4,7 @@
 
 - Registry type: `<SOURCE_FAMILY | SOURCE_COLLECTION | SOURCE_SUBSET>`
 - Review status: `SUBMITTED_TO_REVIEW | BLOCKED`
-- Overall conclusion: `CONDITIONAL | BLOCKED`
+- Scientific feasibility summary: `CONDITIONAL | BLOCKED` (non-authoritative)
 - Reviewed on: `YYYY-MM-DD`
 - Prepared by: `<name>`
 - AI assistance disclosed: `true | false`
@@ -40,3 +40,15 @@ Identify collection- or subset-level records required before any source family c
 ## No-Authorization Statement
 
 This report authorizes no collection, download, annotation, transformation, derived use, redistribution, scientific inclusion, release membership, or publication claim.
+
+## Project-Lead Review Event
+
+Record a human event only when a dated decision explicitly identifies the reviewer and role. Do not attribute Codex evidence checks to the human reviewer.
+
+## External Evidence Required
+
+For every unresolved external question, identify the resolver, required evidence, and consequence if unresolved.
+
+## Review History
+
+Append, never overwrite, `ORIGINAL_CODEX_METADATA_ASSESSMENT`, `PROJECT_LEAD_REVIEW_DECISION`, or `IMPLEMENTATION_EVIDENCE_CHECK` events.

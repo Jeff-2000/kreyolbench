@@ -1,5 +1,9 @@
 # Datasets
 
+## Source Governance
+
+Read `SOURCE_USE_POLICY.md` before proposing training or evaluation use and `MULTIMODAL_PROVENANCE.md` before registering vision-language material. Scientific role, feasibility, legal status, ethics status, contamination, and release membership are independent.
+
 ## Purpose
 
 Define canonical benchmark data contracts, source provenance, splits, leakage controls, and versioning.

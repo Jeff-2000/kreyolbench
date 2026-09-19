@@ -2,17 +2,21 @@
 
 ## Status and Decision Boundary
 
-Current status: SUBMITTED_TO_REVIEW
+Current status: EXPERT_VALIDATED for metadata discovery, reconciliation, source roles, and Project-Lead prioritization only.
 
-Prepared by: Codex. AI assistance disclosed: true. Review date: 2026-09-10.
+Prepared by: Codex. AI assistance disclosed: true. Initial metadata review date: 2026-09-10.
+
+Human decision: Jeff Pierre, Project Lead and Scientific Reviewer, 2026-09-18. Independence: `INTERNAL_PROJECT_LEAD`.
+
+The source decisions were made by the Project Lead, Jeff Pierre, after human review of the evidence and an AI-assisted research synthesis.
 
 This packet expands the source inventory, not the v0.1 benchmark release. No source is approved for acquisition, annotation, transformation, training, redistribution or scientific inclusion. The five task decisions still require independent human review.
 
 ## Inventory Reconciliation
 
-The intake contains 22 deduplicated leads: 15 registered-source references (12 new and 3 existing), four unresolved leads, and three references. The source registry now has 33 non-synthetic candidates plus one test-only synthetic control. These counts describe metadata records, not disjoint corpora or unique examples.
+The intake contains 22 deduplicated leads: 17 registered-source references, two unresolved leads, and three references. The current registry has 37 non-synthetic records plus one test-only synthetic control after registering VoxLingua107 Haitian, the scholarly documented Northern Haitian collection, and two Mission 4636 child records. These counts describe metadata identities, not disjoint corpora or unique examples.
 
-The [initial packet](SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md) and [archived schema-v1 ledger](source_reviews/history/source_feasibility_initial_20260910.yaml) preserve the original 21-candidate assessment. Current evidence is in the schema-v2 feasibility ledger and discovery ledger. Inferred task fit, privacy adequacy and contamination assessability formerly marked EVIDENCE_AVAILABLE are downgraded to PARTIAL unless a direct metadata claim supports them. This is evidence correction, not source authorization.
+The [initial packet](SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md) and [archived schema-v1 ledger](source_reviews/history/source_feasibility_initial_20260910.yaml) preserve the original 21-candidate assessment. This dated expansion originally introduced feasibility schema v2. The active schema-v3 projection and the later Project-Lead decisions are recorded in `configs/governance/source_feasibility.yaml` and the governing feasibility packet. Inferred task fit, privacy adequacy and contamination assessability remain `PARTIAL` unless a direct metadata claim supports them. This is evidence correction, not source authorization.
 
 ## Supplied Leads
 
@@ -31,11 +35,11 @@ The [initial packet](SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md) and [archived sch
 | CMU Haitian resource family | REGISTERED_SOURCE | cmu_haitian | [Review](source_reviews/discovery/cmu_original.md) |
 | phatjmo CMU Haitian mirror candidate | REGISTERED_SOURCE | cmu_haitian_phatjmo | [Review](source_reviews/cmu_haitian_phatjmo.md) |
 | IARPA Babel Haitian LDC2017S03 | REGISTERED_SOURCE | babel_haitian_ldc2017s03 | [Review](source_reviews/babel_haitian_ldc2017s03.md) |
-| VoxLingua107 Haitian lead | UNVERIFIED_LEAD | No corpus registration | [Review](source_reviews/discovery/voxlingua107_hat.md) |
-| Corpus of Northern Haitian Creole lead | UNVERIFIED_LEAD | No corpus registration | [Review](source_reviews/discovery/northern_haitian.md) |
+| VoxLingua107 Haitian | REGISTERED_SOURCE | voxlingua107_hat | [Review](source_reviews/voxlingua107_hat.md) |
+| Corpus of Northern Haitian Creole | REGISTERED_SOURCE, access blocked | northern_haitian_creole_corpus | [Review](source_reviews/northern_haitian_creole_corpus.md) |
 | UD Haitian Creole Autogramm | REGISTERED_SOURCE | ud_haitian_autogramm | [Review](source_reviews/ud_haitian_autogramm.md) |
 | UD Haitian Creole Adolphe | REGISTERED_SOURCE | ud_haitian_adolphe | [Review](source_reviews/ud_haitian_adolphe.md) |
-| Haitian Disaster Response SMS research collection | REGISTERED_SOURCE | haitian_disaster_sms_munro | [Review](source_reviews/haitian_disaster_sms_munro.md) |
+| Mission 4636 family | REGISTERED_SOURCE family with separately governed children | haitian_disaster_sms_munro | [Review](source_reviews/haitian_disaster_sms_munro.md) |
 | APiCS Haitian Creole survey chapter 49 | REFERENCE_ONLY | No corpus registration | [Review](source_reviews/discovery/apics_survey49.md) |
 | APiCS Haitian Creole structure contribution 49 | REFERENCE_ONLY | No corpus registration | [Review](source_reviews/discovery/apics_structure49.md) |
 | XM3600 multimodal methodology reference | REFERENCE_ONLY | No corpus registration | [Review](source_reviews/discovery/xm3600.md) |
@@ -49,8 +53,9 @@ The [initial packet](SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md) and [archived sch
 - MIT-Haiti's README identifies ht-en, ht-fr and ht-es parallel children's stories, distinct from monolingual lesson plans and blog posts. Educational parallel data must not all be relabeled STEM text. [Subset documentation](https://github.com/hclent/CreoleVal/tree/main/nlg/mit_haiti)
 - Adolphe and Autogramm are distinct treebanks; the old family report describes Adolphe only. Versioned counts and conversion quality need review. [Adolphe](https://universaldependencies.org/treebanks/ht_adolphe/index.html), [Autogramm](https://universaldependencies.org/treebanks/ht_autogramm/index.html)
 - The CMU mirror's MIT badge does not settle the reproduced CMU notice conditions or uploader authority. Babel is a cataloged access-controlled resource, not an openly authorized corpus. [CMU mirror](https://huggingface.co/datasets/phatjmo/cmu_haitian), [Babel catalog](https://catalog.ldc.upenn.edu/LDC2017S03)
-- The Northern Haitian link redirects to a general university page; VoxLingua Haitian duration and translated VICR Haitian coverage remain unverified. APiCS is linguistic reference material, not a substitute for natural corpus sampling.
-- XM3600 is retained for methodology, not represented as a confirmed Haitian dataset. No claim that native Haitian vision-language resources do not exist is supported here.
+- The VoxLingua107 provider lists Haitian and approximately 96 hours for spoken language identification, but does not establish transcripts, consent, or redistribution rights. The Northern Haitian collection is documented in scholarship and registered for metadata traceability, while access, custodian, consent, and exact release remain blocked.
+- XM3600 and translated VICR are retained for methodology only and contribute no Haitian corpus coverage. The repository records an evidence gap: it has not validated a native Haitian Creole vision-language source.
+- Mission 4636 is a family. The open/non-sensitive child remains conditional pending exact artifact and ethics evidence; the restricted/sensitive child is prohibited from ordinary pipelines.
 
 ## Human Review Queue
 
@@ -66,8 +71,10 @@ No language-quality sampling, corpus deduplication, content-origin audit, region
 
 ## Acceptance and Next Action
 
-Structural validation must pass with no source gate elevated and release eligibility false. Human review of this packet is next; acquisition and pilots remain blocked until every applicable source and task gate passes.
+The Project-Lead metadata review is complete. Next actions are component-level permission, legal, ethics, provenance, linguistic, and contamination reviews for bounded high-priority subsets. Acquisition and pilots remain blocked until every applicable source and task gate passes.
 
 ## Revision History
 
 - 2026-09-10: Added expanded intake and corrected metadata evidence without rewriting the initial review history.
+- 2026-09-18: Jeff Pierre approved the 21 source/reference metadata dispositions with required corrections; authorization effect remained `NONE`.
+- 2026-09-19: Implemented exact source-use, contamination, multimodal-provenance, Mission 4636 child, VoxLingua107, and Northern Haitian records.

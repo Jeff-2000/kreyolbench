@@ -668,7 +668,7 @@ def test_source_metadata_review_cannot_declare_pilot_feasible(tmp_path: Path):
     root = _copy_audit_fixture(tmp_path)
     path = root / "configs" / "governance" / "source_feasibility.yaml"
     payload = _load_yaml(path)
-    payload["candidate_reviews"][0]["overall"] = "PILOT_FEASIBLE"
+    payload["candidate_reviews"][0]["summary_conclusion"] = "PILOT_FEASIBLE"
     _write_yaml(path, payload)
 
     audit = audit_repository(root)

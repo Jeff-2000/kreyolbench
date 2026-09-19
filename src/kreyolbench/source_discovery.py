@@ -15,6 +15,7 @@ from kreyolbench.governance import (
     GovernanceAudit,
     MetadataClaim,
     ReviewStatus,
+    SourceReviewEvent,
     SourceRecord,
     TaskFamilyRecord,
     TaskInstanceRecord,
@@ -56,8 +57,12 @@ class DiscoveryLead(BaseModel):
     language_evidence: Literal["DOCUMENTED", "CLAIMED", "UNKNOWN", "NOT_DOCUMENTED"]
     language_claims: list[MetadataClaim]
     roles: list[Literal[
-        "PRETRAINING_CANDIDATE", "INSTRUCTION_TUNING_CANDIDATE", "EVALUATION_REFERENCE",
-        "LINGUISTIC_REFERENCE", "SPEECH_RESOURCE", "MULTIMODAL_REFERENCE",
+        "BENCHMARK_EVALUATION_REFERENCE", "BENCHMARK_COMPARISON_REFERENCE",
+        "GOLD_DATA_CANDIDATE", "CORPUS_CANDIDATE", "PRETRAINING_CANDIDATE",
+        "INSTRUCTION_TUNING_CANDIDATE", "CONTAMINATION_REFERENCE",
+        "LINGUISTIC_REFERENCE", "SPEECH_RESOURCE", "RESTRICTED_RESEARCH_RESOURCE",
+        "DISCOVERY_ONLY", "MIRROR_REFERENCE", "MULTIMODAL_METHODOLOGY_REFERENCE",
+        "MACHINE_TRANSLATED_EVALUATION_REFERENCE",
     ]] = Field(min_length=1)
     content_origin: ContentOrigin
     origin_evidence: list[MetadataClaim]
@@ -72,6 +77,7 @@ class DiscoveryLead(BaseModel):
     unresolved_claims: list[str] = Field(min_length=1)
     next_action: str = Field(min_length=1)
     authorization_effect: Literal["NONE"]
+    review_history: list[SourceReviewEvent] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def validate_disposition(self) -> "DiscoveryLead":
@@ -127,7 +133,7 @@ class SourceDiscoveryLedger(GovernedArtifact):
 
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: Literal[1]
+    schema_version: Literal[2]
     open_world: Literal[True]
     ai_assistance_disclosed: Literal[True]
     authorization_effect: Literal["NONE"]

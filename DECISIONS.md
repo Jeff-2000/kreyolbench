@@ -279,6 +279,34 @@ Review history:
 
 - 2026-09-09, `APPROVED`, internal project-lead scientific review; evidence: `reports/TASK_SPEC_REVIEW_PACKET_V0_1.md`.
 
+## KB-SRCREV-001
+
+Title: Project-Lead source-feasibility review v0.1
+
+Date: 2026-09-18
+
+Status: EXPERT_VALIDATED
+
+Context: The AI-assisted metadata packet required human review to correct stale evidence, separate scientific feasibility from authorization, and prioritize source-specific next-stage work.
+
+Decision: Accept the metadata methodology with required corrections and adopt the 19 source-specific dispositions recorded in `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md`. Four sources move from a blocked summary to conditional scientific feasibility; five remain blocked for actionable use; ten retain conditional scientific feasibility. Two sources remain pending Project-Lead review, and later discovery records are outside this review's scope.
+
+Alternatives considered: treat feasibility as authorization; approve every accessible source; leave the original single-label conclusions unchanged; attribute implementation evidence checks to the human reviewer.
+
+Scientific rationale: Multi-axis review preserves scientifically promising resources without erasing unresolved legal, ethical, provenance, contamination, or representativeness constraints.
+
+Engineering implications: Feasibility schema v3 stores independent assessment axes and append-only, explicitly attributed review events. Cross-source prioritization, diversity, and contamination ledgers remain non-authoritative planning artifacts.
+
+Risks: `CONDITIONAL` may still be misread as permission; implementation evidence may be misattributed; broad source families may be mistaken for usable corpora.
+
+Requires expert approval: Yes
+
+Expert decision: Accepted with required corrections by Jeff Pierre on 2026-09-18 as Project Lead and Scientific Reviewer. This decision validates the review methodology and prioritization only. It authorizes no collection, transformation, annotation, derived use, redistribution, scientific inclusion, release membership, or publication claim.
+
+Review history:
+
+- 2026-09-18, `APPROVED`, internal Project-Lead scientific review; evidence: `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md`.
+
 ## KB-GOV-002
 
 Title: Independent external task-specification review gate
@@ -663,6 +691,126 @@ Requires expert approval: No
 
 Expert decision: Not required for engineering; source findings remain SUBMITTED_TO_REVIEW or BLOCKED.
 
+## KB-ENG-009
+
+Title: Append-only multi-axis source-review evidence and attribution
+
+Date: 2026-09-18
+
+Status: TO_REVIEW_LATER
+
+Context: A single feasibility label could erase independent scientific and authorization axes, while untyped prose could blur human decisions with Codex evidence checks.
+
+Decision: Use feasibility schema v3 with independent assessment axes, append-only source-review events, structured external-evidence requirements, and complete planning ledgers for prioritization, representativeness, and contamination. Human decisions and implementation evidence checks use distinct event types and attribution rules.
+
+Alternatives considered: overwrite the earlier assessment; store only an overall conclusion; infer human approval from updated evidence; duplicate authorization states as informal prose.
+
+Scientific rationale: None beyond faithfully preserving the Project-Lead review and the validated multi-axis source-governance policy.
+
+Engineering implications: Audits reject incomplete inventory coverage, false human attribution, unsupported contamination-free claims, and any feasibility record paired with an authorized source state.
+
+Risks: More structured metadata increases maintenance cost; categorical planning evidence can become stale; a structurally valid record does not establish factual truth.
+
+Requires expert approval: No
+
+Expert decision: Not required
+
+## KB-SRCREV-002
+
+Title: Project-Lead expanded source-discovery review
+
+Date: 2026-09-18
+
+Status: EXPERT_VALIDATED
+
+Context: Twenty-one supplied resources or references required explicit dispositions without converting metadata discovery into source authorization.
+
+Decision: Accept the source-specific metadata dispositions and required corrections recorded in `reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md`. The discovery packet is validated only for metadata identity, scientific-role triage, prioritization, and reconciliation. No acquisition, training, annotation, redistribution, scientific inclusion, task approval, or release authorization follows.
+
+Alternatives considered: treating every public endpoint as usable data; collapsing mirrors and upstream sources; crediting methodology references as Haitian corpus coverage; leaving training and evaluation roles implicit.
+
+Scientific rationale: Broad discovery protects KreyolBench's open-world ambition, while resource-specific provenance and use firewalls protect validity, rights, community trust, and future benchmark independence.
+
+Engineering implications: The discovery, source-use, feasibility, contamination, and diversity ledgers must preserve exact identities, lineage, attribution, unresolved evidence, and authorization effect `NONE`.
+
+Risks: Scientific priority can be misread as permission; reported sizes can be mistaken for unique examples; translated or web-derived resources can obscure origin and contamination.
+
+Requires expert approval: Yes
+
+Expert decision: Approved by Jeff Pierre, Project Lead and Scientific Reviewer, on 2026-09-18 after human review of the evidence and an AI-assisted research synthesis. Independence: `INTERNAL_PROJECT_LEAD`.
+
+## KB-DATA-004
+
+Title: Source roles, use eligibility, and contamination firewall
+
+Date: 2026-09-18
+
+Status: EXPERT_VALIDATED
+
+Context: A source can be scientifically interesting while remaining prohibited for training, unsuitable for gold evaluation, legally unresolved, ethically restricted, or excluded from release.
+
+Decision: Maintain scientific roles, training eligibility, evaluation eligibility, contamination status, legal status, ethics status, scientific inclusion, and release membership as independent axes. Protected evaluation material cannot enter training pools. Mirrors and aggregators cannot transfer rights or provenance automatically.
+
+Alternatives considered: one approved/blocked label; deriving eligibility from a license badge; allowing benchmark components into training when overlap is unknown.
+
+Scientific rationale: The firewall prevents circular evaluation, hidden contamination, and invalid claims while preserving useful comparison and methodology references.
+
+Engineering implications: Every registered source and unresolved/reference lead receives a source-use and contamination record. Frozen release inputs require immutable revisions, hashes, split identity, and ordered derivation provenance.
+
+Risks: Eligibility may become stale as evidence changes; component-level overlap can remain unknown; conservative prohibitions may reduce short-term data volume.
+
+Requires expert approval: Yes
+
+Expert decision: Approved by Jeff Pierre on 2026-09-18 at project-policy level. It grants no source-specific authorization.
+
+## KB-DATA-005
+
+Title: Native-versus-translated multimodal provenance policy
+
+Date: 2026-09-18
+
+Status: EXPERT_VALIDATED
+
+Context: A multilingual image-caption resource can contain Haitian translations without being a native Haitian Creole vision-language dataset, and media rights can differ from caption rights.
+
+Decision: Track media provenance, caption authoring origin, translation route, transformations, linkage, rights, split identity, parent datasets, and contamination independently. Do not credit a resource as native Haitian Creole multimodal coverage without direct evidence.
+
+Alternatives considered: infer native coverage from a language code; collapse media and caption rights; classify machine-translated captions as human-original Haitian data.
+
+Scientific rationale: Native cultural grounding, translated evaluation, and methodology transfer answer different research questions and must remain distinguishable.
+
+Engineering implications: Typed multimodal provenance uses canonical content-origin categories and ordered derivation steps. The current absence of a validated native Haitian Creole vision-language source remains an explicit evidence gap.
+
+Risks: Provider documentation may omit authoring origin or image rights; machine-translation pipelines may be incompletely reported.
+
+Requires expert approval: Yes
+
+Expert decision: Approved by Jeff Pierre on 2026-09-18 at project-policy level. It validates provenance requirements, not XM3600 or VICR as Haitian datasets.
+
+## KB-ENG-010
+
+Title: Machine-enforced source-use, contamination-firewall, and multimodal-provenance schemas
+
+Date: 2026-09-19
+
+Status: TO_REVIEW_LATER
+
+Context: The validated source policies require deterministic enforcement across registered sources and unresolved discovery leads.
+
+Decision: Add complete source-use and contamination ledgers, canonical content-origin values, ordered derivation provenance, independent media and caption provenance, protected-split training prohibitions, and exact coverage audits.
+
+Alternatives considered: prose-only policy; task-specific hard coding; relying on source cards without repository validation.
+
+Scientific rationale: None beyond faithfully enforcing `KB-DATA-004` and `KB-DATA-005`.
+
+Engineering implications: Structural audit can pass while release eligibility remains false. Machine validation checks internal consistency, not legal truth or scientific quality.
+
+Risks: Strict schemas increase maintenance cost and cannot replace qualified human review.
+
+Requires expert approval: No
+
+Expert decision: Not required
+
 ## Revision History
 
 | Date | Change | Status |
@@ -674,3 +822,5 @@ Expert decision: Not required for engineering; source findings remain SUBMITTED_
 | 2026-09-09 | Added the open-world task-scope proposal and extensible taxonomy/release architecture. | IN_PROGRESS |
 | 2026-09-10 | Recorded the internal task audit, qualified external-review policy, five revision events, and reviewer-evidence enforcement. | IN_PROGRESS |
 | 2026-09-10 | Added the metadata-only source-feasibility ledger decision without changing source authorization. | IN_PROGRESS |
+| 2026-09-18 | Recorded the Project-Lead source-feasibility review and append-only multi-axis evidence architecture. | IN_PROGRESS |
+| 2026-09-19 | Implemented the expanded Project-Lead source decisions, source-use firewall, contamination lineage, and multimodal provenance policy. | IN_PROGRESS |

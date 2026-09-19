@@ -13,7 +13,7 @@ Owner: Data Governance working group
 
 Requires expert validation: Yes
 
-Governing decisions: `KB-DATA-001`, `KB-DATA-003`, `KB-ENG-003`, `KB-ENG-007`
+Governing decisions: `KB-DATA-001`, `KB-DATA-003`, `KB-SRCREV-001`, `KB-ENG-003`, `KB-ENG-007`, `KB-ENG-009`
 
 ## Core Principle
 
@@ -115,8 +115,10 @@ provenance/versionability, ethics/privacy, provisional task fit, and
 duplication/contamination.
 
 Evidence states are `EVIDENCE_AVAILABLE`, `PARTIAL`, `MISSING`, and `BLOCKED`.
-Permitted conclusions are `CONDITIONAL` and `BLOCKED`; metadata review cannot
-declare a source `PILOT_FEASIBLE`. Every record must set
+Scientific-feasibility states are `CONDITIONAL`, `BLOCKED`,
+`PENDING_PROJECT_LEAD_REVIEW`, and `NOT_IN_REVIEW_SCOPE`. A non-authoritative
+summary can aid reading but cannot override the independent axes. Metadata review
+cannot declare a source `PILOT_FEASIBLE`. Every record must set
 `authorization_effect: NONE`. Reports live under `reports/source_reviews/`, and
 the consolidated packet is `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md`.
 
@@ -124,9 +126,18 @@ Feasibility is not an authorization axis. It prioritizes later human review and
 cannot elevate legal, ethical, collection, derived-use, redistribution,
 scientific, or release status.
 
-## Discovery Intake and Evidence Version 2
+Schema v3 preserves append-only events for the original Codex assessment,
+Project-Lead decisions, and Codex implementation evidence checks. These event
+types cannot substitute for one another. External questions identify the
+resolver, required evidence, and consequence if unresolved.
 
-See `SOURCE_DISCOVERY.md` for the open-world intake and the expanded review packet. Current feasibility schema v2 requires claim-level URLs, publisher attribution, dates and direct evidence for each EVIDENCE_AVAILABLE dimension. Historical assessments are retained, not silently overwritten. Registered sources, unresolved leads and reference-only resources are separate. Relationships never transfer rights, and reported sizes are not aggregated into unique corpus totals.
+Cross-source planning is maintained in the prioritization, diversity, and
+contamination ledgers. See `SOURCE_DIVERSITY.md` and
+`CONTAMINATION_REGISTRY.md`.
+
+## Discovery Intake and Feasibility Evidence
+
+See `SOURCE_DISCOVERY.md` for the open-world intake and the expanded review packet. Current feasibility schema v3 requires claim-level URLs, publisher attribution, dates, direct evidence for each `EVIDENCE_AVAILABLE` dimension, independent assessment axes, append-only review attribution, and explicit external-evidence gates. Historical v1/v2 assessments are retained, not silently overwritten. Registered sources, unresolved leads and reference-only resources are separate. Relationships never transfer rights, and reported sizes are not aggregated into unique corpus totals.
 
 ## Acceptance Criteria
 
@@ -147,3 +158,4 @@ See `SOURCE_DISCOVERY.md` for the open-world intake and the expanded review pack
 | 2026-09-09 | Adopted open-world discovery and multi-axis schema v2; expanded candidate families without authorizing collection. | SUBMITTED_TO_REVIEW |
 | 2026-09-09 | Linked source governance to the example-level provenance contract. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Added complete metadata-only feasibility coverage and machine-enforced no-authorization rules. | SUBMITTED_TO_REVIEW |
+| 2026-09-18 | Added Project-Lead attribution, independent feasibility axes, external-evidence gates, diversity, prioritization, and contamination accounting. | SUBMITTED_TO_REVIEW |

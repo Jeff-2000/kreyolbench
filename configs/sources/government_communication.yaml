@@ -8,9 +8,9 @@ provider: Government of Haiti communication services
 publisher_owner: TO_VERIFY_PER_ITEM
 data_type: civic_and_administrative_web_content
 access_method: language_and_rights_review_before_collection
-license: TO_VERIFY_PER_ITEM
-license_url: null
-license_evidence: "No uniform machine-readable reuse license has been recorded by KreyolBench."
+license: CC0_1_0_PORTAL_NOTICE_SCOPE_TO_VERIFY_PER_ASSET
+license_url: https://communication.gouv.ht/
+license_evidence: "The official portal displays a CC0 1.0 Universal notice. KreyolBench does not infer that linked PDFs, photographs, ministry documents, syndicated material, or third-party works inherit that notice."
 citation: "Cite each government communication item, publisher, URL, publication date, and retrieval date."
 language_claim: fra_hat_mixed_TO_VERIFY
 registers: [civic, administrative, public_information]
@@ -21,7 +21,7 @@ expected_tasks: [classification, ner, retrieval]
 accessed_on: 2026-09-09
 collection_date: null
 hash: null
-notes: "Treat as a discovery source; verify the presence and proportion of Haitian Creole before scientific use."
+notes: "Portal accessibility and the portal-level CC0 notice are verified. Register bounded publisher/content-type children and verify Haitian Creole and license applicability per asset."
 quality_notes: "Language mix, syndication, updates, boilerplate, and item-level rights require review."
 machine_generated_content_risk: unknown
 pii_risk: medium

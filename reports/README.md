@@ -1,5 +1,11 @@
 # Reports
 
+## Current Source Governance
+
+- `SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md`: Project-Lead-validated metadata discovery and reconciliation packet; authorization effect `NONE`.
+- `CREOLEVAL_HAITIAN_COMPONENT_MATRIX_V0_1.md`: component-level license and overlap backlog for CreoleVal.
+- `EXPANDED_SOURCE_REVIEW_IMPLEMENTATION_HANDOFF.md`: implementation state, validation, and remaining external gates.
+
 ## Purpose
 
 `reports/` contains research outputs, datasheets, baseline summaries, and publication-facing artifacts.
@@ -28,6 +34,8 @@ for all registered source candidates. `SOURCE_TO_TASK_MATRIX_V0_1.md` records
 provisional relevance without authorization, and `source_reviews/` contains
 the methodology, template, and source-specific public evidence reports.
 The master paper outline covers the first controlled release only; it does not define the global KreyolBench task universe. Long-term scope is governed by `datasets/TASK_TAXONOMY.md` and `KB-SCOPE-002`.
+
+Source governance reports include the Project-Lead feasibility packet, categorical prioritization, domain/modality accounting, and append-only per-source evidence reports. Feasibility and priority never authorize source use. See `SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md`, `SOURCE_PRIORITIZATION_V0_1.md`, and `SOURCE_DOMAIN_MODALITY_MATRIX_V0_1.md`.
 
 ## Expanded Discovery Review
 

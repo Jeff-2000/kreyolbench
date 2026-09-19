@@ -31,7 +31,9 @@ No corpus files, dumps, documents, audio, models, or archives were downloaded. N
 | `MISSING` | No adequate evidence was identified in this review. |
 | `BLOCKED` | The dimension cannot currently proceed, for example because the endpoint is unavailable or ethics scoping is undefined. |
 
-`CONDITIONAL` means metadata warrants a later human review. It is not approval. `BLOCKED` means metadata gaps prevent responsible progression.
+`CONDITIONAL` means scientific feasibility warrants bounded next-stage review. It is not approval. `BLOCKED` means actionable use cannot responsibly progress, although discovery value may remain.
+
+Schema v3 separates scientific feasibility from identity, Haitian-language evidence, task fit, provenance readiness, privacy, contamination, and every authorization axis. Review history distinguishes `ORIGINAL_CODEX_METADATA_ASSESSMENT`, `PROJECT_LEAD_REVIEW_DECISION`, and `IMPLEMENTATION_EVIDENCE_CHECK`.
 
 ## Review Groups
 
@@ -45,10 +47,11 @@ Every non-synthetic registered source must have one ledger record and one eviden
 
 ## Discovery Expansion
 
-See `datasets/SOURCE_DISCOVERY.md` and `reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md`. The initial 21-candidate packet and schema-v1 ledger are historical snapshots. Active feasibility schema v2 requires direct claim-level evidence; inferred suitability remains PARTIAL. Discovery reports include unresolved leads and references that are not registered research corpora. No source count is a corpus-size or coverage measure.
+See `datasets/SOURCE_DISCOVERY.md` and `reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md`. The initial 21-candidate packet and schema-v1 ledger are historical snapshots. Active feasibility schema v3 requires direct claim-level evidence, independent assessment axes, attributed review events, and external-evidence gates; inferred suitability remains `PARTIAL`. Discovery reports include unresolved leads and references that are not registered research corpora. No source count is a corpus-size or coverage measure.
 
 ## Revision History
 
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-10 | Added methodology and first complete metadata-only review set. | SUBMITTED_TO_REVIEW |
+| 2026-09-18 | Recorded the Project-Lead review, required corrections, and append-only evidence attribution. | SUBMITTED_TO_REVIEW |

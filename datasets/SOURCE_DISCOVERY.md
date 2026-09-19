@@ -10,7 +10,7 @@ Engineering decision: KB-ENG-008. Findings require human review; no source permi
 
 - `configs/governance/source_discovery.yaml`: deduplicated intake, disposition, evidence, candidate roles, reported sizes and relationships.
 - `configs/sources/`: schema-v2 source identity and independent authorization axes.
-- `configs/governance/source_feasibility.yaml`: schema-v2 claim-level evidence for every current non-synthetic source plus a separate test control.
+- `configs/governance/source_feasibility.yaml`: schema-v3 multi-axis feasibility, append-only review events, claim-level evidence, and external-evidence gates for every current non-synthetic source plus a separate test control.
 - `reports/source_reviews/history/`: historical review and authorization snapshots; not active configuration.
 
 ## Identity and Disposition
@@ -53,3 +53,4 @@ Human review of the expansion packet, followed by metadata clarification and sou
 ## Revision History
 
 - 2026-09-10: Established discovery intake and feasibility-v2 evidence requirements.
+- 2026-09-18: Superseded the active feasibility-v2 projection with schema v3 while retaining v2 history; added Project-Lead attribution, independent assessment axes, and external-evidence requirements.

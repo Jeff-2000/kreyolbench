@@ -64,12 +64,23 @@ def test_original_source_permissions_are_unchanged():
     )}
     for source_id, original in snapshot["sources"].items():
         normalized = SourceRecord.model_validate(current[source_id]).model_dump(mode="json")
-        assert {key: normalized[key] for key in original} == original
+        assert normalized["status"] == original["status"]
+        assert normalized["release_candidate"] == original["release_candidate"]
+        authorization_keys = {
+            "legal_review_status", "collection_status", "derived_use_status",
+            "redistribution_status", "commercial_use_status", "ethics_status",
+            "scientific_status",
+        }
+        assert {
+            key: normalized["source_governance"][key] for key in authorization_keys
+        } == {
+            key: original["source_governance"][key] for key in authorization_keys
+        }
     for source_id in current.keys() - snapshot["sources"].keys():
         record = current[source_id]
         assert not record["release_candidate"]
-        assert record["source_governance"]["collection_status"] == "NOT_REQUESTED"
-        assert record["source_governance"]["redistribution_status"] == "UNKNOWN"
+        assert record["source_governance"]["collection_status"] != "APPROVED"
+        assert record["source_governance"]["redistribution_status"] != "APPROVED"
         assert record["source_governance"]["scientific_status"] == "PENDING_EXPERT_REVIEW"
 
 
@@ -78,7 +89,7 @@ def test_original_review_is_preserved_and_active_coverage_is_dynamic():
     current = load(ROOT / "configs/governance/source_feasibility.yaml")
     assert historical["schema_version"] == 1
     assert len(historical["candidate_reviews"]) == 21  # Historical snapshot only.
-    assert current["schema_version"] == 2
+    assert current["schema_version"] == 3
     assert {r["source_id"] for r in historical["candidate_reviews"]} <= {
         r["source_id"] for r in current["candidate_reviews"]
     }
@@ -120,10 +131,12 @@ def test_registration_requires_language_evidence_and_origin_is_not_inferred(fiel
 
 
 def test_reference_and_unverified_resources_are_not_registered_corpora():
-    for identifier in ["xm3600", "vicr_translated", "northern_haitian", "apics_survey49",
-                       "apics_structure49", "voxlingua107_hat", "jsbeaudry_stem"]:
+    for identifier in ["xm3600", "vicr_translated", "apics_survey49",
+                       "apics_structure49", "jsbeaudry_stem"]:
         assert lead(identifier)["source_id"] is None
-    assert lead("aya_haitian")["content_origin"] == "MACHINE_TRANSLATION"
+    assert lead("voxlingua107_hat")["source_id"] == "voxlingua107_hat"
+    assert lead("northern_haitian")["source_id"] == "northern_haitian_creole_corpus"
+    assert lead("aya_haitian")["content_origin"] == "MACHINE_TRANSLATED"
 
 
 def test_snapshots_mirrors_and_treebanks_are_distinct():

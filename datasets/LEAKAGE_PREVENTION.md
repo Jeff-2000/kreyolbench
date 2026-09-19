@@ -29,6 +29,8 @@ Requires expert validation: Yes
 - Near-duplicate detection for long text and generated examples.
 - Source-document grouping before split.
 - Manual review for public examples copied into prompts.
+- Source-registry and contamination-ledger lookup for every proposed test example.
+- Use `CONTAMINATION_NOT_ESTABLISHED` when no overlap is found; do not claim contamination-free data without stronger evidence.
 
 ## Release Gate
 
@@ -39,4 +41,4 @@ No public benchmark release should proceed without a leakage report.
 | Date | Change | Status |
 | --- | --- | --- |
 | 2026-09-01 | Initial leakage prevention policy. | SUBMITTED_TO_REVIEW |
-
+| 2026-09-18 | Added source-level contamination states and prohibited unsupported contamination-free claims. | SUBMITTED_TO_REVIEW |

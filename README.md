@@ -7,15 +7,18 @@ The benchmark prioritizes real-world Haitian Creole use cases: education, public
 ## Quick Start
 
 ```bash
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"
 
-kreyolbench validate-dataset --task ner --path data/sample/ner.jsonl
-kreyolbench audit-governance --root . --format text
-kreyolbench evaluate --task classification --predictions data/sample/classification_topic.jsonl --references data/sample/classification_topic.jsonl
-pytest
+python -m kreyolbench.cli validate-dataset --task ner --path data/sample/ner.jsonl
+python -m kreyolbench.cli audit-governance --root . --format text
+python -m kreyolbench.cli evaluate --task classification --predictions data/sample/classification_topic.jsonl --references data/sample/classification_topic.jsonl
+python -m pytest
 ```
+
+Use the activated environment's `python` for every command. Mixing a global `python3.12` with separately installed `pytest` or `kreyolbench` executables can produce missing-dependency errors even when tests pass elsewhere.
 
 The governance audit distinguishes structural validity from scientific approval. A `PASS` result can still report `release_eligible: false` while expert decisions remain unresolved.
 

@@ -35,10 +35,13 @@ class ContentOrigin(str, Enum):
     """Primary origin of an example's linguistic content."""
 
     HUMAN_ORIGINAL = "HUMAN_ORIGINAL"
-    HUMAN_TRANSLATION = "HUMAN_TRANSLATION"
-    MACHINE_TRANSLATION = "MACHINE_TRANSLATION"
+    HUMAN_TRANSLATED = "HUMAN_TRANSLATED"
+    MACHINE_TRANSLATED = "MACHINE_TRANSLATED"
     LLM_GENERATED = "LLM_GENERATED"
-    SYNTHETIC = "SYNTHETIC"
+    SYNTHETIC_OTHER = "SYNTHETIC_OTHER"
+    ASR_DERIVED = "ASR_DERIVED"
+    OCR_DERIVED = "OCR_DERIVED"
+    HUMAN_TRANSCRIBED = "HUMAN_TRANSCRIBED"
     MIXED = "MIXED"
     UNKNOWN = "UNKNOWN"
 
@@ -94,6 +97,111 @@ class SourceMetadata(BaseModel):
             raise ValueError("derivation step sequences must be contiguous and start at 1")
         if len({step.step_id for step in self.derivation_steps}) != len(self.derivation_steps):
             raise ValueError("derivation step IDs must be unique")
+        return self
+
+
+class MultimodalAuthoringOrigin(str, Enum):
+    """How target-language multimodal text was authored or translated."""
+
+    NATIVE_TARGET_LANGUAGE = "NATIVE_TARGET_LANGUAGE"
+    HUMAN_TRANSLATED = "HUMAN_TRANSLATED"
+    MACHINE_TRANSLATED = "MACHINE_TRANSLATED"
+    MACHINE_TRANSLATED_AUTO_FILTERED = "MACHINE_TRANSLATED_AUTO_FILTERED"
+    MACHINE_TRANSLATED_HUMAN_VALIDATED = "MACHINE_TRANSLATED_HUMAN_VALIDATED"
+    UNKNOWN_OR_MIXED = "UNKNOWN_OR_MIXED"
+
+
+class MediaProvenance(BaseModel):
+    """Rights and identity metadata for one image or other media object."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    media_id: str = Field(min_length=1)
+    original_source: str = Field(min_length=1)
+    creator_or_rights_holder: str | None = None
+    license_or_terms: str = Field(min_length=1)
+    source_url: str | None = None
+    version_or_hash: str = Field(min_length=1)
+    geographic_cultural_provenance: str | None = None
+
+
+class CaptionProvenance(BaseModel):
+    """Independent provenance for text associated with a media object."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    caption_id: str = Field(min_length=1)
+    language: str = Field(min_length=1)
+    authoring_origin: MultimodalAuthoringOrigin
+    original_language: str | None = None
+    translator_type: str | None = None
+    translation_model: str | None = None
+    translation_model_version: str | None = None
+    translation_selection_method: str | None = None
+    quality_estimation_method: str | None = None
+    human_validation_status: str = Field(min_length=1)
+    judgment_language: str | None = None
+    judgment_provenance: str | None = None
+
+    @model_validator(mode="after")
+    def validate_translation_provenance(self) -> "CaptionProvenance":
+        machine_origins = {
+            MultimodalAuthoringOrigin.MACHINE_TRANSLATED,
+            MultimodalAuthoringOrigin.MACHINE_TRANSLATED_AUTO_FILTERED,
+            MultimodalAuthoringOrigin.MACHINE_TRANSLATED_HUMAN_VALIDATED,
+        }
+        if self.authoring_origin in machine_origins:
+            if not self.original_language or not self.translation_model:
+                raise ValueError(
+                    "machine-translated captions require original_language and translation_model"
+                )
+        if (
+            self.authoring_origin
+            == MultimodalAuthoringOrigin.MACHINE_TRANSLATED_AUTO_FILTERED
+            and not self.translation_selection_method
+        ):
+            raise ValueError(
+                "automatically filtered translations require translation_selection_method"
+            )
+        return self
+
+
+class MediaCaptionLinkage(BaseModel):
+    """Versioned relationship between independently governed media and text."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    media_id: str = Field(min_length=1)
+    caption_id: str = Field(min_length=1)
+    parent_dataset: str = Field(min_length=1)
+    derived_dataset: str | None = None
+    transformation_history: list[DerivationStep] = Field(default_factory=list)
+    split: str = Field(min_length=1)
+    contamination_status: str = Field(min_length=1)
+
+    @model_validator(mode="after")
+    def validate_transformation_order(self) -> "MediaCaptionLinkage":
+        sequences = [step.sequence for step in self.transformation_history]
+        if sequences != list(range(1, len(sequences) + 1)):
+            raise ValueError("multimodal transformation steps must be ordered and contiguous")
+        return self
+
+
+class MultimodalProvenance(BaseModel):
+    """Media, caption, and linkage provenance without rights inheritance."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    media: MediaProvenance
+    caption: CaptionProvenance
+    linkage: MediaCaptionLinkage
+
+    @model_validator(mode="after")
+    def validate_linkage_ids(self) -> "MultimodalProvenance":
+        if self.linkage.media_id != self.media.media_id:
+            raise ValueError("linkage media_id must match media provenance")
+        if self.linkage.caption_id != self.caption.caption_id:
+            raise ValueError("linkage caption_id must match caption provenance")
         return self
 
 

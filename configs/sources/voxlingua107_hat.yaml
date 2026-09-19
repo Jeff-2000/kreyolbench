@@ -1,0 +1,47 @@
+source_schema_version: 2
+source_id: voxlingua107_hat
+record_type: SOURCE_COLLECTION
+parent_source_id: null
+name: VoxLingua107 Haitian metadata source
+url: https://cs.taltech.ee/staff/tanel.alumae/data/voxlingua107/
+provider: Tallinn University of Technology NLP group
+publisher_owner: UPSTREAM_YOUTUBE_AND_DATASET_CONTRIBUTORS
+data_type: speech_audio_language_identification
+access_method: metadata_review_only
+license: TO_VERIFY_PER_ARTIFACT_AND_UPSTREAM_MEDIA
+license_url: https://cs.taltech.ee/staff/tanel.alumae/data/voxlingua107/
+license_evidence: "The provider page documents the dataset and Haitian subset size; it does not establish KreyolBench acquisition, redistribution, speaker consent, or upstream media rights."
+citation: "Valk and Alumäe. VoxLingua107: a Dataset for Spoken Language Recognition."
+language_claim: "Haitian/ht documented by the provider; content-level language quality not reviewed"
+registers: [youtube_speech, TO_VERIFY]
+domain: other
+temporal_coverage: TO_VERIFY
+geographic_relevance: UNKNOWN
+expected_tasks: [speech_audio, language_contact, linguistic_robustness]
+accessed_on: 2026-09-18
+collection_date: null
+hash: null
+notes: "Provider metadata reports approximately 96 hours and 9.2 GB for Haitian. No transcript claim is made; this is not an ASR gold corpus."
+quality_notes: "Language-ID purity, speaker/source provenance, regional balance, consent, rights, duplication, and version require review."
+machine_generated_content_risk: UNKNOWN
+pii_risk: TO_VERIFY_SPEAKER_REIDENTIFICATION
+duplication_risk: TO_VERIFY_YOUTUBE_AND_MODEL_TRAINING_OVERLAP
+status: SUBMITTED_TO_REVIEW
+decision_ids: [KB-DATA-001, KB-DATA-003, KB-SRCREV-002, KB-DATA-004]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: ENDPOINT_VERIFIED
+  access_status: ACCESSIBLE_FOR_REVIEW
+  legal_review_status: PENDING
+  collection_status: NOT_REQUESTED
+  derived_use_status: UNKNOWN
+  redistribution_status: UNKNOWN
+  commercial_use_status: UNKNOWN
+  ethics_status: PENDING
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://cs.taltech.ee/staff/tanel.alumae/data/voxlingua107/
+    - https://arxiv.org/abs/2011.12998

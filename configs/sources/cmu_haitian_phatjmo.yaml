@@ -21,13 +21,13 @@ expected_tasks: ["speech_audio"]
 accessed_on: "2026-09-10"
 collection_date: null
 hash: null
-notes: "The upload describes CMU Haitian speech. Its MIT badge coexists with reproduced CMU notice conditions; this is not proof of authorized relicensing."
+notes: "Reference/mirror only for identity, metadata, possible hash, and transport-location discovery. Its MIT badge does not authorize relicensing or redistribution of original CMU recordings."
 quality_notes: "Mirror identity and hashes; license compatibility; speaker linkage; train/test leakage"
 machine_generated_content_risk: "UNKNOWN"
 pii_risk: "high"
 duplication_risk: "TO_VERIFY; shared upstream content and model contamination may occur"
 status: "SUBMITTED_TO_REVIEW"
-decision_ids: ["KB-DATA-001","KB-DATA-003"]
+decision_ids: ["KB-DATA-001","KB-DATA-003","KB-SRCREV-002","KB-DATA-004"]
 requires_expert_validation: true
 release_candidate: false
 source_governance:

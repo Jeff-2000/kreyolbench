@@ -33,7 +33,7 @@ No task, source permission, metric, split or release approval. Domain fit remain
 
 ## Engineering Decisions Made
 
-KB-ENG-008 records separate discovery intake and claim-level feasibility schema v2. Coverage is registry-driven, not limited to 21 sources. Historical snapshots are not active configuration.
+KB-ENG-008 records the discovery intake and the claim-level feasibility-v2 architecture implemented on 2026-09-10. KB-ENG-009 and active feasibility schema v3 now supersede that projection without deleting its history. Coverage remains registry-driven, not limited to 21 sources. Historical snapshots are not active configuration.
 
 ## Open Questions and Risks Identified
 

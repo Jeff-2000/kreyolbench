@@ -1,5 +1,14 @@
 # Research Changelog
 
+## 2026-09-19
+
+- Implemented Jeff Pierre's 2026-09-18 expanded source-review decisions with explicit human attestation and AI-assisted evidence-synthesis disclosure.
+- Added `KB-SRCREV-002`, `KB-DATA-004`, `KB-DATA-005`, and `KB-ENG-010` to both decision registries.
+- Added complete source-use and contamination-firewall ledgers covering registered sources and unresolved/reference leads.
+- Registered metadata-only VoxLingua107 Haitian and Northern Haitian records, and separated Mission 4636 open/non-sensitive and restricted/sensitive children.
+- Added canonical content-origin and typed multimodal-provenance contracts while preserving the native Haitian vision-language evidence gap.
+- Protected FLORES+ and CreoleVal evaluation material from training use; no source authorization, task status, or release membership changed.
+
 ## Purpose
 
 Track scientific and governance evolution separately from software release notes.
@@ -11,6 +20,22 @@ Current status: IN_PROGRESS
 Owner: Codex
 
 Requires expert validation: No for logging; Yes for scientific decisions referenced here.
+
+## 2026-09-18
+
+Status: IN_PROGRESS
+
+Changes:
+
+- Recorded `KB-SRCREV-001`, Jeff Pierre's Project-Lead acceptance of the source-feasibility methodology with required corrections.
+- Migrated source feasibility to schema v3 with independent scientific axes, append-only attribution, and structured external-evidence gates.
+- Revised CMU, government portal, MENFP, and Radio Haiti-Inter summaries to conditional scientific feasibility without changing authorization.
+- Added complete categorical prioritization, source-diversity, and contamination ledgers for all 33 non-synthetic source records.
+- Preserved MIT-Ayiti and MSPP as pending Project-Lead review and kept 12 later candidates outside the 2026-09-18 human review.
+
+Scientific implications:
+
+- No source acquisition, annotation, training, scientific inclusion, release membership, or release authorization occurred.
 
 ## 2026-09-01
 
@@ -209,6 +234,36 @@ Implemented 22 deduplicated leads across text, speech, linguistic and multimodal
 
 Added claim-level feasibility evidence, attributed size records, cross-source provenance relationships, domain/modality hypotheses and engineering decision KB-ENG-008. Corrected Aya origin claims, separated UD treebanks and preserved source-specific rights uncertainty. Inferred task fit and risk assessments remain PARTIAL, not direct evidence. No dataset content was acquired or benchmark scope frozen. Validation results are recorded in the implementation handoff.
 
+### Project-Lead Source-Feasibility Review
+
+Status: EXPERT_VALIDATED for methodology and Project-Lead prioritization only
+
+Implemented:
+
+- recorded Jeff Pierre's 2026-09-18 review as `KB-SRCREV-001`, with internal Project-Lead independence and an explicit no-authorization boundary
+- preserved the original Codex assessment, appended 19 Project-Lead source decisions, and separated later Codex implementation evidence checks
+- represented 14 reviewed sources as conditionally feasible and five as blocked for actionable use
+- retained `mit_ayiti_resources` and `mspp_publications` in a dedicated pending Project-Lead queue
+- kept 12 subsequently registered source candidates outside the scope of this human review
+- introduced feasibility schema v3 with independent assessment axes and structured external-evidence requirements
+- added complete source-prioritization, representativeness, and contamination ledgers without numerical readiness scores
+- strengthened evidence for CMU, Haitian government communications, eBible, Kreyol-MT, Radio Haiti, UN assets, UD treebanks, and Wikimedia provenance
+
+Scientific and authorization state:
+
+- `CONDITIONAL` means only that bounded next-stage review is scientifically worthwhile
+- no legal, collection, derived-use, redistribution, commercial-use, ethics, scientific-inclusion, or release gate was elevated
+- no new content-bearing child record was created
+- no source content was acquired, scraped, annotated, transformed, trained on, or redistributed
+- release eligibility remains false and the five task decisions remain unresolved
+
+Validation:
+
+- Ruff passed
+- 174 tests passed
+- deterministic text and JSON governance audits returned `PASS` with zero errors and warnings
+- source attribution, pending-review, hierarchy, contamination, and no-authorization invariants passed
+
 ## Revision History
 
 | Date | Change | Status |
@@ -221,3 +276,5 @@ Added claim-level feasibility evidence, attributed size records, cross-source pr
 | 2026-09-09 | Added open-world task/domain taxonomy and bounded release membership. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Revised all five task specifications after the AI-assisted internal audit and added qualified external human review enforcement. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Added complete metadata-only source feasibility evidence and enforcement without authorizing source use. | SUBMITTED_TO_REVIEW |
+| 2026-09-10 | Expanded open-world source discovery while preserving all source authorization gates. | SUBMITTED_TO_REVIEW |
+| 2026-09-18 | Implemented the Project-Lead source-feasibility review, multi-axis evidence model, and planning ledgers without authorizing source use. | EXPERT_VALIDATED |

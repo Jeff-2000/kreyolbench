@@ -32,7 +32,7 @@ Before editing a subsystem, read the relevant Markdown specification:
 | --- | --- |
 | Project vision/scope | `PROJECT_VISION.md`, `RESEARCH_SCOPE.md`, `ROADMAP.md`, `datasets/TASK_TAXONOMY.md` |
 | Scientific governance | `SCIENTIFIC_GOVERNANCE.md`, `DECISIONS.md`, `ASSUMPTIONS.md`, `RISKS.md` |
-| Data and datasets | `data/README.md`, `datasets/DATASET_SPECIFICATION.md`, `datasets/EXAMPLE_PROVENANCE.md`, `datasets/SOURCE_REGISTRY.md`, `datasets/SPLIT_POLICY.md`, `datasets/LEAKAGE_PREVENTION.md`, `datasets/VERSIONING_POLICY.md`, `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md`, `reports/source_reviews/README.md`, and the relevant `datasets/tasks/*.md` specification |
+| Data and datasets | `data/README.md`, `datasets/DATASET_SPECIFICATION.md`, `datasets/EXAMPLE_PROVENANCE.md`, `datasets/SOURCE_REGISTRY.md`, `datasets/SOURCE_DIVERSITY.md`, `datasets/CONTAMINATION_REGISTRY.md`, `datasets/SPLIT_POLICY.md`, `datasets/LEAKAGE_PREVENTION.md`, `datasets/VERSIONING_POLICY.md`, `reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md`, `reports/SOURCE_PRIORITIZATION_V0_1.md`, `reports/source_reviews/README.md`, and the relevant `datasets/tasks/*.md` specification |
 | Annotation | `annotation/README.md`, `annotation/guidelines.md`, `annotation/QUALITY_CONTROL.md`, `annotation/ADJUDICATION_PROTOCOL.md` |
 | Evaluation | `eval/EVALUATION_PROTOCOL.md`, `eval/METRICS.md`, `eval/STATISTICAL_TESTING.md`, `eval/ERROR_ANALYSIS.md` |
 | Baselines | `baselines/BASELINE_MATRIX.md`, `baselines/TRAINING_PROTOCOL.md`, `baselines/COMPUTE_POLICY.md` |
@@ -140,3 +140,4 @@ After each meaningful implementation step, report:
 | 2026-09-09 | Added open-world scope and bounded-release operating rules. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Added qualified external-review evidence rules and the internal/AI-assistance boundary. | SUBMITTED_TO_REVIEW |
 | 2026-09-10 | Added mandatory reading and authorization boundaries for metadata-only source reviews. | SUBMITTED_TO_REVIEW |
+| 2026-09-18 | Added source-review attribution, prioritization, diversity, and contamination required reading. | SUBMITTED_TO_REVIEW |

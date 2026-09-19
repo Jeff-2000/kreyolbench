@@ -142,6 +142,58 @@ decisions:
         evidence_path: reports/TASK_SPEC_REVIEW_PACKET_V0_1.md
         notes: Independent external review is required before any v0.1 task specification is frozen.
 
+  - id: KB-SRCREV-001
+    title: Project-Lead source-feasibility review v0.1
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-18
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/SOURCE_FEASIBILITY_REVIEW_PACKET_V0_1.md
+        notes: Accept with required corrections. The Project Lead made the scientific decisions after human review of the evidence and an AI-assisted research synthesis. Feasibility and prioritization only; no collection, derived-use, redistribution, scientific-inclusion, release-membership, or release authorization.
+
+  - id: KB-SRCREV-002
+    title: Project-Lead expanded source-discovery review
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-18
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+        notes: Approve with source-specific conditions at metadata-discovery level. The Project Lead made the decisions after human review of the evidence and an AI-assisted research synthesis; no source authorization or task approval follows.
+
+  - id: KB-DATA-004
+    title: Source roles, use eligibility, and contamination firewall
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-18
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+        notes: Scientific roles and training/evaluation eligibility remain independent from legal, ethics, scientific-inclusion, task, and release authorization.
+
+  - id: KB-DATA-005
+    title: Native-versus-translated multimodal provenance policy
+    status: EXPERT_VALIDATED
+    requires_expert_approval: true
+    review_history:
+      - outcome: APPROVED
+        reviewer: Jeff Pierre
+        reviewer_role: Project Lead and Scientific Reviewer
+        reviewed_on: 2026-09-18
+        independence: INTERNAL_PROJECT_LEAD
+        evidence_path: reports/SOURCE_DISCOVERY_EXPANSION_REVIEW_PACKET_V0_1.md
+        notes: Media and caption provenance, rights, authoring origin, translation route, judgments, linkage, and contamination must remain independently traceable.
+
   - id: KB-GOV-003
     title: Qualified external human review evidence policy
     status: EXPERT_VALIDATED
@@ -294,6 +346,18 @@ decisions:
 
   - id: KB-ENG-008
     title: Open-world discovery intake and claim-level metadata evidence
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []
+
+  - id: KB-ENG-009
+    title: Append-only multi-axis source-review evidence and attribution
+    status: TO_REVIEW_LATER
+    requires_expert_approval: false
+    review_history: []
+
+  - id: KB-ENG-010
+    title: Machine-enforced source-use, contamination-firewall, and multimodal-provenance schemas
     status: TO_REVIEW_LATER
     requires_expert_approval: false
     review_history: []

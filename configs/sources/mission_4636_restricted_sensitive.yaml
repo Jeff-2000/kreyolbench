@@ -1,0 +1,46 @@
+source_schema_version: 2
+source_id: mission_4636_restricted_sensitive
+record_type: SOURCE_SUBSET
+parent_source_id: haitian_disaster_sms_munro
+name: Mission 4636 restricted or sensitive research material
+url: https://aclanthology.org/2010.amta-workshop.1/
+provider: Mission 4636 custodians and research authors
+publisher_owner: TO_VERIFY_WITH_CUSTODIAN
+data_type: restricted_humanitarian_sms_text
+access_method: prohibited_from_ordinary_corpus_pipeline
+license: RESTRICTED_CUSTODIAN_AND_ETHICS_APPROVAL_REQUIRED
+license_url: null
+license_evidence: "Restricted or sensitive crisis messages require custodian authorization and IRB or equivalent ethics approval; public-interest origin is not consent."
+citation: "Mission 4636 restricted research material; no corpus citation substitutes for custodian authorization."
+language_claim: "Haitian disaster-response messages; item-level language validation required"
+registers: [informal, humanitarian, crisis, sensitive]
+domain: disaster_response
+temporal_coverage: "2010 Haiti earthquake response"
+geographic_relevance: Haiti
+expected_tasks: [retrieval, language_contact, linguistic_robustness]
+accessed_on: 2026-09-18
+collection_date: null
+hash: null
+notes: "Metadata-only restricted child. It must never be acquired through ordinary corpus pipelines and cannot be redistributed."
+quality_notes: "Custodian authority, consent or waiver, PII, health/location data, minors, dignity, retention, deletion, and security require formal review."
+machine_generated_content_risk: UNKNOWN_TRANSLATION_AND_PROCESSING_HISTORY
+pii_risk: HIGH
+duplication_risk: TO_VERIFY_RESTRICTED_RESEARCH_COPIES
+status: BLOCKED
+decision_ids: [KB-DATA-001, KB-DATA-003, KB-SRCREV-002, KB-DATA-004]
+requires_expert_validation: true
+release_candidate: false
+source_governance:
+  discovery_status: DISCOVERED
+  access_status: RESTRICTED
+  legal_review_status: PENDING
+  collection_status: PROHIBITED
+  derived_use_status: PROHIBITED
+  redistribution_status: PROHIBITED
+  commercial_use_status: PROHIBITED
+  ethics_status: RESTRICTED
+  scientific_status: PENDING_EXPERT_REVIEW
+  reviewed_by: null
+  reviewed_on: null
+  evidence_urls:
+    - https://aclanthology.org/2010.amta-workshop.1/

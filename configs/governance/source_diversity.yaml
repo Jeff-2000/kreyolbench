@@ -1,0 +1,732 @@
+schema_version: 2
+status: SUBMITTED_TO_REVIEW
+decision_ids:
+- KB-DATA-001
+- KB-DATA-003
+- KB-SRCREV-001
+- KB-ENG-009
+- KB-SRCREV-002
+- KB-DATA-004
+- KB-DATA-005
+- KB-ENG-010
+requires_expert_validation: true
+release_candidate: false
+entries:
+- source_id: aka_official
+  domains:
+  - OTHER
+  registers:
+  - NORMATIVE
+  - FORMAL
+  - LINGUISTIC
+  - TERMINOLOGY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_RESOURCE
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: aka_publications
+  domains:
+  - OTHER
+  registers:
+  - NORMATIVE
+  - FORMAL
+  - LINGUISTIC
+  - TERMINOLOGY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_DOCUMENT
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: aya_collection_haitian
+  domains:
+  - OTHER
+  registers:
+  - TO_VERIFY
+  origins:
+  - MACHINE_TRANSLATED
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: babel_haitian_ldc2017s03
+  domains:
+  - OTHER
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - SPEECH_AUDIO
+  temporal_periods:
+  - 2012-2013 (catalog report)
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: cmu_haitian
+  domains:
+  - OTHER
+  registers:
+  - SPOKEN
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - SPEECH_AUDIO
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: cmu_haitian_phatjmo
+  domains:
+  - OTHER
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - SPEECH_AUDIO
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: creoleval
+  domains:
+  - OTHER
+  registers:
+  - MIXED
+  - BENCHMARK
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_SUBSET
+  geographies:
+  - UNKNOWN
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: creoleval_mit_haiti
+  domains:
+  - EDUCATION
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: diaspora_publications
+  domains:
+  - DIASPORA
+  registers:
+  - DIASPORA
+  - FORMAL
+  - INFORMAL
+  - CODESWITCH
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: ebible_hat_1985
+  domains:
+  - RELIGION
+  registers:
+  - RELIGIOUS
+  - FORMAL
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - 1985_edition_TO_VERIFY
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: finepdfs_hat
+  domains:
+  - OTHER
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: flores_plus_hat
+  domains:
+  - OTHER
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: haiti_civil_protection_resources
+  domains:
+  - HUMANITARIAN_DISASTER
+  registers:
+  - DISASTER_RESPONSE
+  - CIVIC
+  - PUBLIC_INFORMATION
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: haiti_government_communication_portal
+  domains:
+  - GOVERNMENT_CIVIC
+  registers:
+  - CIVIC
+  - ADMINISTRATIVE
+  - PUBLIC_INFORMATION
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: haiti_government_publications
+  domains:
+  - GOVERNMENT_CIVIC
+  registers:
+  - CIVIC
+  - ADMINISTRATIVE
+  - PUBLIC_INFORMATION
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_COLLECTION
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: haitian_disaster_sms_munro
+  domains:
+  - HUMANITARIAN_DISASTER
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: haitian_news_candidates
+  domains:
+  - NEWS
+  registers:
+  - NEWS
+  - FORMAL
+  - INFORMAL
+  - MULTIMEDIA
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: jhu_kreyol_mt
+  domains:
+  - OTHER
+  registers:
+  - PARALLEL_TEXT
+  - MIXED
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_SUBSET
+  geographies:
+  - UNKNOWN
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: mc4_ht
+  domains:
+  - OTHER
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: menfp_educational_resources
+  domains:
+  - EDUCATION
+  registers:
+  - EDUCATION
+  - INSTRUCTIONAL
+  - ADMINISTRATIVE
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: mission_4636_open_nonsensitive
+  domains:
+  - HUMANITARIAN_DISASTER
+  registers:
+  - INFORMAL
+  - CRISIS
+  origins:
+  - MIXED
+  modalities:
+  - TEXT
+  temporal_periods:
+  - '2010'
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Metadata-level diversity evidence does not establish representativeness or authorize use.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: mission_4636_restricted_sensitive
+  domains:
+  - HUMANITARIAN_DISASTER
+  registers:
+  - INFORMAL
+  - CRISIS
+  - SENSITIVE
+  origins:
+  - MIXED
+  modalities:
+  - TEXT
+  temporal_periods:
+  - '2010'
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Metadata-level diversity evidence does not establish representativeness or authorize use.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: mit_ayiti_resources
+  domains:
+  - EDUCATION
+  registers:
+  - EDUCATION
+  - STEM
+  - INSTRUCTIONAL
+  - TERMINOLOGY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_RESOURCE
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: mspp_publications
+  domains:
+  - HEALTH
+  registers:
+  - HEALTH
+  - ADMINISTRATIVE
+  - PUBLIC_INFORMATION
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: northern_haitian_creole_corpus
+  domains:
+  - OTHER
+  registers:
+  - SPOKEN
+  - REGIONAL
+  origins:
+  - HUMAN_TRANSCRIBED
+  modalities:
+  - SPEECH_AUDIO
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Metadata-level diversity evidence does not establish representativeness or authorize use.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: opus
+  domains:
+  - OTHER
+  registers:
+  - MIXED
+  - PARALLEL_TEXT
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_SUBSET
+  geographies:
+  - UNKNOWN
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: radio_haiti_duke_archive
+  domains:
+  - NEWS
+  registers:
+  - SPOKEN
+  - BROADCAST
+  - INTERVIEW
+  - CODE_SWITCHING
+  - DIACHRONIC
+  origins:
+  - UNKNOWN
+  modalities:
+  - SPEECH_AUDIO
+  temporal_periods:
+  - archival_TO_VERIFY_PER_ITEM
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: radio_haiti_inter_lrec2026
+  domains:
+  - NEWS
+  registers:
+  - SPOKEN
+  - BROADCAST
+  - INTERVIEW
+  - CODE_SWITCHING
+  - DIACHRONIC
+  origins:
+  - ASR_DERIVED
+  modalities:
+  - SPEECH_AUDIO
+  temporal_periods:
+  - TO_VERIFY_FROM_CORPUS_DOCUMENTATION
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: social_media_candidates
+  domains:
+  - OTHER
+  registers:
+  - INFORMAL
+  - CODESWITCH
+  - SOCIAL_MEDIA
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: ud_haitian_adolphe
+  domains:
+  - RELIGION
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: ud_haitian_autogramm
+  domains:
+  - RELIGION
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: un_haiti_ht
+  domains:
+  - GOVERNMENT_CIVIC
+  registers:
+  - CIVIC
+  - DEVELOPMENT
+  - PUBLIC_INFORMATION
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: universal_dependencies_haitian
+  domains:
+  - OTHER
+  registers:
+  - WRITTEN
+  - LINGUISTIC_ANNOTATION
+  - TO_VERIFY_PER_TREEBANK
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY_PER_TREEBANK
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: voxlingua107_hat
+  domains:
+  - OTHER
+  registers:
+  - SPOKEN
+  origins:
+  - UNKNOWN
+  modalities:
+  - SPEECH_AUDIO
+  temporal_periods:
+  - PROVIDER_CURRENT_2026_09_18
+  geographies:
+  - UNKNOWN
+  evidence_state: PARTIAL
+  limitations:
+  - Metadata-level diversity evidence does not establish representativeness or authorize use.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: wikimedia_htwiki
+  domains:
+  - ENCYCLOPEDIA_REFERENCE
+  registers:
+  - ENCYCLOPEDIC
+  - FORMAL
+  - COMMUNITY_EDITED
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - snapshot_specific
+  geographies:
+  - HAITI
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: wikimedia_htwiki_20231101
+  domains:
+  - EDUCATION
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - 2023-11-01 snapshot
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+- source_id: xp3x_hat
+  domains:
+  - OTHER
+  registers:
+  - TO_VERIFY
+  origins:
+  - UNKNOWN
+  modalities:
+  - TEXT
+  temporal_periods:
+  - TO_VERIFY
+  geographies:
+  - HAITI_AND_DIASPORA
+  evidence_state: PARTIAL
+  limitations:
+  - Registry metadata is candidate-level and does not establish measured corpus coverage or representativeness.
+  authorization_effect: NONE
+  multimodal_origin: NOT_MULTIMODAL
+evidence_gaps:
+- NATIVE_HAITIAN_CREOLE_VISION_LANGUAGE_DATA
